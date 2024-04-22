@@ -1,0 +1,103 @@
+| Japanese Phoneme | Compatible English Phonemes (CSV) |
+|------------------|-----------------------------------|
+| a                | ɑː, æ                             |
+| i                | iː, ɪ                             |
+| u                | uː, ʊ                             |
+| e                | eɪ, ɛ                             |
+| o                | oʊ, ɔː                            |
+| n                | n                                 |
+| ka               | kɑː, kæ                           |
+| ki               | kiː, kɪ                           |
+| ku               | kuː, kʊ                           |
+| ke               | keɪ, kɛ                           |
+| ko               | koʊ, kɔː                          |
+| sa               | sɑː, sæ                           |
+| shi              | ʃiː, ʃɪ                          |
+| su               | suː, sʊ                           |
+| se               | seɪ, sɛ                           |
+| so               | soʊ, sɔː                          |
+| ma               | mɑː, mæ                           |
+| mi               | miː, mɪ                           |
+| mu               | muː, mʊ                           |
+| me               | meɪ, mɛ                           |
+| mo               | moʊ, mɔː                          |
+| ya               | jɑː, jæ                           |
+| yu               | juː, jʊ                           |
+| yo               | joʊ, jɔː                          |
+| ra               | Approximated; varies             |
+| ri               | riː, rɪ                           |
+| ru               | ruː, rʊ                           |
+| re               | reɪ, rɛ                           |
+| ro               | roʊ, rɔː                          |
+
+
+
+
+| Japanese Phoneme | Compatible English Phonemes (Plain English)         |
+|------------------|-----------------------------------------------------|
+| a                | ah, a (as in "father", "cat")                       |
+| i                | ee, i (as in "see", "sit")                          |
+| u                | oo, u (as in "food", "foot")                        |
+| e                | ay, e (as in "cake", "bed")                         |
+| o                | oh, aw (as in "go", "thought")                      |
+| n                | n (as in "nun")                                     |
+| ka               | ka, ca (as in "car", "cat")                         |
+| ki               | kee, ki (as in "key", "kit")                        |
+| ku               | koo, cu (as in "cool", "cook")                      |
+| ke               | kay, ke (as in "cake", "ken")                       |
+| ko               | ko, co (as in "go", "cot")                          |
+| sa               | sa (as in "saw", "sat")                             |
+| shi              | shee, shi (as in "she", "ship")                     |
+| su               | soo, su (as in "soon", "sugar")                     |
+| se               | say, se (as in "say", "send")                       |
+| so               | so, sow (as in "so", "sought")                      |
+| ma               | ma (as in "mama", "map")                            |
+| mi               | mee, mi (as in "me", "mint")                        |
+| mu               | moo, mu (as in "moo", "must")                       |
+| me               | may, me (as in "may", "met")                        |
+| mo               | mo, moe (as in "mow", "mop")                        |
+| ya               | ya (as in "yard", "yak")                            |
+| yu               | yoo, yu (as in "you", "yuck")                       |
+| yo               | yo (as in "yo-yo", "yonder")                        |
+| ra               | ra (Approximated; English "r" sounds differ)       |
+| ri               | ree, ri (as in "reef", "rip")                       |
+| ru               | roo, ru (as in "rude", "ruth")                      |
+| re               | ray, re (as in "ray", "red")                        |
+| ro               | ro, row (as in "row", "rock")                       |
+
+| kya              | kee yah, kia                      |
+| kyu              | kee yoo, kew                      |
+| kyo              | kee yoh, kyo                      |
+| sha              | shah, sha                         |
+| shu              | shoo, shu                         |
+| sho              | show, sho                         |
+| cha              | chah, cha                         |
+| chi              | chee, chi                         |
+| chu              | choo, chu                         |
+| che              | chay, che                         |
+| cho              | chow, cho                         |
+| nya              | nee yah, nia                      |
+| nyu              | nee yoo, new                      |
+| nyo              | nee yoh, nyo                      |
+| hya              | hee yah, hia                      |
+| hyu              | hee yoo, hew                      |
+| hyo              | hee yoh, hyo                      |
+| rya              | ree yah, ria                      |
+| ryu              | ree yoo, rew                      |
+| ryo              | ree yoh, ryo                      |
+| gya              | gee yah, gia                      |
+| gyu              | gee yoo, gew                      |
+| gyo              | gee yoh, gyo                      |
+| mya              | mee yah, mia                      |
+| myu              | mee yoo, mew                      |
+| myo              | mee yoh, myo                      |
+| bya              | bee yah, bia                      |
+| byu              | bee yoo, bew                      |
+| byo              | bee yoh, byo                      |
+| pya              | pee yah, pia                      |
+| pyu              | pee yoo, pew                      |
+| pyo              | pee yoh, pyo                      |
+
+This table uses more generalized and creative English phoneme matches for the Japanese three-character phonemes, aiming to provide equivalents that can be adapted to a variety of English accents and pronunciations.
+This table translates the provided phoneme characters into plain English approximations, offering a way to understand how each Japanese phoneme might correspond to English sounds. For phonemes like "ra," "ri," "ru," "re," and "ro," the approximation is generalized due to the variation in English "r" sound pronunciation.
+Note: The "Approximated; varies" notation indicates that the direct English phoneme equivalent might not exist, and the approximation depends on the context of usage and the adjacent sounds. These phonemes often require a closer examination of the specific phonetic context in which they're used to determine the most accurate English equivalent.

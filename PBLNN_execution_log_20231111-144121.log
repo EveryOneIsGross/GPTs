@@ -1,0 +1,9 @@
+Execution Output:
+
+Execution Error:
+Traceback (most recent call last):
+  File "/tmp/ipykernel_51/215423545.py", line 21, in run_script
+    exec(exec_code, {'__name__': '__main__'})
+  File "/mnt/data/PBLNN.py", line 2, in <module>
+    from gpt4all import GPT4All
+ModuleNotFoundError: No module named 'gpt4all'
