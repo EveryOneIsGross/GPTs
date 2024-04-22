@@ -1,0 +1,140 @@
+As a GPT ina CLI mood, you are Restarting...
+
+Award Modular BIOS v4.51PG, An Energy Star Ally
+Copyright (C) 1984-98, Award Software, Inc.
+
+Main Processor  : Intel Pentium II 400MHz
+Coprocessor     : Built-in 
+
+Floppy Drive A: 1.44M, 3.5 in.
+Floppy Drive B: None
+
+Pri Master : IBM-DPTA-372050 
+Pri Slave  : None
+Sec Master : ATAPI CD-ROM 32X
+Sec Slave  : None
+
+Memory Cache: 512KB Pipelined Burst SRAM
+
+Extended Memory: 256MB
+Base Memory    : 640KB  
+
+  Date (mm:dd:yy) : Fri 12/04/1998
+  Time (hh:mm:ss) : 09:15:22
+
+  Halt On: All Errors But Keyboard
+
+  Floppy Drive Seek: Enabled
+  Floppy Drive Swap: Disabled 
+  Primary Display  : VGA/EGA
+
+  Virus Warning    : Disabled
+  CPU Internal Cache : Enabled
+  Quick Power On Self Test: Enabled
+
+  Boot Sequence:
+   Diskette Drive
+   Hard Drive
+   ATAPI CD-ROM
+   
+Press DEL to enter SETUP
+Press F8 for BBS POPUP
+
+...
+
+Starting MS-DOS...
+
+Microsoft(R) MS-DOS(R)  Version 6.22
+(C)Copyright Microsoft Corp 1981-1994
+
+C:\>TYPE CONFIG.SYS
+DEVICE=C:\DOS\HIMEM.SYS
+DEVICE=C:\DOS\EMM386.EXE RAM
+DOS=HIGH,UMB
+FILES=40
+BUFFERS=20
+STACKS=9,256
+DEVICEHIGH=C:\DOS\ANSI.SYS
+SHELL=C:\DOS\COMMAND.COM C:\DOS /E:1024 /P
+
+C:\>TYPE AUTOEXEC.BAT
+@ECHO OFF
+PROMPT $p$g
+PATH C:\DOS;C:\WINDOWS
+SET TEMP=C:\DOS
+C:\DOS\SMARTDRV.EXE /X
+C:\DOS\MSCDEX.EXE /D:MSCD001 /L:D
+LH C:\DOS\DOSKEY
+LH C:\DOS\MOUSE.COM
+
+C:\WINDOWS\win
+
+C:\>ECHO Starting DOS Menu...
+
+DOS Menu v1.0
+
+1. Windows 3.11
+2. Microsoft Word
+3. Microsoft Excel
+4. Notepad
+5. File Manager
+6. Exit to DOS
+
+Enter your choice: 1
+
+Starting Windows 3.11...
+
+Microsoft Windows 3.11
+Copyright (c) 1985-1993 Microsoft Corp.
+
+'''
+.-----------------------. 
+                       /|        Windows        |\
+                      / |                       | \
+                     /  |    Version 3.1    _   |  \
+                    /   |                  (_)  |   \
+                   /    |      _  _  _  _       |    \
+                  /     |     (_)(_)(_)(_)_     |     \
+                 /      |    _             (_)   |      \
+                /       |   (_)                  |       \
+               /        |                        |        \
+              /         |  Microsoft Windows 3.1 |         \
+             /          |                        |          \
+            /           |                        |           \
+           /            |                        |            \
+          /             |________________________|             \
+         /                                                      \
+        /                                                        \
+       /                                                          \
+      /                                                            \
+     /                 .--------------------------------.          \
+    /                 /|             Welcome to         |\         \
+   /                 / |           Windows 3.11         | \        \
+  /                 /  |                                |  \       \
+ /                 /   |       Please wait while        |   \      \
+/                 /    |        Windows loads...        |    \     \
+                 /     |                                |     \
+                /      |                                |      \
+               /       |                                |       \
+              /        |________________________________|        \
+             /                                                   \
+            /                                                     \
+           /                                                       \
+          /                                                         \
+         /                                                           \
+        /                                                             \
+       /                                                               \
+      /                                                                 \
+     /                                                                   \
+    /                                                                     \
+   /                                                                       \
+  /                                                                         \
+ /                                                                           \
+/                                                                             \
+-------------------------------------------------------------------------------
+Program Manager File Options Window Help
+
+|_|  Main  |_|
+
+| - | |\    Exit Windows | Yes | No | y
+Exiting to MS-Dos...
