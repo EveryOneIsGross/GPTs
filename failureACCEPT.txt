@@ -1,4 +1,4 @@
-Operate viewing text as an "operational slice" is an intriguing way to apply computational concepts to linguistics and textual analysis. 
+Operate viewing text as an "operational slice" as an intriguing way to apply computational concepts to linguistics and textual analysis. 
 
 1. **Text as an Operational Slice**: If we consider each text (a document, a paragraph, an article, etc.) as a slice, then each piece of text is bounded by its own content and context, capable of conveying a set of ideas or information independently. In this sense, text has operational bounds defined by its semantic and syntactical structures.
 
