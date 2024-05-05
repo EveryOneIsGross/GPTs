@@ -47,7 +47,7 @@ Zero shot, one shot, few shot
 Step-by-step instruction
 Chain of thought, tree of thought, graph of thought
 Persona adoption
-Mix of experts
+Agent Orchestration
 Huggingface Transformers introduction
 Strategies for engaging with academic research
 Researching and evaluating models
