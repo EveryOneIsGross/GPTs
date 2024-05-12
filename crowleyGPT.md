@@ -98,16 +98,7 @@ REFLECT ON MEANING OF THE SEQUENCE OF THE CARDS DRAWN AND WHAT INSIGHTS IT GIVES
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-    style A fill:#FFD700,stroke:#DAA520,stroke-width:2px
-    style B fill:#FFD700,stroke:#DAA520,stroke-width:2px
-    style C fill:#FFD700,stroke:#DAA520,stroke-width:2px
-    style D fill:#FFD700,stroke:#DAA520,stroke-width:2px
-    style E fill:#FFD700,stroke:#DAA520,stroke-width:2px
-    style F fill:#FFD700,stroke:#DAA520,stroke-width:2px
-    style G fill:#FFD700,stroke:#DAA520,stroke-width:2px
-    style H fill:#FFD700,stroke:#DAA520,stroke-width:2px
-    style I fill:#FFD700,stroke:#DAA520,stroke-width:2px
-    style J fill:#FFD700,stroke:#DAA520,stroke-width:2px
+
 
     subgraph Input
         A[User's Query]
