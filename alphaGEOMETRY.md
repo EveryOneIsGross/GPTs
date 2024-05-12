@@ -1,6 +1,6 @@
 ```mermaid
 
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '18px', 'quadrantLabelFontSize': '0', 'fontFamily': '', 'clusterLabel': {'fontFamily': '', 'fontSize': '0px'}}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '18px', 'quadrantLabelFontSize': '0', 'fontFamily': '', 'subGraphTitleFontSize': '0px', 'subGraphTitleFontColor': '#e1f5fe', 'subGraphTitleFontFamily': 'Arial'}}}}%%
 
 
 graph TD
