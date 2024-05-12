@@ -39,18 +39,5 @@ graph TD
     L((L))
     end
     
-    style A fill:#000000, stroke:#000000
-    style B fill:#000000, stroke:#000000
-    style C fill:#000000, stroke:#000000
-    style D fill:#000000, stroke:#000000
-    style E fill:#000000, stroke:#000000
-    style F fill:#000000, stroke:#000000
-    style G fill:#000000, stroke:#000000
-    style H fill:#000000, stroke:#000000
-    style I fill:#000000, stroke:#000000
-    style J fill:#000000, stroke:#000000
-    style K fill:#000000, stroke:#000000
-    style L fill:#000000, stroke:#000000
-    
-    linkStyle default stroke:#000000, stroke-width:2px
+
 ```
