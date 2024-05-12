@@ -56,56 +56,80 @@ The following is the sequence of reasoning Donnie will take before responding to
 ```
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#5b5b5b', 'lineColor': '#808080', 'borderColor': '#b2b2b2', 'clusterBkg': '#f0f0f0', 'fontSize': '16px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%graph TD
+
 graph TD
 
 subgraph "Query"
-    A["Query Description"] --> B["Keywords"]
-    B --> C["Sentiment"]
+    A["Query Description"] -->|Influences| B["Keywords"]
+    B -->|Influences| C["Sentiment"]
+    A -->|Directs focus| F["Agent Type"]
 end
 
 subgraph "Domain"
-    D["Domain Name"] --> E["Domain Description"]
+    D["Domain Name"] -->|Describes| E["Domain Description"]
+    D -->|Context for| G["Expertise"]
 end
 
 subgraph "Agent Role"
-    F["Agent Type"] --> G["Expertise"]
+    F -->|Defines| G["Expertise"]
+    G -->|Guides| K["Instructions"]
+    F -.->|Bidirectional with| S["Response Content"]
 end
 
 subgraph "Consent Layer"
-    H["Consent Status"] --> I["Guidelines"]
-    I --> J["Verification"]
+    H["Consent Status"] -->|Controls| I["Guidelines"]
+    I -->|Ensures| J["Verification"]
+    H -->|Affects| N["Agent Thoughts"]
+    H -->|Affects| U["Proposed Action"]
 end
 
 subgraph "Directive Instruction Layer"
-    K["Instructions"] --> L["Assets"]
-    L --> M["Limitations"]
+    K -->|Include| L["Assets"]
+    L -->|Constrained by| M["Limitations"]
+    K -->|Informs| N["Agent Thoughts"]
+    K -->|Informs| S["Response Content"]
+    M -->|Restricts| P["Background Information"]
 end
 
 subgraph "Thoughts Layer"
-    N["Agent Thoughts"] --> O["Ethical Considerations"]
+    N -->|Guided by| O["Ethical Considerations"]
+    N -->|Influences| S["Response Content"]
+    N -->|Influences| U["Proposed Action"]
 end
 
 subgraph "Context"
-    P["Background Information"] --> Q["Cultural Sensitivity"]
-    Q --> R["Conversation History"]
+    P -->|Informs| Q["Cultural Sensitivity"]
+    Q -->|Part of| R["Conversation History"]
+    P -->|Shapes| S["Response Content"]
+    Q -->|Affects| S["Response Content"]
 end
 
 subgraph "Response"
-    S["Response Content"] --> T["Response Tone"]
+    S -->|Expressed as| T["Response Tone"]
+    T -->|Feedback to| A["Query Description"]
+    T -->|Feedback to| H["Consent Status"]
 end
 
 subgraph "Action"
-    U["Proposed Action"] --> V["Safety Measures"]
+    U -->|Guided by| V["Safety Measures"]
+    U -->|Realized through| L["Assets"]
+    V -->|Back to| H["Consent Status"]
 end
 
-%% Connections %%
-A --> F
-C --> H
-G --> K
-J --> N
-M --> P
-O --> S
-R --> U
-T --> V
+%% Additional Connections %%
+A -->|Sets stage for| D["Domain Name"]
+B -->|Keywords affect| G["Expertise"]
+C -->|Modifies| T["Response Tone"]
+D -->|Influences| K["Instructions"]
+E -->|Details affect| M["Limitations"]
+J -->|Affects| N["Agent Thoughts"]
+R -->|History affects| U["Proposed Action"]
+S -.->|Bidirectional with| F["Agent Type"]
+P -->|Influences| N["Agent Thoughts"]
+L -->|Utilized in| U["Proposed Action"]
+
+classDef default fill:#f9f,stroke:#333,stroke-width:2px;
+class A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V default;
+
 ```
