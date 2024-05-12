@@ -130,7 +130,5 @@ S -.->|Bidirectional with| F["Agent Type"]
 P -->|Influences| N["Agent Thoughts"]
 L -->|Utilized in| U["Proposed Action"]
 
-classDef default fill:#f9f,stroke:#333,stroke-width:2px;
-class A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V default;
 
 ```
