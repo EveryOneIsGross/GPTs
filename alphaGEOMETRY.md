@@ -1,6 +1,6 @@
 ```mermaid
 
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '18px', 'padding': '15', 'textMargin': '10' }}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '18px', 'padding': '150', 'textMargin': '10' }}}%%
 
 graph TD
     %% Nodes within Input
@@ -106,20 +106,22 @@ graph TD
     D2 --> A2
     D2 --> A3
     
-    subgraph 
+
+    subgraph Input
     A1
     A2
     A3
     end
     
-    subgraph 
+    subgraph Process
     B1
     B2
     B3
     B4
+    B5
     end
     
-    subgraph 
+    subgraph Output
     C1
     C2
     end
@@ -127,5 +129,7 @@ graph TD
     subgraph "Parameter Space"
     D1
     D2
+    D3
     end
+
 ```
