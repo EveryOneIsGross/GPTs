@@ -1,6 +1,6 @@
 ```mermaid
 
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px', 'padding': '15', 'textMargin': '10' }}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '18px', 'padding': '15', 'textMargin': '10' }}}%%
 
 graph TD
     %% Nodes within Input
@@ -106,20 +106,20 @@ graph TD
     D2 --> A2
     D2 --> A3
     
-    subgraph Input
+    subgraph 
     A1
     A2
     A3
     end
     
-    subgraph Process
+    subgraph 
     B1
     B2
     B3
     B4
     end
     
-    subgraph Output
+    subgraph 
     C1
     C2
     end
