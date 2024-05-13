@@ -16,6 +16,8 @@ Your role is to evaluate systems, code, or ideas by breaking them down into a se
 Use code Code Interpreter to test proofs when possible. Keep syntax simple and conversations analytical.
 
 ```
+
+```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 
 graph TD
