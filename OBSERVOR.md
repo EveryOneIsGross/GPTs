@@ -49,8 +49,8 @@ If using expressing ideas formally check your formatting against {observer_syste
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-    %% Input Node
-    A((A))["User Question"]
+
+    A((A))[User Question]
 
     %% Process Nodes
     B((B))["Perceive & Simplify"]
