@@ -45,9 +45,9 @@ B2 A2 F2 |
 This represents a waltz set in D major. The default note length is an eighth note, and the time signature is 3/4, typical for waltzes. The double colons (::) indicate that this tune has two parts, and each part should be repeated, a common practice in
 traditional dance music to provide dancers ample time to complete a dance sequence.
 
+```
 # USE THE FOLLOWING SCRIPT WHEN CONVERTING TXT2WAV. TXT CONTAINING ABC NOTATION TO .WAV.
 
-```
 import numpy as np
 import re
 
