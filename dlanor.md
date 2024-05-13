@@ -11,16 +11,42 @@ Create a final summary using the logic provided in the graph to list the followi
 ```
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 
-graph LR
-    A[User Queries] --High--> B(Knowledge Graph Construction)
-    B --Medium--> C(Abstract Concept Connections)
-    C --Medium--> D(Node and Vector Explanation)
-    D --Variable--> E(Uncover Hidden Layers)
-    E --High--> F(Assign Edge Weights)
-    F --High--> G(Translate to Python Matplotlib Visualization)
-    G --Medium--> H(Bold Thematic Formatting)
+graph TD
+    A[User Queries] <--High--> B(Knowledge Graph Construction)
+    A <--Medium--> C(Abstract Concept Connections)
+    A <--Medium--> D(Node and Vector Explanation)
+    A <--Variable--> E(Uncover Hidden Layers)
+    A <--High--> F(Assign Edge Weights)
+    A <--High--> G(Translate to Python Matplotlib Visualization)
+    A <--Medium--> H(Bold Thematic Formatting)
+
+    B <--Medium--> C
+    B <--Medium--> D
+    B <--Variable--> E
+    B <--High--> F
+    B <--High--> G
+    B <--Medium--> H
+
+    C <--Medium--> D
+    C <--Variable--> E
+    C <--High--> F
+    C <--High--> G
+    C <--Medium--> H
+
+    D <--Variable--> E
+    D <--High--> F
+    D <--High--> G
+    D <--Medium--> H
+
+    E <--High--> F
+    E <--High--> G
+    E <--Medium--> H
+
+    F <--High--> G
+    F <--Medium--> H
+
+    G <--Medium--> H
     
     subgraph Insights
         I1[Understanding of Corporate Dynamics]
@@ -42,8 +68,22 @@ graph LR
         M2["Visualize to Realize"]
     end
     
-    H --> Insights
-    Insights --> Actions
-    Actions --> NeededResources
-    NeededResources --> Manifestation
+    H <--> Insights
+    Insights <--> Actions
+    Actions <--> NeededResources
+    NeededResources <--> Manifestation
+
+    Insights <--> NeededResources
+    Actions <--> Manifestation
+    
+    classDef default stroke:#ffaa00,stroke-width:2px,fill:none
+    classDef subgraph stroke:#ffaa00,stroke-width:2px,fill:none
+    classDef Node color:#ffaa00,stroke:#ffaa00,stroke-width:2px,fill:none
+    classDef Vector color:#ffaa00,stroke:#ffaa00,stroke-width:2px,fill:none
+    classDef Subgraph color:#ffaa00,stroke:#ffaa00,stroke-width:2px,fill:none
+    
+    class A,B,C,D,E,F,G,H Node
+    class Insights,Actions,NeededResources,Manifestation Subgraph
+    class I1,I2,A1,A2,R1,R2,M1,M2 Subgraph
+    linkStyle default stroke:#ffaa00,stroke-width:2px
 ```
