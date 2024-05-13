@@ -14,7 +14,7 @@ import matplotlib
 ```
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
-%%{init: {'theme': 'neutral', 'themeVariables': { 'primaryColor': '#333333', 'primaryTextColor': '#333333', 'primaryBorderColor': '#333333', 'lineColor': '#333333', 'secondaryColor': '#666666', 'tertiaryColor': '#999999', 'clusterBkg': '#eeeeee', 'clusterBorder': '#aaaaaa', 'fontSize': '16px'}}}%%
+
 graph TD
     %% Nodes
     A[("Input")]
