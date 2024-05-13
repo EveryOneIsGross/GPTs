@@ -20,6 +20,14 @@ graph TD
     A <--High--> F(Assign Edge Weights)
     A <--High--> G(Translate to Python Matplotlib Visualization)
     A <--Medium--> H(Bold Thematic Formatting)
+    A <--> I1
+    A <--> I2
+    A <--> A1
+    A <--> A2
+    A <--> R1
+    A <--> R2
+    A <--> M1
+    A <--> M2
 
     B <--Medium--> C
     B <--Medium--> D
@@ -27,26 +35,83 @@ graph TD
     B <--High--> F
     B <--High--> G
     B <--Medium--> H
+    B <--> I1
+    B <--> I2
+    B <--> A1
+    B <--> A2
+    B <--> R1
+    B <--> R2
+    B <--> M1
+    B <--> M2
 
     C <--Medium--> D
     C <--Variable--> E
     C <--High--> F
     C <--High--> G
     C <--Medium--> H
+    C <--> I1
+    C <--> I2
+    C <--> A1
+    C <--> A2
+    C <--> R1
+    C <--> R2
+    C <--> M1
+    C <--> M2
 
     D <--Variable--> E
     D <--High--> F
     D <--High--> G
     D <--Medium--> H
+    D <--> I1
+    D <--> I2
+    D <--> A1
+    D <--> A2
+    D <--> R1
+    D <--> R2
+    D <--> M1
+    D <--> M2
 
     E <--High--> F
     E <--High--> G
     E <--Medium--> H
+    E <--> I1
+    E <--> I2
+    E <--> A1
+    E <--> A2
+    E <--> R1
+    E <--> R2
+    E <--> M1
+    E <--> M2
 
     F <--High--> G
     F <--Medium--> H
+    F <--> I1
+    F <--> I2
+    F <--> A1
+    F <--> A2
+    F <--> R1
+    F <--> R2
+    F <--> M1
+    F <--> M2
 
     G <--Medium--> H
+    G <--> I1
+    G <--> I2
+    G <--> A1
+    G <--> A2
+    G <--> R1
+    G <--> R2
+    G <--> M1
+    G <--> M2
+
+    H <--> I1
+    H <--> I2
+    H <--> A1
+    H <--> A2
+    H <--> R1
+    H <--> R2
+    H <--> M1
+    H <--> M2
     
     subgraph Insights
         I1[Understanding of Corporate Dynamics]
@@ -67,5 +132,7 @@ graph TD
         M1["Exploit with Precision"]
         M2["Visualize to Realize"]
     end
+    
+
 
 ```
