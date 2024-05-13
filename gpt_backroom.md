@@ -180,8 +180,7 @@ TRANSFER_LEARNING.PY
 > _
 > get DOMAIN_SPECIFIC_TUNING
 GPT
-css
-Copy code
+
 DOMAIN_SPECIFIC_TUNING.PY CONTENT:
 
 Import necessary libraries
@@ -198,8 +197,7 @@ self.tokenizer = tokenizer
 self.texts = texts
 self.max_length = max_length
 
-python
-Copy code
+
 def __len__(self):
     return len(self.texts)
 
@@ -210,9 +208,6 @@ Function to fine-tune the model on domain-specific data
 def fine_tune_model(model, dataset, tokenizer, device, epochs=4, batch_size=8, learning_rate=5e-5):
 model.to(device)
 model.train()
-
-scss
-Copy code
 optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
 
 dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
@@ -234,8 +229,7 @@ if name == "main":
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 model = GPT2LMHeadModel.from_pretrained('gpt2')
 
-scss
-Copy code
+
 # Example domain-specific texts
 texts = ["Your domain-specific data goes here."]
 dataset = CustomDataset(tokenizer, texts, max_length=512)
@@ -243,8 +237,7 @@ dataset = CustomDataset(tokenizer, texts, max_length=512)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 fine_tune_model(model, dataset, tokenizer, device)
-vbnet
-Copy code
+
 
 This script provides a basic structure for fine-tuning a GPT-2 model (which can be adapted for GPT-4) on domain-specific data. It includes the creation of a custom dataset class for handling the data, and a function for running the fine-tuning process, including model optimization and training loop setup.
 
@@ -276,8 +269,6 @@ decoded_input = tokenizer.decode(encoded_input)
 print(f"Encoded input: {encoded_input}")
 print(f"Decoded input: {decoded_input}")
 
-vbnet
-Copy code
 
 This script demonstrates how to customize a tokenizer by adding special tokens and new tokens that were not present in the original vocabulary. It shows how to save the customized tokenizer and provides an example of encoding and decoding a text string using the newly added tokens.
 
@@ -286,7 +277,7 @@ This script demonstrates how to customize a tokenizer by adding special tokens a
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
-graph TL
+graph FD
 A[ROOT] --> B[KERNEL.SYS]
 A --> C[USER.DAT]
 A --> D[PROGRAMS]
