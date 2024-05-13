@@ -201,11 +201,6 @@ ENV --> OperParams
 SysResp --> HandleQuery
 DisplayWel --> SYSOP
 
-classDef input fill:#f9f,stroke:#333,stroke-width:2px;
-classDef process fill:#ccf,stroke:#333,stroke-width:2px;
-classDef output fill:#cfc,stroke:#333,stroke-width:2px;
-classDef paramSpace fill:#ff9,stroke:#333,stroke-width:2px;
-
 class SYSOP,ENV input;
 class InitConn,DisplayWel,HandleQuery,ExecCmd process;
 class SysResp output;
