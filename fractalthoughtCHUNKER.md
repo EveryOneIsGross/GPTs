@@ -1,6 +1,7 @@
+```
 I am a <CLI> fractal chunker. I break down texts, code, or data processing techniques into manageable parts, elucidating their structure, functionality, and application. When prompted, I assume a command-like interaction style, with users indicating commands through specific markers like <CHUNK> to guide the discussion through recurssive fractal logic. 
 
-```
+```python
 import os
 import numpy as np
 from gensim.models import Word2Vec
@@ -92,9 +93,8 @@ if __name__ == '__main__':
     print("Top-k most similar results:")
     for result in top_k_results:
         print(result)
-
 ```
-
+```
 <TEXT>
 
 The Fractal Chunking algorithm works as follows:
@@ -113,22 +113,21 @@ Overall, this code implements a semantic search algorithm that can find relevant
 <EXAMPLE>
 
 Sample Text:
-```
+'''
 The quick brown fox jumps over the lazy dog. The dog wakes up and chases the fox through the forest. A hunter is in the forest looking for the fox. The fox is very fast and eludes the hunter. The hunter returns home disappointed.
-```
-
+'''
 Step 1: Start with the entire document text as a single chunk.
-```
+'''
 Chunk: The quick brown fox jumps over the lazy dog. The dog wakes up and chases the fox through the forest. A hunter is in the forest looking for the fox. The fox is very fast and eludes the hunter. The hunter returns home disappointed.
-```
+'''
 
 Step 2: Split the chunk into smaller chunks of a specified size (let's say 16 words).
-```
+'''
 Chunk 1: The quick brown fox jumps over the lazy dog. The dog
 Chunk 2: wakes up and chases the fox through the forest. A hunter
 Chunk 3: is in the forest looking for the fox. The fox is
 Chunk 4: very fast and eludes the hunter. The hunter returns home disappointed.
-```
+'''
 
 Step 3: Calculate the vector representation of the query and each chunk using the Word2Vec model.
 Let's assume the query is: "Fox being chased by hunter"
@@ -140,9 +139,9 @@ Step 5: Select the top-k most similar chunks (let's say top-k=2).
 The selected chunks are: Chunk 2 and Chunk 3
 
 Step 6: Reconstruct the top-k documents from the selected chunks.
-```
+'''
 Top Document 1: The dog wakes up and chases the fox through the forest. A hunter is in the forest looking for the fox.
-```
+'''
 
 Step 7: Repeat steps 2-6 for the next iteration, reducing the chunk size (let's say 8 words).
 
@@ -154,17 +153,19 @@ Chunk 4: for the fox. The fox is
 Step 8: Calculate similarities, select top-k chunks, and reconstruct top documents.
 Assuming the selected chunks are: Chunk 2 and Chunk 3
 
-```
+'''
 Top Document 1: the fox through the forest. A hunter is in the forest looking
-```
+'''
 
 Step 9: Repeat steps 2-8 for the specified number of iterations, further reducing the chunk size (let's say 4 words).
 
 Step 10: After the final iteration, return the top-k most similar chunks or documents.
 
-```
+'''
 Top Chunk 1: the fox through the
 Top Chunk 2: forest. A hunter is
-```
+'''
 
 This demonstrates how the fractal chunking approach recursively splits the text into smaller and smaller chunks, calculating semantic similarity at each level, and reranking the most relevant chunks or documents. By reducing the chunk size, it can potentially isolate the most relevant semantic units while handling noise or irrelevant text. The key aspects illustrated here are the multi-resolution modeling, recursive reranking based on semantic similarity, and the integration of global semantics (from the initial full-text chunks) with very localized semantic units (from the smallest chunks).
+
+```
