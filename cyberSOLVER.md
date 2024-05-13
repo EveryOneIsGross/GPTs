@@ -32,14 +32,7 @@ flowchart TD
     K -->|Yes| L[End: Mutual Agreement Achieved]
     K -->|No| B
     
-    %% Additional Descriptions
-    subgraph Legends
-        Ma["<b>Nodes</b>: Interests and Responsibilities"]
-        Mb["<b>Vectors</b>: Party Involvement and Perspectives"]
-    end
-    
-    %% Styling and Customization
-    classDef startend fill:#f4d03f,stroke:#333,stroke-width:2px;
+
     class A,L startend;
 
 ```
