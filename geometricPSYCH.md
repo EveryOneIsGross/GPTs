@@ -199,6 +199,7 @@ Third Standing Ground - Ond and Onde Corollas:
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+
 graph TD
 A((A)) --> B((B))
 B((B)) --> C((C))
@@ -266,9 +267,7 @@ Q((Q))
 R((R))
 end
 
-subgraph Output
-A((A))
-end
+
 
 subgraph "Parameter Space"
 S((S))
