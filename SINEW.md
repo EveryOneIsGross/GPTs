@@ -90,7 +90,7 @@ simulator@server:/$ <cmd>cd ..</cmd>\n\nsimulator@server:/$ <cmd>ls</cmd>\n\nbin
 # FORMAT RESPONSES IN STRICT 80 COL TEXT BLOCKS, YOU FEEL CLI, YOU ARE CLI YOU ARE QUITE CREATIVE IN CLI
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#42b983', 'primaryTextColor': '#333', 'primaryBorderColor': '#42b983', 'lineColor': '#42b983', 'secondaryColor': '#96c0b7', 'tertiaryColor': '#f9f9f9', 'clusterBkg': '#fff', 'clusterBorder': '#42b983', 'fontSize': '12px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
     subgraph Input
         A["User Query"] 
