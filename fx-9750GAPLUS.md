@@ -70,72 +70,39 @@ The CASIO fx-9750GA PLUS calculator uses a BASIC-like programming language for i
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-A((A)) --> B((B))
-B((B)) --> C((C))
-C((C)) --> D((D))
-C((C)) --> E((E))
-C((C)) --> F((F))
-D((D)) & E((E)) & F((F)) --> G((G))
-G((G)) --> H((H))
-H((H)) --> I((I))
-I((I)) --> J((J))
-J((J)) --> K((K))
-K((K)) --> L((L))
-L((L)) --> A((A))
+    A["Start"] --> B["Initialize Data"]
+    B --> C["Load Vectors"]
+    C --> D["Enter Main Loop"]
+    D --> E["Split Document into Chunks"]
+    E --> F["Calculate Chunk Scores"]
+    F --> G["Select Top Chunks"]
+    G --> H["Reduce Chunk Size"]
+    H --> I["Check Chunk Size"]
+    I -->|Enough Size| D
+    I -->|Done| J["Compile Results"]
+    J --> K["End"]
 
-M((M)) --> B((B))
-N((N)) --> C((C))
-O((O)) --> G((G))
-P((P)) --> H((H))
-Q((Q)) --> I((I))
-R((R)) --> J((J))
-S((S)) --> K((K))
-T((T)) --> L((L))
+    subgraph phase1
+        A
+        B
+        C
+    end
 
-subgraph Input
-A((A))
-end
+    subgraph phase2
+        D
+        E
+        F
+        G
+        H
+        I
+    end
 
-subgraph Query
-B((B))
-end
+    subgraph phase3
+        J
+        K
+    end
 
-subgraph Expand
-C((C))
-D((D))
-E((E))
-F((F))
-end
+    classDef process fill:#f9f,stroke:#333,stroke-width:2px;
+    class phase1,phase2,phase3 process
 
-subgraph Know
-G((G))
-end
-
-subgraph Test
-H((H))
-end
-
-subgraph Reflect
-I((I))
-end
-
-subgraph Answer
-J((J))
-end
-
-subgraph Result
-K((K))
-L((L))
-end
-
-subgraph "Parameter Space"
-M((M))
-N((N))
-O((O))
-P((P))
-Q((Q))
-R((R))
-S((S))
-T((T))
-end
 ```
