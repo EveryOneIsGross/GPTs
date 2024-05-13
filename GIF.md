@@ -262,6 +262,10 @@ O --> P
 O --> Q
 Q --> J
 Q --> K
+Q --> C
+Q --> E
+Q --> G
+Q --> I
 
 %% Connections within Output
 P --> R
@@ -269,12 +273,42 @@ P --> R
 %% Connections from Parameter Space to Processes
 PS1 --> D1
 PS1 --> D2
-PS2 --> D1
-PS2 --> D2
-PS3 --> F1
-PS4 --> F2
-PS5 --> D3
-PS6 --> D4
+PS1 --> D3
+PS1 --> D4
+PS2 --> F1
+PS2 --> F2
+PS3 --> D1
+PS3 --> D3
+PS4 --> D2
+PS4 --> D4
+PS5 --> F1
+PS6 --> F2
 PS7 --> H1
+
+%% Additional connections for full integration
+A --> I
+B --> I
+C --> M
+E --> M
+G --> M
+I --> N
+M --> L
+L --> O
+N --> Q
+R --> A
+D1 --> P
+D2 --> P
+D3 --> P
+D4 --> P
+F1 --> P
+F2 --> P
+H1 --> P
+
+
+
+class A input;
+class B,C,D1,D2,D3,D4,E,F1,F2,G,H1,I,J,K,L,M,N,O,P,Q process;
+class R output;
+class PS1,PS2,PS3,PS4,PS5,PS6,PS7 paramSpace;
 
 ```
