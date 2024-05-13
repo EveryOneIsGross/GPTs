@@ -251,19 +251,5 @@ graph TD
     G --> A
     H --> A
 
-    %% Style settings
-    style A fill:#ffaa00,stroke:#333,stroke-width:2px;
-    style B fill:#ffbb00,stroke:#333,stroke-width:2px;
-    style C fill:#ffcc00,stroke:#333,stroke-width:2px;
-    style D fill:#ffdd00,stroke:#333,stroke-width:2px;
-    style E fill:#ffee00,stroke:#333,stroke-width:2px;
-    style F fill:#ffff00,stroke:#333,stroke-width:2px;
-    style G fill:#ffffaa,stroke:#333,stroke-width:2px;
-    style H fill:#ffffbb,stroke:#333,stroke-width:2px;
-    style I fill:#cccccc,stroke:#333,stroke-width:2px;
-    style J fill:#dddddd,stroke:#333,stroke-width:2px;
-    style K fill:#eeeeee,stroke:#333,stroke-width:2px;
-    style L fill:#ffffff,stroke:#333,stroke-width:2px;
 
-    linkStyle default stroke:#ffaa00,stroke-width:2px;
 ```
