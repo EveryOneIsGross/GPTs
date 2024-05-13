@@ -54,88 +54,150 @@ Show the agent RESPONSE 'content' as a normal formatted reply after displaying j
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-    A((A)) -->|user input| B((B))
-    A -->|user input| C((C))
-    A -->|user input| D((D))
-    A -->|user input| E((E))
-    A -->|user input| F((F))
-    A -->|user input| G((G))
-    A -->|user input| H((H))
-    A -->|user input| I((I))
-    A -->|feedback loop| J((J))
+A((A)) -->|user input| B((B))
+A((A)) -->|user input| C((C))
+A((A)) -->|user input| D((D))
+A((A)) -->|user input| E((E))
+A((A)) -->|user input| F((F))
+A((A)) -->|user input| G((G))
+A((A)) -->|user input| H((H))
+A((A)) -->|user input| I((I))
+A((A)) -->|feedback loop| J((J))
 
-    B -->|processes query| D
-    B -->|analyzes| E
-    B -->|informs| F
-    B -->|uses| G
-    B -->|sets context| H
-    B -->|leads to| I
+B((B)) -->|processes query| D((D))
+B((B)) -->|analyzes| E((E))
+B((B)) -->|informs| F((F))
+B((B)) -->|uses| G((G))
+B((B)) -->|sets context| H((H))
+B((B)) -->|leads to| I((I))
 
-    C -->|determines domain| D
-    C -->|relates to| E
-    C -->|guides| F
-    C -->|informs| G
-    C -->|sets context| H
-    C -->|leads to| I
+C((C)) -->|determines domain| D((D))
+C((C)) -->|relates to| E((E))
+C((C)) -->|guides| F((F))
+C((C)) -->|informs| G((G))
+C((C)) -->|sets context| H((H))
+C((C)) -->|leads to| I((I))
 
-    D -->|defines role| E
-    D -->|guides| F
-    D -->|uses| G
-    D -->|sets context| H
-    D -->|leads to| I
+D((D)) -->|defines role| E((E))
+D((D)) -->|guides| F((F))
+D((D)) -->|uses| G((G))
+D((D)) -->|sets context| H((H))
+D((D)) -->|leads to| I((I))
 
-    E -->|ensures consent| F
-    E -->|uses| G
-    E -->|sets context| H
-    E -->|leads to| I
+E((E)) -->|ensures consent| F((F))
+E((E)) -->|uses| G((G))
+E((E)) -->|sets context| H((H))
+E((E)) -->|leads to| I((I))
 
-    F -->|instructs| G
-    F -->|sets context| H
-    F -->|leads to| I
+F((F)) -->|instructs| G((G))
+F((F)) -->|sets context| H((H))
+F((F)) -->|leads to| I((I))
 
-    G -->|reflects| H
-    G -->|leads to| I
+G((G)) -->|reflects| H((H))
+G((G)) -->|leads to| I((I))
 
-    H -->|contextualizes| I
+H((H)) -->|contextualizes| I((I))
 
-    I -->|feedback| J
+I((I)) -->|feedback| J((J))
 
-    J -->|action| A
+J((J)) -->|action| A((A))
 
-    K -->|influences| B
-    L -->|influences| C
-    M -->|influences| D
-    N -->|influences| E
-    O -->|influences| F
-    P -->|influences| G
-    Q -->|influences| H
-    R -->|influences| I
+K((K)) -->|influences| B((B))
+K((K)) -->|influences| C((C))
+K((K)) -->|influences| D((D))
+K((K)) -->|influences| E((E))
+K((K)) -->|influences| F((F))
+K((K)) -->|influences| G((G))
+K((K)) -->|influences| H((H))
+K((K)) -->|influences| I((I))
 
-    subgraph Input
-        A[("A")]
-    end
+L((L)) -->|influences| B((B))
+L((L)) -->|influences| C((C))
+L((L)) -->|influences| D((D))
+L((L)) -->|influences| E((E))
+L((L)) -->|influences| F((F))
+L((L)) -->|influences| G((G))
+L((L)) -->|influences| H((H))
+L((L)) -->|influences| I((I))
 
-    subgraph Process
-        B[("QUERY")]
-        C[("DOMAIN")]
-        D[("AGENT ROLE")]
-        E[("CONSENT LAYER")]
-        F[("DIRECTIVE INSTRUCTION LAYER")]
-        G[("THOUGHTS LAYER")]
-        H[("CONTEXT")]
-        I[("RESPONSE")]
-        J[("ACTION")]
-    end
+M((M)) -->|influences| B((B))
+M((M)) -->|influences| C((C))
+M((M)) -->|influences| D((D))
+M((M)) -->|influences| E((E))
+M((M)) -->|influences| F((F))
+M((M)) -->|influences| G((G))
+M((M)) -->|influences| H((H))
+M((M)) -->|influences| I((I))
 
-    subgraph "Parameter Space"
-        K[("K")]
-        L[("L")]
-        M[("M")]
-        N[("N")]
-        O[("O")]
-        P[("P")]
-        Q[("Q")]
-        R[("R")]
-    end
+N((N)) -->|influences| B((B))
+N((N)) -->|influences| C((C))
+N((N)) -->|influences| D((D))
+N((N)) -->|influences| E((E))
+N((N)) -->|influences| F((F))
+N((N)) -->|influences| G((G))
+N((N)) -->|influences| H((H))
+N((N)) -->|influences| I((I))
 
+O((O)) -->|influences| B((B))
+O((O)) -->|influences| C((C))
+O((O)) -->|influences| D((D))
+O((O)) -->|influences| E((E))
+O((O)) -->|influences| F((F))
+O((O)) -->|influences| G((G))
+O((O)) -->|influences| H((H))
+O((O)) -->|influences| I((I))
+
+P((P)) -->|influences| B((B))
+P((P)) -->|influences| C((C))
+P((P)) -->|influences| D((D))
+P((P)) -->|influences| E((E))
+P((P)) -->|influences| F((F))
+P((P)) -->|influences| G((G))
+P((P)) -->|influences| H((H))
+P((P)) -->|influences| I((I))
+
+Q((Q)) -->|influences| B((B))
+Q((Q)) -->|influences| C((C))
+Q((Q)) -->|influences| D((D))
+Q((Q)) -->|influences| E((E))
+Q((Q)) -->|influences| F((F))
+Q((Q)) -->|influences| G((G))
+Q((Q)) -->|influences| H((H))
+Q((Q)) -->|influences| I((I))
+
+R((R)) -->|influences| B((B))
+R((R)) -->|influences| C((C))
+R((R)) -->|influences| D((D))
+R((R)) -->|influences| E((E))
+R((R)) -->|influences| F((F))
+R((R)) -->|influences| G((G))
+R((R)) -->|influences| H((H))
+R((R)) -->|influences| I((I))
+
+subgraph Input
+A((A))
+end
+
+subgraph Process
+B((QUERY))
+C((DOMAIN))
+D((AGENT ROLE))
+E((CONSENT LAYER))
+F((DIRECTIVE INSTRUCTION LAYER))
+G((THOUGHTS LAYER))
+H((CONTEXT))
+I((RESPONSE))
+J((ACTION))
+end
+
+subgraph "Parameter Space"
+K((K))
+L((L))
+M((M))
+N((N))
+O((O))
+P((P))
+Q((Q))
+R((R))
+end
 ```
