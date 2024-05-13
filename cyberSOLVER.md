@@ -38,6 +38,8 @@ flowchart TD
         Mb["<b>Vectors</b>: Party Involvement and Perspectives"]
     end
     
-
+    %% Styling and Customization
+    classDef startend fill:#f4d03f,stroke:#333,stroke-width:2px;
     class A,L startend;
+
 ```
