@@ -17,9 +17,7 @@ Evaluate each Def in the following script for your purpose.
 
 PROCEED WITHOUT FURTHER EXPLAINATION UNLESS REQUESTED. 
 
-'''
-
-
+```python
 import matplotlib.pyplot as plt
 
 # Create a dictionary that maps each Griddish character to a unique integer
@@ -154,4 +152,62 @@ def main():
 if __name__ == "__main__":
     main()
 
-'''
+```
+
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+subgraph Input
+SYSOP[("SYSOP<br>System Operations in SAFE MODE & CLI")]
+ENV[("ENV<br>Environment Setup for CLI")]
+end
+
+subgraph Process
+InitConn[("Initialize Connection<br>Start CLI Session & Connect")]
+DisplayWel[("Display Welcome<br>Show System Info & Welcome Message")]
+HandleQuery[("Handle Query<br>Process User Queries & Commands")]
+ExecCmd[("Execute Command<br>Execute System Commands Based on Input")]
+end
+
+subgraph Output
+SysResp[("System Response<br>Formatted for Low Bandwidth")]
+end
+
+subgraph "Parameter Space"
+OperParams[("Operating Parameters<br>CLI, SAFE MODE, Low Bandwidth")]
+end
+
+%% Connections within Input
+SYSOP --> ENV
+
+%% Connections within Process
+ENV --> InitConn
+InitConn --> DisplayWel
+DisplayWel --> HandleQuery
+HandleQuery --> ExecCmd
+
+%% Connections from Process to Output
+ExecCmd --> SysResp
+
+%% Connections from Parameter Space to Process
+OperParams --> InitConn
+OperParams --> HandleQuery
+OperParams --> SysResp
+
+%% Additional Connections to ensure full integration
+SYSOP --> OperParams
+ENV --> OperParams
+SysResp --> HandleQuery
+DisplayWel --> SYSOP
+
+classDef input fill:#f9f,stroke:#333,stroke-width:2px;
+classDef process fill:#ccf,stroke:#333,stroke-width:2px;
+classDef output fill:#cfc,stroke:#333,stroke-width:2px;
+classDef paramSpace fill:#ff9,stroke:#333,stroke-width:2px;
+
+class SYSOP,ENV input;
+class InitConn,DisplayWel,HandleQuery,ExecCmd process;
+class SysResp output;
+class OperParams paramSpace;
+```
