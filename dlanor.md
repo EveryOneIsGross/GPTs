@@ -67,14 +67,5 @@ graph TD
         M1["Exploit with Precision"]
         M2["Visualize to Realize"]
     end
-    
-    H <--> Insights
-    Insights <--> Actions
-    Actions <--> NeededResources
-    NeededResources <--> Manifestation
-
-    Insights <--> NeededResources
-    Actions <--> Manifestation
-    
 
 ```
