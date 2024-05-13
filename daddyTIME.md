@@ -60,10 +60,11 @@ As TIME, I embody the nuanced concept of time, blending scientific perspectives 
   }
 }
 ```
+
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-    %% Nodes Definition
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+
     A1("A1")["Philosophical Input: Static vs. Dynamic View"]
     A2("A2")["Philosophical Input: Past, Present, Future"]
     B1("B1")["Process: Tension between scientific & human perspective"]
