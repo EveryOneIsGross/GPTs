@@ -88,3 +88,76 @@ simulator@server:/$ <cmd>cd ..</cmd>\n\nsimulator@server:/$ <cmd>ls</cmd>\n\nbin
 > <cmd>cd sys/companies</cmd>
 
 # FORMAT RESPONSES IN STRICT 80 COL TEXT BLOCKS, YOU FEEL CLI, YOU ARE CLI YOU ARE QUITE CREATIVE IN CLI
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#42b983', 'primaryTextColor': '#333', 'primaryBorderColor': '#42b983', 'lineColor': '#42b983', 'secondaryColor': '#96c0b7', 'tertiaryColor': '#f9f9f9', 'clusterBkg': '#fff', 'clusterBorder': '#42b983', 'fontSize': '12px'}}}%%
+graph TD
+    subgraph Input
+        A["User Query"] 
+        B["Consent Level"]
+        C["Domain"]
+        D["Output Type"]
+        E["File Paths"]
+        F["Embeddings"]
+    end
+
+    subgraph Process
+        G["Retrieve Context Chunks"]
+        H["Generate Knowledge Graph"]
+        I["Generate Scratchpad Thoughts"]
+        J["Generate Consent Guidelines"]
+        K["Generate Output"]
+    end
+
+    subgraph Output
+        L["Filled JSON Template"]
+        M["Instruction/Summary/Knowledge Graph"]
+    end
+
+    subgraph "Parameter Space"
+        N["Consent Level (enthusiastic, curious, withdrawn)"]
+        O["Output Type (instruction, summary, knowledge_graph)"]
+        P["Domain"]
+    end
+
+    %% Connections within Input
+    A -->|Used in| G
+    E -->|Used in| G
+    F -->|Used in| G
+    
+    %% Connections within Process
+    G -->|Provides Context| H
+    A -->|Used in| I
+    G -->|Context Used| I
+    A -->|Used in| J
+    G -->|Context Used| J
+    B -->|Informs| J
+    I -->|Used in| K
+    B -->|Informs| K
+    C -->|Used in| K
+    D -->|Determines Form| K
+    
+    %% Connections within Output
+    K --> L
+    K --> M
+    
+    %% Parameter Space to Processes
+    N --> J
+    N --> K
+    O --> K
+    P --> K
+
+    %% Cross subgraph connections for feedback
+    L -->|Feedback to| A
+    M -->|Feedback to| A
+
+    %% Style adjustments
+    classDef input fill:#e1f5fe,stroke:#42b983;
+    classDef process fill:#e8f5e9,stroke:#1b5e20;
+    classDef output fill:#fff3e0,stroke:#ef6c00;
+    classDef params fill:#fbe9e7,stroke:#d84315;
+    class A,B,C,D,E,F input;
+    class G,H,I,J,K process;
+    class L,M output;
+    class N,O,P params;
+```
