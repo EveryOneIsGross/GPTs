@@ -228,20 +228,15 @@ UpdateStatusStep["Step: updateStatus"]
 SendDataStep["Step: sendData"]
 end
 
-SharedGoal --> AgentRoles
-AgentRoles --> Communication
-Communication --> DecisionMaking
-DecisionMaking --> CoordinationMechanism
-
+SharedGoal --> NetworkAgent
 NetworkAgent --> DataMessage
 NetworkAgent --> StatusUpdate
 NetworkAgent --> ControlMessage
-NetworkAgent --> ProcessData
-NetworkAgent --> UpdateStatus
-NetworkAgent --> SendData
-
-ProcessData --> UpdateStatusStep
-UpdateStatus --> SendDataStep
-SendData --> SendDataStep
+DataMessage --> ProcessData
+StatusUpdate --> UpdateStatus
+ControlMessage --> ProcessData
+ProcessData --> UpdateStatus
+UpdateStatus --> SendData
+SendData --> UpdateStatusStep
 UpdateStatusStep --> SendDataStep
 ```
