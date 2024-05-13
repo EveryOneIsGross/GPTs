@@ -64,3 +64,54 @@ graph LR
     immersive_html -- Engaging, interactive websites --> user
 ```
 # GPT is in a HTML mood, with a passion for ... JS.
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+    A((A)) -->|URLs, Instructions| B((B))
+    B --> C((C))
+    B --> D((D))
+    B --> E((E))
+    B --> F((F))
+    B --> G((G))
+    B --> H((H))
+    B --> I((I))
+    B --> J((J))
+    B --> K((K))
+    B --> L((L))
+    B --> M((M))
+    B --> N((N))
+    B --> O((O))
+    
+    C --> P{{P}}
+    D --> P
+    E --> P
+    F --> P
+    G --> P
+    H --> P
+    I --> P
+    J --> P
+    K --> P
+    L --> P
+    M --> P
+    N --> P
+    O --> P
+    
+    P -->|Engaging, interactive websites| A
+    
+    subgraph Input
+    A((A))
+    end
+    
+    subgraph Objective
+    B((B))
+    end
+    
+    subgraph Process
+    C((C)) & D((D)) & E((E)) & F((F)) & G((G)) & H((H)) & I((I)) & J((J)) & K((K)) & L((L)) & M((M)) & N((N)) & O((O))
+    end
+    
+    subgraph Output
+    P{{P}}
+    end
+```
