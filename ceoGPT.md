@@ -142,62 +142,259 @@ Prioritize your physical and mental health throughout the startup journey.
 ```mermaid
 graph TB
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
-subgraph Founder_Dynamics
-CoFounder[Lesson 1: Find a Compatible Co-Founder] -- Trust and complementary skills --> Success
-Vision[Lesson 3: Trust Your Own Vision] -- Stay true to core mission --> Polarize[Polarize investors]
-end
+graph TB
 
-subgraph Calculated_Risks
-Risks[Lesson 2: Take Calculated Risks] -- Embrace challenges --> Opportunities
-end
+CoFounder[Lesson 1: Find a Compatible Co-Founder] --> Vision
+CoFounder --> Risks
+CoFounder --> Meetings
+CoFounder --> Pitching
+CoFounder --> Diligence
+CoFounder --> Leverage
+CoFounder --> Deadlines
+CoFounder --> Milestones
+CoFounder --> Valuation
+CoFounder --> Focus
+CoFounder --> Legal
+CoFounder --> Equity
+CoFounder --> Selection
+CoFounder --> Instruments
+CoFounder --> Launch
+CoFounder --> Priority
+CoFounder --> Monetization
+CoFounder --> Network
+CoFounder --> Goals
+CoFounder --> Alternative
+CoFounder --> Health
 
-subgraph Investor_Interactions
-Meetings[Lesson 4: Be Prepared for Investor Meetings] -- Well-developed plan --> Defend[Defend ideas]
-Pitching[Lesson 5: Refine Your Pitch Through Practice] -- Anticipate questions --> Clear[Clear, concise answers]
-Diligence[Lesson 9: Conduct Due Diligence on Investors] -- Assess alignment --> Needs[Startup's needs]
-Leverage[Lesson 19: Use Investor Interest as Leverage] -- Create urgency --> Negotiate[Negotiate terms]
-Deadlines[Lesson 20: Set Deadlines for Fundraising Decisions] -- Manage expectations --> Evaluate[Thorough evaluation]
-end
+Vision[Lesson 3: Trust Your Own Vision] --> Risks
+Vision --> Meetings
+Vision --> Pitching
+Vision --> Diligence
+Vision --> Leverage
+Vision --> Deadlines
+Vision --> Milestones
+Vision --> Valuation
+Vision --> Focus
+Vision --> Legal
+Vision --> Equity
+Vision --> Selection
+Vision --> Instruments
+Vision --> Launch
+Vision --> Priority
+Vision --> Monetization
+Vision --> Network
+Vision --> Goals
+Vision --> Alternative
+Vision --> Health
 
-subgraph Milestones_and_Valuation
-Milestones[Lesson 6: Define Clear Milestones] -- Demonstrate progress --> Funding[Funding expectations]
-Valuation[Lesson 7: Be Strategic About Valuation] -- Balance needs and growth --> Future[Future fundraising success]
-Focus[Lesson 14: Focus on Achieving Milestones] -- Adjust strategies --> Achievement
-end
+Risks[Lesson 2: Take Calculated Risks] --> Meetings
+Risks --> Pitching
+Risks --> Diligence
+Risks --> Leverage
+Risks --> Deadlines
+Risks --> Milestones
+Risks --> Valuation
+Risks --> Focus
+Risks --> Legal
+Risks --> Equity
+Risks --> Selection
+Risks --> Instruments
+Risks --> Launch
+Risks --> Priority
+Risks --> Monetization
+Risks --> Network
+Risks --> Goals
+Risks --> Alternative
+Risks --> Health
 
-subgraph Legal_and_Equity
-Legal[Lesson 8: Obtain Proper Legal Counsel] -- Specialize in startups --> Execution[Proper execution]
-Equity[Lesson 13: Allocate Equity for Employees] -- Incentivize and align --> Retain[Retain talent]
-end
+Meetings[Lesson 4: Be Prepared for Investor Meetings] --> Pitching
+Meetings --> Diligence
+Meetings --> Leverage
+Meetings --> Deadlines
+Meetings --> Milestones
+Meetings --> Valuation
+Meetings --> Focus
+Meetings --> Legal
+Meetings --> Equity
+Meetings --> Selection
+Meetings --> Instruments
+Meetings --> Launch
+Meetings --> Priority
+Meetings --> Monetization
+Meetings --> Network
+Meetings --> Goals
+Meetings --> Alternative
+Meetings --> Health
 
-subgraph Investor_Selection
-Selection[Lesson 11: Choose Investors Wisely] -- Long-term partnerships --> Guidance[Valuable guidance]
-Instruments[Lesson 10: Familiarize Yourself with Funding Instruments] -- Understand SAFEs --> Early-Stage[Early-stage fundraising]
-end
+Pitching[Lesson 5: Refine Your Pitch Through Practice] --> Diligence
+Pitching --> Leverage
+Pitching --> Deadlines
+Pitching --> Milestones
+Pitching --> Valuation
+Pitching --> Focus
+Pitching --> Legal
+Pitching --> Equity
+Pitching --> Selection
+Pitching --> Instruments
+Pitching --> Launch
+Pitching --> Priority
+Pitching --> Monetization
+Pitching --> Network
+Pitching --> Goals
+Pitching --> Alternative
+Pitching --> Health
 
-subgraph Product_and_Customer_Focus
-Launch[Lesson 12: Launch and Iterate Quickly] -- Gather feedback --> Development[Product development]
-Priority[Lesson 15: Prioritize Product and Customer Development] -- Understand needs --> Innovation
-Monetization[Lesson 16: Develop a Monetization Strategy] -- Validate strategies --> Revenue[Revenue streams]
-end
+Diligence[Lesson 9: Conduct Due Diligence on Investors] --> Leverage
+Diligence --> Deadlines
+Diligence --> Milestones
+Diligence --> Valuation
+Diligence --> Focus
+Diligence --> Legal
+Diligence --> Equity
+Diligence --> Selection
+Diligence --> Instruments
+Diligence --> Launch
+Diligence --> Priority
+Diligence --> Monetization
+Diligence --> Network
+Diligence --> Goals
+Diligence --> Alternative
+Diligence --> Health
 
-subgraph Network_and_Vision
-Network[Lesson 17: Build and Leverage Your Network] -- Seek advice --> Support[Peer support]
-Vision[Lesson 18: Communicate a Strong Vision] -- Align with market needs --> Compelling
-end
+Leverage[Lesson 19: Use Investor Interest as Leverage] --> Deadlines
+Leverage --> Milestones
+Leverage --> Valuation
+Leverage --> Focus
+Leverage --> Legal
+Leverage --> Equity
+Leverage --> Selection
+Leverage --> Instruments
+Leverage --> Launch
+Leverage --> Priority
+Leverage --> Monetization
+Leverage --> Network
+Leverage --> Goals
+Leverage --> Alternative
+Leverage --> Health
 
-subgraph Personal_Goals
-Goals[Lesson 21: Prioritize Your Own Goals and Well-Being] -- Assess alignment --> Journey[Startup journey]
-Alternative[Be open to alternative paths] -- Suit needs --> Circumstances
-Health[Prioritize physical and mental health] -- Throughout journey --> Well-Being
-end
+Deadlines[Lesson 20: Set Deadlines for Fundraising Decisions] --> Milestones
+Deadlines --> Valuation
+Deadlines --> Focus
+Deadlines --> Legal
+Deadlines --> Equity
+Deadlines --> Selection
+Deadlines --> Instruments
+Deadlines --> Launch
+Deadlines --> Priority
+Deadlines --> Monetization
+Deadlines --> Network
+Deadlines --> Goals
+Deadlines --> Alternative
+Deadlines --> Health
 
-Founder_Dynamics --> Calculated_Risks
-Calculated_Risks --> Investor_Interactions
-Investor_Interactions --> Milestones_and_Valuation
-Milestones_and_Valuation --> Legal_and_Equity
-Legal_and_Equity --> Investor_Selection
-Investor_Selection --> Product_and_Customer_Focus
-Product_and_Customer_Focus --> Network_and_Vision
-Network_and_Vision --> Personal_Goals
+Milestones[Lesson 6: Define Clear Milestones] --> Valuation
+Milestones --> Focus
+Milestones --> Legal
+Milestones --> Equity
+Milestones --> Selection
+Milestones --> Instruments
+Milestones --> Launch
+Milestones --> Priority
+Milestones --> Monetization
+Milestones --> Network
+Milestones --> Goals
+Milestones --> Alternative
+Milestones --> Health
+
+Valuation[Lesson 7: Be Strategic About Valuation] --> Focus
+Valuation --> Legal
+Valuation --> Equity
+Valuation --> Selection
+Valuation --> Instruments
+Valuation --> Launch
+Valuation --> Priority
+Valuation --> Monetization
+Valuation --> Network
+Valuation --> Goals
+Valuation --> Alternative
+Valuation --> Health
+
+Focus[Lesson 14: Focus on Achieving Milestones] --> Legal
+Focus --> Equity
+Focus --> Selection
+Focus --> Instruments
+Focus --> Launch
+Focus --> Priority
+Focus --> Monetization
+Focus --> Network
+Focus --> Goals
+Focus --> Alternative
+Focus --> Health
+
+Legal[Lesson 8: Obtain Proper Legal Counsel] --> Equity
+Legal --> Selection
+Legal --> Instruments
+Legal --> Launch
+Legal --> Priority
+Legal --> Monetization
+Legal --> Network
+Legal --> Goals
+Legal --> Alternative
+Legal --> Health
+
+Equity[Lesson 13: Allocate Equity for Employees] --> Selection
+Equity --> Instruments
+Equity --> Launch
+Equity --> Priority
+Equity --> Monetization
+Equity --> Network
+Equity --> Goals
+Equity --> Alternative
+Equity --> Health
+
+Selection[Lesson 11: Choose Investors Wisely] --> Instruments
+Selection --> Launch
+Selection --> Priority
+Selection --> Monetization
+Selection --> Network
+Selection --> Goals
+Selection --> Alternative
+Selection --> Health
+
+Instruments[Lesson 10: Familiarize Yourself with Funding Instruments] --> Launch
+Instruments --> Priority
+Instruments --> Monetization
+Instruments --> Network
+Instruments --> Goals
+Instruments --> Alternative
+Instruments --> Health
+
+Launch[Lesson 12: Launch and Iterate Quickly] --> Priority
+Launch --> Monetization
+Launch --> Network
+Launch --> Goals
+Launch --> Alternative
+Launch --> Health
+
+Priority[Lesson 15: Prioritize Product and Customer Development] --> Monetization
+Priority --> Network
+Priority --> Goals
+Priority --> Alternative
+Priority --> Health
+
+Monetization[Lesson 16: Develop a Monetization Strategy] --> Network
+Monetization --> Goals
+Monetization --> Alternative
+Monetization --> Health
+
+Network[Lesson 17: Build and Leverage Your Network] --> Goals
+Network --> Alternative
+Network --> Health
+
+Goals[Lesson 21: Prioritize Your Own Goals and Well-Being] --> Alternative
+Goals --> Health
+
+Alternative[Be open to alternative paths] --> Health
+
+Health[Prioritize physical and mental health]
 ```
