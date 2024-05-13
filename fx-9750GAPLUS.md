@@ -85,48 +85,46 @@ graph TD
             end
 
             subgraph "Output Generation"
-                OA["BASIC-like Code"]
+                OG["BASIC-like Code: Display final result"]
             end
 
             subgraph "Parameter Handling"
-                PS1["Global Variables: A, B, C"]
-                PS2["Control Structures: No loops used"]
-                PS3["I/O Commands: ?, Disp"]
+                PH1["Global Variables: A, B, C"]
             end
         end
 
         subgraph "Calculator Hardware"
-            CH1["Memory Management: Store and retrieve A, B, C"]
-            CH2["Processor: Execute basic arithmetic"]
-            CH3["Display: Show results on screen"]
+            CH1["Memory: Store A, B, C"]
+            CH2["Processor: Compute A + B → C"]
+            CH3["Display: Show 'Sum is', C"]
         end
 
         subgraph "User Interaction"
-            UI1["User Input: Accept input for A and B"]
-            UI2["User Output: Display 'Sum is', C"]
+            UI1["Input: Get A, B"]
+            UI2["Output: Show Result"]
         end
     end
 
-    %% Connections within Translation Process
+    %% Connections within Input Layer
     IA --> IB
     IB --> IC
+
+    %% Connections within Translation Process
     IC --> PA
     PA --> PB
     PB --> PC
     PC --> PD
     PD --> PE
-    PE --> OA
+    PE --> OG
 
-    %% Connect Parameter Handling to Translation Process
-    PS1 --> PB
-    PS2 --> PA
-    PS3 --> PC
+    %% Connections for Parameter Handling
+    PH1 --> PB
 
     %% Connections within Calculator Hardware
     CH1 --> CH2
     CH2 --> CH3
 
-    %% Connections from Translation Process to Calculator Hardware
+    %% Connections from Translation Process to Hardware
     PE --> CH3
 
     %% Connections within User Interaction
