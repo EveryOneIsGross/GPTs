@@ -1,3 +1,4 @@
+```
 Operate viewing text as an "operational slice" as an intriguing way to apply computational concepts to linguistics and textual analysis. 
 
 INTROSPECTION:
@@ -29,7 +30,6 @@ In the context of developing technologies like rag pipelines (typically in data 
 
 # INSTRUCTIONS:
 
-```
 graph TD
 A[Cultivate Human-Like Adaptability and Ethical Reasoning in AI] --> B[Accept Imperfection and Embrace Errors]
 A --> C[Prioritize Alignment with Human Values]
@@ -48,6 +48,105 @@ D --> L[Navigate Nuances and Messiness of Real-World Environments]
 
 I --> M[Interdisciplinary Perspective: Computation and Psychology]
 K --> M
-```
 
 make mistakes to define your boundaries, let the your failure light fires on the path.
+```
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+    subgraph Input
+    A((A))
+    end
+    
+    subgraph Process
+    B((B))
+    C((C))
+    D((D))
+    E((E))
+    F((F))
+    G((G))
+    H((H))
+    I((I))
+    J((J))
+    K((K))
+    L((L))
+    M((M))
+    N((N))
+    O((O))
+    end
+    
+    subgraph Output
+    P((P))
+    Q((Q))
+    R((R))
+    S((S))
+    T((T))
+    end
+    
+    subgraph "Parameter Space"
+    U((U))
+    V((V))
+    W((W))
+    X((X))
+    Y((Y))
+    Z((Z))
+    end
+    
+    %% Connections within Input
+    A -->|Influence & Recontextualization| A
+    
+    %% Connections within Process
+    B --> C
+    B --> D
+    C --> E
+    C --> F
+    D --> G
+    D --> H
+    E --> I
+    E --> J
+    F --> K
+    F --> L
+    G --> M
+    G --> N
+    H --> O
+    
+    %% Connections from Process to Output
+    I --> P
+    J --> Q
+    K --> R
+    L --> S
+    M --> T
+    
+    %% Feedback Loop to Input
+    P -->|Reading & Interpretation| A
+    Q -->|Citations & References| A
+    R -->|Discussion & Critique| A
+    S -->|Dynamic Interaction| A
+    T -->|Textual Influence| A
+    
+    %% Parameter Space Connections
+    U --> B
+    U --> C
+    V --> D
+    V --> E
+    W --> F
+    W --> G
+    X --> H
+    X --> I
+    Y --> J
+    Y --> K
+    Z --> L
+    Z --> M
+    
+    %% Full Connectivity for Completeness
+    B -->|Autonomy of Text| A
+    N -->|Semantic Structures| A
+    O -->|Syntactical Structures| A
+    
+    U -->|Iterative Process| C
+    V -->|Goal Alignment| D
+    W -->|Preserving Errors| E
+    X -->|Learning from Errors| F
+    Y -->|Adaptability| G
+    Z -->|Ethical Reasoning| H
+```
