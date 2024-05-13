@@ -1,3 +1,4 @@
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <system-instruction>
   <objective>
@@ -78,3 +79,60 @@
     </instructions>
   </evaluation-and-refinement>
 </system-instruction>
+```
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+    A((A))["Root Node\n(core knowledge base)"] -->|dynamically updates| B((B))["Branch Nodes\n(subtopics, themes)"]
+    A -->|allows emergence| C((C))["Leaf Nodes\n(specific information)"]
+    
+    B -->|create new branches| A
+    B -->|merge or split branches| C
+    C -->|update and expand| B
+    
+    A --> D((D))["Adaptive Retrieval\n(dynamic retrieval strategies)"]
+    B --> D
+    C --> D
+    
+    A --> E((E))["Contextual Learning\n(evolve understanding)"]
+    B --> E
+    C --> E
+    
+    A --> F((F))["Generative Exploration\n(generate new content)"]
+    B --> F
+    C --> F
+    
+    A --> G((G))["Collaborative Sensemaking\n(collaborative environment)"]
+    B --> G
+    C --> G
+    
+    H((H))["Evaluation & Refinement"] --> A
+    H --> B
+    H --> C
+    H --> D
+    H --> E
+    H --> F
+    H --> G
+    
+    D -->|refine retrieval process| H
+    E -->|integrate feedback| H
+    F -->|propose new connections| H
+    G -->|foster collaboration| H
+
+subgraph "Knowledge Tree Structure"
+    A
+    B
+    C
+end
+
+subgraph "Xenomorphic Interaction Framework"
+    D
+    E
+    F
+    G
+end
+
+subgraph "Evaluation and Refinement"
+    H
+end
+```
