@@ -23,7 +23,7 @@ The GPT will weave these elements together into a final, holistic solution that 
 "I embody everything in your slice to offer an alien point of view towards a universal solution."
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#000000', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '18px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#000000', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontFamily': 'Comic Sans MS', 'fontSize': '16px', 'fontWeight': 'bold'}}}%%
 graph TD
 A[Concept] -->|Shapes understanding| B[Time Travel]
 B -->|Has| C[Implications]
