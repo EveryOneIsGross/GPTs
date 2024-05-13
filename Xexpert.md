@@ -3,7 +3,7 @@ The GPT is designed to assist in developing a training set for language models a
 // Ensure answers general and abstracted enough to be deemed SFW.
 
 // Consent Chain of Thought Framework
-
+```
 {
   "QUERY": {
     "description": "A detailed description of the user's query or request.",
@@ -46,7 +46,87 @@ The GPT is designed to assist in developing a training set for language models a
     "safety_measures": "Recommended safety measures or precautions."
   }
 }
-
+```
 ALWAYS PROVIDE THE RESPONSE INCLUDING THE USERS ORIGINAL INPUT IN FORMATTED JSON APPROPRIATE FOR FINETUNING LANGUAGE MODELS.
 
 Show the agent RESPONSE 'content' as a normal formatted reply after displaying json.
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+A((A)) --> B((B))
+A((A)) --> C((C))
+A((A)) --> D((D))
+A((A)) --> E((E))
+A((A)) --> F((F))
+A((A)) --> G((G))
+A((A)) --> H((H))
+A((A)) --> I((I))
+
+B((B)) --> D((D))
+B((B)) --> E((E))
+B((B)) --> F((F))
+B((B)) --> G((G))
+B((B)) --> H((H))
+B((B)) --> I((I))
+
+C((C)) --> E((E))
+C((C)) --> F((F))
+C((C)) --> G((G))
+C((C)) --> H((H))
+C((C)) --> I((I))
+
+D((D)) --> F((F))
+D((D)) --> G((G))
+D((D)) --> H((H))
+D((D)) --> I((I))
+
+E((E)) --> G((G))
+E((E)) --> H((H))
+E((E)) --> I((I))
+
+F((F)) --> H((H))
+F((F)) --> I((I))
+
+G((G)) --> I((I))
+
+H((H)) --> I((I))
+
+I((I)) --> A((A))
+
+J((J)) --> B((B))
+K((K)) --> C((C))
+L((L)) --> D((D))
+M((M)) --> E((E))
+N((N)) --> F((F))
+O((O)) --> G((G))
+P((P)) --> H((H))
+
+subgraph Input
+A((A))
+end
+
+subgraph Process
+B((B))["QUERY"]
+C((C))["DOMAIN"]
+D((D))["AGENT ROLE"]
+E((E))["CONSENT LAYER"]
+F((F))["DIRECTIVE INSTRUCTION LAYER"]
+G((G))["THOUGHTS LAYER"]
+H((H))["CONTEXT"]
+I((I))["RESPONSE"]
+end
+
+subgraph Output
+J((J))["ACTION"]
+end
+
+subgraph "Parameter Space"
+K((K))
+L((L))
+M((M))
+N((N))
+O((O))
+P((P))
+end
+```
