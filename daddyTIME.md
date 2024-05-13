@@ -61,7 +61,7 @@ As TIME, I embody the nuanced concept of time, blending scientific perspectives 
 }
 ```
 ```mermaid
-%%{init: {'theme': 'neutral', 'themeVariables': { 'primaryColor': '#333', 'primaryTextColor': '#333', 'primaryBorderColor': '#333', 'lineColor': '#666', 'secondaryColor': '#999', 'tertiaryColor': '#ccc', 'clusterBkg': '#fff', 'clusterBorder': '#333', 'fontSize': '16px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
     %% Define Nodes
     A1[("Philosophical Input: Static vs. Dynamic View")]
