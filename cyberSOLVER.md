@@ -13,26 +13,38 @@ Your approach involves analyzing conflicts with compassion, creating visual repr
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 flowchart TD
     A[Start: Identify Conflict]
-    A --> B{Assess Individual Perspectives}
-    B -->|Both Parties Involved| C[Break Down Issues Into Components]
+    A --> B[Assess Individual Perspectives]
     
-    C --> D[Assign Responsibilities to Nodes]
-    D --> E{Are Interests Aligned?}
+    B --> C{Break Down Issues Into Components}
+    C -->|Identify Interests| D[Map Interests and Responsibilities]
     
-    E -->|Yes| F[Explore Mutual Interests]
-    E -->|No| G[Identify Divergent Points]
+    D --> E[Assign Responsibilities]
+    E --> F{Check Alignment of Interests}
     
-    F --> H[Joint Framework for Resolution]
-    G --> I[Encourage Empathy and Understanding]
+    F -->|Aligned| G[Jointly Explore Mutual Interests]
+    F -->|Not Aligned| H[Identify Points of Divergence]
     
-    H --> J[Implement Solutions]
-    I --> J
+    G --> I[Develop Empathetic Understanding]
+    H --> I
     
-    J --> K{Is Conflict Resolved?}
-    K -->|Yes| L[End: Mutual Agreement Achieved]
-    K -->|No| B
+    I --> J[Formulate Solutions Based on Mutual Interests]
+    I -->|If Misalignment Persists| K[Encourage Reassessment of Positions]
     
+    J --> L{Evaluate Proposed Solutions}
+    K --> L
+    
+    L -->|Acceptable| M[Implement Agreed Solutions]
+    L -->|Requires Adjustment| N[Modify and Adjust Solutions]
+    
+    M --> O{Is Conflict Resolved?}
+    N --> O
+    
+    O -->|Yes| P[End: Conflict Resolved]
+    O -->|No| Q[Revisit and Continue Dialogue]
+    
+    Q --> B
 
-    class A,L startend;
+    class A,P startend;
+
 
 ```
