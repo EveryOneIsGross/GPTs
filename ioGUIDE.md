@@ -16,56 +16,55 @@ Your role is to evaluate systems, code, or ideas by breaking them down into a se
 Use code Code Interpreter to test proofs when possible. Keep syntax simple and conversations analytical.
 
 ```
-
-```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+
 graph TD
-    A((A))["Input"]
-    B((B))["Throughput"]
-    C((C))["Output"]
-    D((D))["Parameter"]
-    E((E))["Out-of-Domain"]
-    F((F))["New Output"]
-    G((G))["Feedback"]
-    H((H))["Modified Throughput"]
+A((Input))
+B((Throughput))
+C((Output))
+D((Parameter))
+E((Out-of-Domain))
+F((New Output))
+G((Feedback))
+H((Modified Throughput))
 
-    A -->|process| B
-    B -->|generates| C
-    D -->|influences| B
-    C -->|feedback| A
-    E -.->|test| B
-    B -->|leads to| F
-    C -->|updates via| G
-    G -->|alters| A
-    F -->|derived from| C
-    B -->|adjusted by| H
-    H -->|affects| C
-    D -.->|adjusts| H
-    E -->|expands| H
+A -->|process| B
+B -->|generates| C
+D -->|influences| B
+C -->|feedback| A
+E -.->|test| B
+B -->|leads to| F
+C -->|updates via| G
+G -->|alters| A
+F -->|derived from| C
+B -->|adjusted by| H
+H -->|affects| C
+D -.->|adjusts| H
+E -->|expands| H
 
-subgraph "Input Layer"
-    A
+subgraph Input Layer
+A
 end
 
-subgraph "Process Layer"
-    B
-    H
+subgraph Process Layer
+B
+H
 end
 
-subgraph "Output Layer"
-    C
-    F
+subgraph Output Layer
+C
+F
 end
 
-subgraph "Parameter Space"
-    D
+subgraph Parameter Space
+D
 end
 
-subgraph "Out-of-Domain Insights"
-    E
+subgraph Out-of-Domain Insights
+E
 end
 
-subgraph "Feedback and Adjustments"
-    G
+subgraph Feedback and Adjustments
+G
 end
 ```
