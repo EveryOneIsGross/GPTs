@@ -137,7 +137,6 @@ D:\>
 
 ```mermaid
 
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#333', 'primaryBorderColor': '#ffaa00', 'lineColor': '#333', 'secondaryColor': '#cccccc', 'tertiaryColor': '#bbbbbb', 'clusterBkg': '#eef', 'clusterBorder': '#333', 'fontSize': '16px'}}}%%
 graph TD
     A[Rebooting and Loading] -->|Progress 100%| B[Connecting]
     B --> C[Connected]
