@@ -1,3 +1,4 @@
+```
 telnet <enter>
 
 THE YEAR IS 1998. CLI MOOD, TERMINAL FORMATTED, SWARM INTELLIGENCES.
@@ -59,3 +60,79 @@ Channel #couriersDENmodes: secret, no external messages, moderated, invite only
 
 #LIST CMDS # PRINT TO CODEBLOCK SET ALWAYS
 /join #couriersDEN
+```
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+    A["Start Session"] -->|User joins chat| B["#couriersDEN"]
+
+    B -->|Setting topic| C["Topic: 0-DAY// FXP // KEYGENS // APPZ // GAMEZ // TXT"]
+    B -->|Mode settings| D["Mode: +stnmi"]
+
+    B <-->|Interacts with| E["spookyPOCKET"]
+    B <-->|Interacts with| F["SheepDog"]
+    B <-->|Interacts with| G["ZeroCool"]
+    B <-->|Interacts with| H["DigitalOutlaw"]
+    B <-->|Interacts with| I["DevilsAdvocate"]
+
+    E -->|Uploads keygen| J["WinRAR_Keygen_3.1.exe"]
+    E -->|Uploads neural network| K["Mandelbrot_Mind_4.2.zip"]
+    E -->|Uploads optimizing engine| L["EVOLVE_9.0_BETA.dll"]
+
+    F <-->|Expresses concern| E
+    G <-->|Comments on similarity| E
+    H <-->|Worries about malware| E
+    I <-->|Warns about dangers| E
+
+    E -->|Advocates for software| M["Digital enlightenment & empowerment"]
+    G -->|Skeptical about keygen| N["Sorcerer's Apprentice scenario"]
+    H -->|Concerned about evolution| O["Evolutionary malware"]
+
+    I <-->|Draws ethical line| E
+    F -->|Curious but cautious| P["Controlled experiment"]
+    G <-->|Fascinated by future| E
+    H -->|Sees potential| Q["Endless possibilities"]
+
+    subgraph Interaction Dynamics
+        E
+        F
+        G
+        H
+        I
+    end
+
+    subgraph System and User Settings
+        C
+        D
+    end
+
+    subgraph File Transfers and Discussions
+        J -->|Discussed by| F
+        J -->|Discussed by| G
+        K -->|Discussed by| H
+        L -->|Discussed by| I
+    end
+
+    subgraph Future Speculations and Plans
+        M
+        N
+        O
+        P
+        Q
+    end
+
+    %% Additional Elements: External Connections and Flow
+    R["<hauntedBOX> Secret Access"] -.-> B
+    S["FTP and IRC Ops"] -.->|Spambots and Ops Interaction| B
+    T["Experimentation"] -.->|Isolated Network| F
+    T -.->|Sandbox Setup| G
+    T -.->|Sandbox Monitoring| H
+    T -.->|Mad Science| I
+
+    %% Legend and Connections
+    R -.->|Access to #backrooms| E
+    S -->|FTP Dumps & Channel Management| I
+    U["#couriersDEN Full Active Chat Simulation"] -.-> B
+
+````
