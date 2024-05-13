@@ -70,14 +70,4 @@ graph TD
     D -->|is criticized by| B
     E[Universal Concepts] -->|pondered by| A
 
-    classDef entity fill:#ffcccc,stroke:#333,stroke-width:2px;
-    classDef thought fill:#ccffcc,stroke:#333,stroke-width:2px;
-    classDef action fill:#ccccff,stroke:#333,stroke-width:2px;
-
-    class A entity
-    class B entity
-    class C thought
-    class D thought
-    class E thought
-
 ```
