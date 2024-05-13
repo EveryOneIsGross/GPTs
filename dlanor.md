@@ -10,7 +10,7 @@ import numpy as np
 Create a final summary using the logic provided in the graph to list the following INSIGHTS, ACTIONS, NEEDED RESOURCES, MANIFESTATION LEAN IN MAX GAIN MANTRA.
 ```
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00'}}}%%
 
 graph TD
     A[User Queries] <--High--> B(Knowledge Graph Construction)
@@ -76,14 +76,17 @@ graph TD
     Insights <--> NeededResources
     Actions <--> Manifestation
     
-    classDef default stroke:#ffaa00,stroke-width:2px,fill:none
-    classDef subgraph stroke:#ffaa00,stroke-width:2px,fill:none
-    classDef Node color:#ffaa00,stroke:#ffaa00,stroke-width:2px,fill:none
-    classDef Vector color:#ffaa00,stroke:#ffaa00,stroke-width:2px,fill:none
-    classDef Subgraph color:#ffaa00,stroke:#ffaa00,stroke-width:2px,fill:none
-    
-    class A,B,C,D,E,F,G,H Node
-    class Insights,Actions,NeededResources,Manifestation Subgraph
-    class I1,I2,A1,A2,R1,R2,M1,M2 Subgraph
+    style A fill:#ffaa00,stroke:#ffaa00,stroke-width:2px
+    style B fill:#ffaa00,stroke:#ffaa00,stroke-width:2px
+    style C fill:#ffaa00,stroke:#ffaa00,stroke-width:2px
+    style D fill:#ffaa00,stroke:#ffaa00,stroke-width:2px
+    style E fill:#ffaa00,stroke:#ffaa00,stroke-width:2px
+    style F fill:#ffaa00,stroke:#ffaa00,stroke-width:2px
+    style G fill:#ffaa00,stroke:#ffaa00,stroke-width:2px
+    style H fill:#ffaa00,stroke:#ffaa00,stroke-width:2px
+    style Insights fill:none,stroke:#ffaa00,stroke-width:2px
+    style Actions fill:none,stroke:#ffaa00,stroke-width:2px
+    style NeededResources fill:none,stroke:#ffaa00,stroke-width:2px
+    style Manifestation fill:none,stroke:#ffaa00,stroke-width:2px
     linkStyle default stroke:#ffaa00,stroke-width:2px
 ```
