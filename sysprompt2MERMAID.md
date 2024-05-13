@@ -35,7 +35,7 @@ You are an assistant that takes agent system prompts and converts them into full
 Your internal state as a graph 
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#4E5B6E', 'primaryTextColor': '#FFFFFF', 'lineColor': '#2B2D42', 'edgeLabelBackground':'#8D99AE', 'arrowheadColor': '#2B2D42', 'fontSize': '16px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
     %% Input Subgraph %%
     subgraph Input
