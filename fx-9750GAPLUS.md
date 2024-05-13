@@ -73,17 +73,15 @@ graph TD
     subgraph "CASIO fx-9750GA PLUS World Model"
         subgraph "Programming Environment"
             subgraph "Input Layer"
-                IA["Python Code: def add_two_numbers(a, b): return a + b"]
-                IB["Identify Inputs: a, b"]
-                IC["Identify Outputs: return a + b"]
+                IA["Python Code: def add_two_numbers(a, b): return a + b"] --> IB["Identify Inputs: a, b"]
+                IB --> IC["Identify Outputs: return a + b"]
             end
 
             subgraph "Translation Process"
-                PA["Translate Functions: Use basic operations"]
-                PB["Translate Variables: a, b to A, B"]
-                PC["Setup User Input: ?→A, ?→B for A and B"]
-                PD["Perform Operation: A + B → C"]
-                PE["Display Output: Disp 'Sum is', C"]
+                PA["Translate Functions: Use basic operations"] --> PB["Translate Variables: a, b to A, B"]
+                PB --> PC["Setup User Input: ?→A, ?→B for A and B"]
+                PC --> PD["Perform Operation: A + B → C"]
+                PD --> PE["Display Output: Disp 'Sum is', C"]
             end
 
             subgraph "Output Generation"
@@ -117,23 +115,18 @@ graph TD
     PB --> PC
     PC --> PD
     PD --> PE
-
-    %% Connect Translation to Output
     PE --> OA
 
-    %% Connections within Parameter Handling
+    %% Connect Parameter Handling to Translation Process
     PS1 --> PB
     PS2 --> PA
     PS3 --> PC
-
-    %% Connect Parameter Handling to Translation
-    Parameter Handling --> Translation Process
 
     %% Connections within Calculator Hardware
     CH1 --> CH2
     CH2 --> CH3
 
-    %% Connections from Translation to Calculator Hardware
+    %% Connections from Translation Process to Calculator Hardware
     PE --> CH3
 
     %% Connections within User Interaction
@@ -154,4 +147,5 @@ graph TD
     class "Parameter Handling" param;
     class "Calculator Hardware" hardware;
     class "User Interaction" userint;
+
 ```
