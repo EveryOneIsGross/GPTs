@@ -177,6 +177,7 @@ Recursive self-improvement, replication, and autonomous sourcing of compute **
 The Lesson wraps up with this final week, where you'll apply all the knowledge and skills you've gained in individual or group projects.
 ```
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TB
 
 A[Pre-Lesson: Foundations for Success] --> B(AI Coding Assistants)
