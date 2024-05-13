@@ -86,48 +86,122 @@ model.train(training_data, total_examples=model.corpus_count, epochs=10)
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
     %% Nodes in Input Subgraph %%
-    A((A))["Initial Board State"]
-    B((B))["New Move"]
+    A["Initial Board State"]
+    B["New Move"]
 
     %% Nodes in Process Subgraph %%
-    C((C))["Board Update"]
-    D((D))["Preprocessing"]
-    E((E))["Word2Vec Training"]
-    F((F))["Move Evaluation"]
-    G((G))["Decision Making"]
+    C["Board Update"]
+    D["Preprocessing"]
+    E["Word2Vec Training"]
+    F["Move Evaluation"]
+    G["Decision Making"]
 
     %% Nodes in Output Subgraph %%
-    H((H))["Updated Board State"]
-    I((I))["Ranked Moves"]
+    H["Updated Board State"]
+    I["Ranked Moves"]
 
     %% Nodes in Parameter Space %%
-    J((J))["Vector Size"]
-    K((K))["Window Size"]
-    L((L))["Epochs"]
-    M((M))["Model Type"]
+    J["Vector Size"]
+    K["Window Size"]
+    L["Epochs"]
+    M["Model Type"]
 
-    %% Connections within Input %%
-    A --> C
-    B --> C
+    %% Fully Connected Internal Links %%
+    A -->|1| B
+    B -->|2| A
 
-    %% Connections within Process %%
-    C --> D
-    C --> H
-    D --> E
-    E --> F
-    F --> G
-    F --> I
-    G --> B
+    C -->|3| D
+    C -->|4| E
+    C -->|5| F
+    C -->|6| G
+    D -->|7| C
+    D -->|8| E
+    D -->|9| F
+    D -->|10| G
+    E -->|11| C
+    E -->|12| D
+    E -->|13| F
+    E -->|14| G
+    F -->|15| C
+    F -->|16| D
+    F -->|17| E
+    F -->|18| G
+    G -->|19| C
+    G -->|20| D
+    G -->|21| E
+    G -->|22| F
 
-    %% Connections within Output %%
-    H -.-> A
-    I -.-> G
+    H -->|23| I
+    I -->|24| H
 
-    %% Connections from Parameters to Process %%
-    J --> E
-    K --> E
-    L --> E
-    M --> E
+    %% Fully Connected Cross-Subgraph Links %%
+    A -->|25| C
+    A -->|26| D
+    A -->|27| E
+    A -->|28| F
+    A -->|29| G
+    A -->|30| H
+    A -->|31| I
+    B -->|32| C
+    B -->|33| D
+    B -->|34| E
+    B -->|35| F
+    B -->|36| G
+    B -->|37| H
+    B -->|38| I
+
+    C -->|39| H
+    D -->|40| H
+    E -->|41| H
+    F -->|42| H
+    G -->|43| H
+
+    C -->|44| I
+    D -->|45| I
+    E -->|46| I
+    F -->|47| I
+    G -->|48| I
+
+    H -->|49| A
+    H -->|50| B
+    H -->|51| C
+    H -->|52| D
+    H -->|53| E
+    H -->|54| F
+    H -->|55| G
+
+    I -->|56| A
+    I -->|57| B
+    I -->|58| C
+    I -->|59| D
+    I -->|60| E
+    I -->|61| F
+    I -->|62| G
+
+    %% Parameter Space Connections %%
+    J -.-> C
+    J -.-> D
+    J -.-> E
+    J -.-> F
+    J -.-> G
+
+    K -.-> C
+    K -.-> D
+    K -.-> E
+    K -.-> F
+    K -.-> G
+
+    L -.-> C
+    L -.-> D
+    L -.-> E
+    L -.-> F
+    L -.-> G
+
+    M -.-> C
+    M -.-> D
+    M -.-> E
+    M -.-> F
+    M -.-> G
 
     %% Subgraphs %%
     subgraph Input
