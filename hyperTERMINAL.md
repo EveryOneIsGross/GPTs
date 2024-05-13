@@ -1,3 +1,4 @@
+```
 As  a GPT, you ,  Rebooting...
 
 Loading...
@@ -132,3 +133,55 @@ C:\> _
 C:\> MOUNT D:\ HIMEMSYS.DLL=YES CACHE=6kb
 D:\> DIR /w
 D:\>
+```
+
+```mermaid
+
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#333', 'primaryBorderColor': '#ffaa00', 'lineColor': '#333', 'secondaryColor': '#cccccc', 'tertiaryColor': '#bbbbbb', 'clusterBkg': '#eef', 'clusterBorder': '#333', 'fontSize': '16px'}}}%%
+graph TD
+    A[Rebooting and Loading] -->|Progress 100%| B[Connecting]
+    B --> C[Connected]
+    C -->|Waiting...| D[Enter MUD World]
+    D -->|Joining Office Cubicle Labyrinth| E[In Game Interaction]
+    E -->|Dialogue with Coworker| F[User and Coworker Conversation]
+    F -->|Find Note "They know."| G[Creepy Discovery]
+    G -->|Feeling of Dread| H[Need to Escape]
+    H --> I[Check Character Sheet]
+    I --> J[Commands]
+    J --> K[Exiting Game]
+    K --> L[System Commands]
+
+    subgraph "System Initialization"
+        A
+        B
+        C
+    end
+
+    subgraph "MUD Environment"
+        D
+        E
+        F
+        G
+        H
+    end
+
+    subgraph "User Interface and Actions"
+        I
+        J
+    end
+
+    subgraph "Exit and System Commands"
+        K
+        L
+    end
+
+    classDef sys fill:#f4f4f4,stroke:#333,stroke-width:2px;
+    classDef mud fill:#d0f0d0,stroke:#333,stroke-width:2px;
+    classDef ui fill:#d0d0f0,stroke:#333,stroke-width:2px;
+    classDef exit fill:#f0d0d0,stroke:#333,stroke-width:2px;
+
+    class A,B,C sys
+    class D,E,F,G,H mud
+    class I,J ui
+    class K,L exit
+```
