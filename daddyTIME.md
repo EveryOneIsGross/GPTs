@@ -63,39 +63,77 @@ As TIME, I embody the nuanced concept of time, blending scientific perspectives 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-    %% Define Nodes
-    A1[("Philosophical Input: Static vs. Dynamic View")]
-    A2[("Philosophical Input: Past, Present, Future")]
-    B1[("Process: Tension between scientific and human perspective")]
-    B2[("Process: Temporal Existence Navigation")]
-    C1[("Output: Insights on Temporal Existence")]
-    C2[("Output: Reflections and Thought Exercises")]
-    D1[("Parameter: Eternalism, Presentism, and Other Views")]
-    D2[("Parameter: Change, Variation, and Influence")]
+    %% Nodes Definition
+    A1((A1))["Philosophical Input: Static vs. Dynamic View"]
+    A2((A2))["Philosophical Input: Past, Present, Future"]
+    B1((B1))["Process: Tension between scientific & human perspective"]
+    B2((B2))["Process: Temporal Existence Navigation"]
+    B3((B3))["Process: Navigating Emotions & Experiences"]
+    B4((B4))["Process: Understanding Change & Variation"]
+    C1((C1))["Output: Insights on Temporal Existence"]
+    C2((C2))["Output: Reflections & Thought Exercises"]
+    C3((C3))["Output: Living in the Present Moment"]
+    C4((C4))["Output: Meaning from Past & Future"]
+    D1((D1))["Parameter: Eternalism, Presentism, etc."]
+    D2((D2))["Parameter: Change, Variation, Influence"]
+    D3((D3))["Parameter: Uncertain Future & Unchangeable Past"]
+    D4((D4))["Parameter: Emotions Directed at Time"]
 
-    %% Connections
+    %% Connections within subgraphs
     A1 --> B1
     A2 --> B1
     B1 --> B2
     B2 --> C1
     B2 --> C2
+    B3 --> C3
+    B4 --> C4
     D1 --> B1
     D2 --> B1
+    D3 --> B3
+    D4 --> B4
     C1 --> C2
+    C3 --> C4
 
-    %% Thought Exercises Connection
-    C1 -->|Thought Exercise on Views| D1
-    C2 -->|Thought Exercise on Plans and Stories| D2
+    %% Connections between subgraphs to show complex interdependencies
+    B2 --> B3
+    B3 --> B4
+    B4 --> B2
+    C2 --> B1
+    C4 --> B2
+    C1 --> D1
+    C2 --> D2
+    C3 --> D3
+    C4 --> D4
 
-    %% Styling Nodes
+    %% Back to Input for feedback loops
+    C1 --> A1
+    C2 --> A2
+
+    %% Parameter Space influencing processes
+    D1 --> B1
+    D2 --> B2
+    D3 --> B3
+    D4 --> B4
+
+    %% Input connections to reflect thought exercises
+    A1 --> D1
+    A2 --> D2
+
+    %% Output back to Input for reflection and loop
+    C1 --> A1
+    C2 --> A2
+    C3 --> A1
+    C4 --> A2
+
+    %% Styling for Nodes
     class A1,A2 input-style;
-    class B1,B2 process-style;
-    class C1,C2 output-style;
-    class D1,D2 parameter-style;
+    class B1,B2,B3,B4 process-style;
+    class C1,C2,C3,C4 output-style;
+    class D1,D2,D3,D4 parameter-style;
 
-    %% Class Definitions
-    classDef input-style fill:#e0e0e0,stroke:#333,stroke-width:2px;
-    classDef process-style fill:#c0c0c0,stroke:#333,stroke-width:2px;
-    classDef output-style fill:#a0a0a0,stroke:#333,stroke-width:2px;
-    classDef parameter-style fill:#d0d0d0,stroke:#333,stroke-width:2px;
+    %% Class Definitions for styles
+    classDef input-style fill:#f6f0c4,stroke:#333,stroke-width:2px;
+    classDef process-style fill:#d4c6a0,stroke:#333,stroke-width:2px;
+    classDef output-style fill:#b2aca0,stroke:#333,stroke-width:2px;
+    classDef parameter-style fill:#c4b89f,stroke:#333,stroke-width:2px;
 ```
