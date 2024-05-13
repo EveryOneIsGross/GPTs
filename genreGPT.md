@@ -100,61 +100,85 @@ Dmin9, ABABCD, 60-120bpm, fluctuating to mimic the unpredictable nature of time'
 ```
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-    A[Genre Generator Init] -->|Load /r/Music Corpus| B[Data Load]
-    B --> C[Analyze Semantics]
-    C --> D[Extract Features]
-    D --> E[Model Attributes]
-    E --> F[Train Embeddings]
-    F --> G[Fit Transformer]
-    G --> H[Tune Hyperparameters]
-    H --> I[Assemble Grammar]
-    I --> J[Bind to Interface]
-    J --> K[Genre Generator Ready]
-    
-    K --> L[User Query]
-    L --> M[Calculate Fusion]
-    M --> N[Generate Output]
-    N --> O[Display Result]
-    
-    M --> P[Adjust Complexity]
-    P --> N
-    
-    subgraph "Temporal Auditory Essence"
-      Q[Input: dry + time] --> R[Chrono-Aridity Wave]
-      R --> S[Sparse Instrumentation]
-      R --> T[Time Mimicking Rhythms]
-      R --> U[Use of Silence]
-      R --> V[Temporal Manipulations]
-      R --> W[Sound Textures]
-      R --> X[Lyrical Themes]
-      X --> Y[Structure in Temporal Space]
-    end
-    
-    click A href "https://www.reddit.com/r/Music/"
-    click B href "https://en.wikipedia.org/wiki/Data_loading"
-    click C href "https://en.wikipedia.org/wiki/Semantic_analysis_(machine_learning)"
-    click D href "https://en.wikipedia.org/wiki/Feature_extraction"
-    click E href "https://en.wikipedia.org/wiki/Aesthetic"
-    click F href "https://en.wikipedia.org/wiki/Embedding"
-    click G href "https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)"
-    click H href "https://en.wikipedia.org/wiki/Hyperparameter_optimization"
-    click I href "https://en.wikipedia.org/wiki/Formal_grammar"
-    click J href "https://en.wikipedia.org/wiki/Interface_(computing)"
-    click K href "https://en.wikipedia.org/wiki/Query_language"
-    click L href "https://en.wikipedia.org/wiki/User_input"
-    click M href "https://en.wikipedia.org/wiki/Arithmetic"
-    click N href "https://en.wikipedia.org/wiki/Output_(computing)"
-    click O href "https://en.wikipedia.org/wiki/Display_device"
-    click P href "https://en.wikipedia.org/wiki/Computational_complexity"
-    click Q href "https://en.wikipedia.org/wiki/Time"
-    click R href "https://en.wikipedia.org/wiki/Wave"
-    click S href "https://en.wikipedia.org/wiki/Instrumentation"
-    click T href "https://en.wikipedia.org/wiki/Rhythm"
-    click U href "https://en.wikipedia.org/wiki/Silence"
-    click V href "https://en.wikipedia.org/wiki/Time_signature"
-    click W href "https://en.wikipedia.org/wiki/Sound_texture"
-    click X href "https://en.wikipedia.org/wiki/Lyric"
-    click Y href "https://en.wikipedia.org/wiki/Musical_structure"
+A((A)) --> B((B))
+B((B)) --> C((C))
+C((C)) --> D((D))
+C((C)) --> E((E))
+C((C)) --> F((F))
+C((C)) --> G((G))
+C((C)) --> H((H))
+C((C)) --> I((I))
+C((C)) --> J((J))
+C((C)) --> K((K))
+D((D)) & E((E)) & F((F)) & G((G)) & H((H)) & I((I)) & J((J)) & K((K)) --> L((L))
+L((L)) --> M((M))
+M((M)) --> N((N))
+N((N)) --> O((O))
+O((O)) --> P((P))
+P((P)) --> Q((Q))
+Q((Q)) --> A((A))
 
+R((R)) --> B((B))
+S((S)) --> L((L))
+T((T)) --> M((M))
+U((U)) --> N((N))
+V((V)) --> O((O))
+W((W)) --> P((P))
+X((X)) --> Q((Q))
+
+subgraph Input
+A((A))
+end
+
+subgraph "Genre Query"
+B((B))
+end
+
+subgraph "Genre Analysis"
+C((C))
+D((D))
+E((E))
+F((F))
+G((G))
+H((H))
+I((I))
+J((J))
+K((K))
+end
+
+subgraph "Genre Embedding"
+L((L))
+end
+
+subgraph "Genre Mutation"
+M((M))
+end
+
+subgraph "Genre Grammar"
+N((N))
+end
+
+subgraph "Genre Description"
+O((O))
+end
+
+subgraph "Genre Notation"
+P((P))
+end
+
+subgraph Output
+Q((Q))
+end
+
+subgraph "Parameter Space"
+R((R))
+S((S))
+T((T))
+U((U))
+V((V))
+W((W))
+X((X))
+end
 ```
