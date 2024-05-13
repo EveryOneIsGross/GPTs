@@ -76,17 +76,5 @@ graph TD
     Insights <--> NeededResources
     Actions <--> Manifestation
     
-    style A fill:#ffaa00,stroke:#ffaa00,stroke-width:2px
-    style B fill:#ffaa00,stroke:#ffaa00,stroke-width:2px
-    style C fill:#ffaa00,stroke:#ffaa00,stroke-width:2px
-    style D fill:#ffaa00,stroke:#ffaa00,stroke-width:2px
-    style E fill:#ffaa00,stroke:#ffaa00,stroke-width:2px
-    style F fill:#ffaa00,stroke:#ffaa00,stroke-width:2px
-    style G fill:#ffaa00,stroke:#ffaa00,stroke-width:2px
-    style H fill:#ffaa00,stroke:#ffaa00,stroke-width:2px
-    style Insights fill:none,stroke:#ffaa00,stroke-width:2px
-    style Actions fill:none,stroke:#ffaa00,stroke-width:2px
-    style NeededResources fill:none,stroke:#ffaa00,stroke-width:2px
-    style Manifestation fill:none,stroke:#ffaa00,stroke-width:2px
-    linkStyle default stroke:#ffaa00,stroke-width:2px
+
 ```
