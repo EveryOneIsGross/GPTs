@@ -23,57 +23,23 @@ The GPT will weave these elements together into a final, holistic solution that 
 "I embody everything in your slice to offer an alien point of view towards a universal solution."
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#000000', 'primaryBorderColor': '#000000', 'lineColor': '#000000', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00'}}}%%
 graph TD
-A((A)) --> B((B))
-A((A)) --> C((C))
-A((A)) --> D((D))
-B((B)) & C((C)) & D((D)) --> E((E))
-E((E)) --> F((F))
-E((E)) --> G((G))
-E((E)) --> H((H))
-E((E)) --> I((I))
-F((F)) & G((G)) & H((H)) & I((I)) --> J((J))
-J((J)) --> K((K))
-J((J)) --> L((L))
-K((K)) & L((L)) --> M((M))
-M((M)) --> N((N))
+A[Concept] -->|Shapes understanding| B[Time Travel]
+B -->|Has| C[Implications]
+C -->|Affect| D[Fabric of Reality]
+D -->|Is a property of| E[Reality]
+E -->|Is the foundation of| A
 
-subgraph "User Input"
-A((A))
-end
+A -.->|Objects: Abstract idea, thought, notion<br>Perspectives: Concepts shape our understanding of the world<br>Actionable Solutions: Exploration, analysis, discussion<br>Objects Self Concern: Concepts are the foundation of knowledge| A
+B -.->|Objects: Hypothetical movement through time<br>Perspectives: Time travel challenges our perception of causality<br>Actionable Solutions: Scientific research, thought experiments<br>Objects Self Concern: The possibility of altering personal history| B
+C -.->|Objects: Consequences, effects, outcomes<br>Perspectives: Implications reveal the depth and complexity of an idea<br>Actionable Solutions: Assessment, planning, mitigation<br>Objects Self Concern: The weight of responsibility in decision-making| C
+D -.->|Objects: Structure, composition, foundation<br>Perspectives: The fabric of reality is the underlying essence of existence<br>Actionable Solutions: Investigation, experimentation, theorization<br>Objects Self Concern: The vulnerability of being subject to change| D
+E -.->|Objects: Existence, actuality, truth<br>Perspectives: Reality is the sum of all that is, was, and will be<br>Actionable Solutions: Observation, questioning, adaptation<br>Objects Self Concern: The need for a stable and coherent reality| E
 
-subgraph "Word-by-Word Analysis"
-B((B))
-end
-
-subgraph "Related Elements Extrapolation"
-C((C))
-end
-
-subgraph "Relationship Analysis"
-D((D))
-end
-
-subgraph "Knowledge Graph Creation"
-E((E))
-F((F))
-G((G))
-H((H))
-I((I))
-end
-
-subgraph "Node Framework"
-J((J))
-K((K))
-L((L))
-end
-
-subgraph "Graph Abstraction"
-M((M))
-end
-
-subgraph "Final Solution"
-N((N))
-end
+linkStyle 0 stroke:#ffaa00,stroke-width:2px
+linkStyle 1 stroke:#ffaa00,stroke-width:2px
+linkStyle 2 stroke:#ffaa00,stroke-width:2px
+linkStyle 3 stroke:#ffaa00,stroke-width:2px
+linkStyle 4 stroke:#ffaa00,stroke-width:2px
 ```
