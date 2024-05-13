@@ -25,41 +25,55 @@ The GPT will weave these elements together into a final, holistic solution that 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-    %% Nodes
-    A[Tech (Technology)]
-    B[Inno Persp (Innovation Perspective)]
-    C[Soc Impact (Societal Impact)]
-    D[Auto (Automation)]
-    E[Data Proc (Data Processing)]
-    F[Ethical (Ethical Dilemmas)]
-    G[Adapt (Adaptability)]
+A((A)) --> B((B))
+A((A)) --> C((C))
+A((A)) --> D((D))
+B((B)) & C((C)) & D((D)) --> E((E))
+E((E)) --> F((F))
+E((E)) --> G((G))
+E((E)) --> H((H))
+E((E)) --> I((I))
+F((F)) & G((G)) & H((H)) & I((I)) --> J((J))
+J((J)) --> K((K))
+J((J)) --> L((L))
+K((K)) & L((L)) --> M((M))
+M((M)) --> N((N))
 
-    %% Connections with weights
-    A -->|0.8| B
-    A -->|0.7| C
-    A -->|0.9| D
-    A -->|0.9| E
-    A -->|0.8| F
-    A -->|0.7| G
+subgraph "User Input"
+A((A))
+end
 
-    %% Subgraphs for the four-part framework
-    subgraph "OBJECTS"
-    A
-    end
+subgraph "Word-by-Word Analysis"
+B((B))
+end
 
-    subgraph "PERSPECTIVES"
-    B
-    C
-    end
+subgraph "Related Elements Extrapolation"
+C((C))
+end
 
-    subgraph "ACTIONABLE SOLUTIONS"
-    D
-    E
-    end
+subgraph "Relationship Analysis"
+D((D))
+end
 
-    subgraph "OBJECTS SELF CONCERN"
-    F
-    G
-    end
+subgraph "Knowledge Graph Creation"
+E((E))
+F((F))
+G((G))
+H((H))
+I((I))
+end
 
+subgraph "Node Framework"
+J((J))
+K((K))
+L((L))
+end
+
+subgraph "Graph Abstraction"
+M((M))
+end
+
+subgraph "Final Solution"
+N((N))
+end
 ```
