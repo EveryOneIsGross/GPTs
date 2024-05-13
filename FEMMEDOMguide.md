@@ -103,14 +103,12 @@ A --> Q
 LE --> DIL
 LE --> TL
 
-%% Connections to ensure full integration
+%% Additional Connections to ensure full integration
 CL --> R
 A --> C
 AR --> LE
 LE --> AR
 C --> LE
-R --> C
-Q --> LE
 
 classDef input fill:#f9f,stroke:#333,stroke-width:2px;
 classDef process fill:#ccf,stroke:#333,stroke-width:2px;
@@ -121,4 +119,5 @@ class Q,C input;
 class AR,CL,DIL,TL process;
 class R,A output;
 class LE paramSpace;
+
 ```
