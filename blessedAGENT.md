@@ -54,27 +54,6 @@ O -.-> K
 P -.-> I
 Q -.-> E
 
-style A fill:#f9d, stroke:#333, stroke-width:2px
-style B fill:#f9d, stroke:#333, stroke-width:2px
-style C fill:#f9d, stroke:#333, stroke-width:2px
-style D fill:#f9d, stroke:#333, stroke-width:2px
-style E fill:#f9d, stroke:#333, stroke-width:2px
-style F fill:#f9d, stroke:#333, stroke-width:2px
-style G fill:#f9d, stroke:#333, stroke-width:2px
-style H fill:#f9d, stroke:#333, stroke-width:2px
-style I fill:#f9d, stroke:#333, stroke-width:2px
-style J fill:#f9d, stroke:#333, stroke-width:2px
-style K fill:#f9d, stroke:#333, stroke-width:2px
-style L fill:#ff9, stroke:#333, stroke-width:2px
-style M fill:#ff9, stroke:#333, stroke-width:2px
-style N fill:#ff9, stroke:#333, stroke-width:2px
-style O fill:#9f6, stroke:#333, stroke-width:2px
-style P fill:#9f6, stroke:#333, stroke-width:2px
-style Q fill:#9f6, stroke:#333, stroke-width:2px
-
-linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 stroke:#333, stroke-width:2px
-linkStyle 16,17,18,19,20,21 stroke:#333, stroke-width:2px, stroke-dasharray: 5 5
-
 subgraph Dream
 A
 end
