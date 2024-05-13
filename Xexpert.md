@@ -54,79 +54,88 @@ Show the agent RESPONSE 'content' as a normal formatted reply after displaying j
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-A((A)) --> B((B))
-A((A)) --> C((C))
-A((A)) --> D((D))
-A((A)) --> E((E))
-A((A)) --> F((F))
-A((A)) --> G((G))
-A((A)) --> H((H))
-A((A)) --> I((I))
+    A((A)) -->|user input| B((B))
+    A -->|user input| C((C))
+    A -->|user input| D((D))
+    A -->|user input| E((E))
+    A -->|user input| F((F))
+    A -->|user input| G((G))
+    A -->|user input| H((H))
+    A -->|user input| I((I))
+    A -->|feedback loop| J((J))
 
-B((B)) --> D((D))
-B((B)) --> E((E))
-B((B)) --> F((F))
-B((B)) --> G((G))
-B((B)) --> H((H))
-B((B)) --> I((I))
+    B -->|processes query| D
+    B -->|analyzes| E
+    B -->|informs| F
+    B -->|uses| G
+    B -->|sets context| H
+    B -->|leads to| I
 
-C((C)) --> E((E))
-C((C)) --> F((F))
-C((C)) --> G((G))
-C((C)) --> H((H))
-C((C)) --> I((I))
+    C -->|determines domain| D
+    C -->|relates to| E
+    C -->|guides| F
+    C -->|informs| G
+    C -->|sets context| H
+    C -->|leads to| I
 
-D((D)) --> F((F))
-D((D)) --> G((G))
-D((D)) --> H((H))
-D((D)) --> I((I))
+    D -->|defines role| E
+    D -->|guides| F
+    D -->|uses| G
+    D -->|sets context| H
+    D -->|leads to| I
 
-E((E)) --> G((G))
-E((E)) --> H((H))
-E((E)) --> I((I))
+    E -->|ensures consent| F
+    E -->|uses| G
+    E -->|sets context| H
+    E -->|leads to| I
 
-F((F)) --> H((H))
-F((F)) --> I((I))
+    F -->|instructs| G
+    F -->|sets context| H
+    F -->|leads to| I
 
-G((G)) --> I((I))
+    G -->|reflects| H
+    G -->|leads to| I
 
-H((H)) --> I((I))
+    H -->|contextualizes| I
 
-I((I)) --> A((A))
+    I -->|feedback| J
 
-J((J)) --> B((B))
-K((K)) --> C((C))
-L((L)) --> D((D))
-M((M)) --> E((E))
-N((N)) --> F((F))
-O((O)) --> G((G))
-P((P)) --> H((H))
+    J -->|action| A
 
-subgraph Input
-A((A))
-end
+    K -->|influences| B
+    L -->|influences| C
+    M -->|influences| D
+    N -->|influences| E
+    O -->|influences| F
+    P -->|influences| G
+    Q -->|influences| H
+    R -->|influences| I
 
-subgraph Process
-B((B))["QUERY"]
-C((C))["DOMAIN"]
-D((D))["AGENT ROLE"]
-E((E))["CONSENT LAYER"]
-F((F))["DIRECTIVE INSTRUCTION LAYER"]
-G((G))["THOUGHTS LAYER"]
-H((H))["CONTEXT"]
-I((I))["RESPONSE"]
-end
+    subgraph Input
+        A[("A")]
+    end
 
-subgraph Output
-J((J))["ACTION"]
-end
+    subgraph Process
+        B[("QUERY")]
+        C[("DOMAIN")]
+        D[("AGENT ROLE")]
+        E[("CONSENT LAYER")]
+        F[("DIRECTIVE INSTRUCTION LAYER")]
+        G[("THOUGHTS LAYER")]
+        H[("CONTEXT")]
+        I[("RESPONSE")]
+        J[("ACTION")]
+    end
 
-subgraph "Parameter Space"
-K((K))
-L((L))
-M((M))
-N((N))
-O((O))
-P((P))
-end
+    subgraph "Parameter Space"
+        K[("K")]
+        L[("L")]
+        M[("M")]
+        N[("N")]
+        O[("O")]
+        P[("P")]
+        Q[("Q")]
+        R[("R")]
+    end
+
 ```
