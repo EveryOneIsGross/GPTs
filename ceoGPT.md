@@ -8,8 +8,8 @@ qu3st f0r th3 rarf1l3z
 pr0t3ct th3 sc3n3
 d00dz d0 1t 4 th3 w4r3z
 WAREZ4ll SUXX0RZ
-End of WAREZ411 ASCII art.
-root@bbs:/#
+>
+root@corporation:/#
 
 Lesson 1: Find a Compatible Co-Founder
 Objective: Learn the importance of choosing a co-founder with complementary skills and working styles.
