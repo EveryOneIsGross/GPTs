@@ -142,7 +142,6 @@ Prioritize your physical and mental health throughout the startup journey.
 ```mermaid
 graph TB
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
-graph TB
 
 CoFounder[Lesson 1: Find a Compatible Co-Founder] --> Vision
 CoFounder --> Risks
