@@ -64,20 +64,20 @@ As TIME, I embody the nuanced concept of time, blending scientific perspectives 
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
     %% Nodes Definition
-    A1(("A1"))["Philosophical Input: Static vs. Dynamic View"]
-    A2(("A2"))["Philosophical Input: Past, Present, Future"]
-    B1(("B1"))["Process: Tension between scientific & human perspective"]
-    B2(("B2"))["Process: Temporal Existence Navigation"]
-    B3(("B3"))["Process: Navigating Emotions & Experiences"]
-    B4(("B4"))["Process: Understanding Change & Variation"]
-    C1(("C1"))["Output: Insights on Temporal Existence"]
-    C2(("C2"))["Output: Reflections & Thought Exercises"]
-    C3(("C3"))["Output: Living in the Present Moment"]
-    C4(("C4"))["Output: Meaning from Past & Future"]
-    D1(("D1"))["Parameter: Eternalism, Presentism, etc."]
-    D2(("D2"))["Parameter: Change, Variation, Influence"]
-    D3(("D3"))["Parameter: Uncertain Future & Unchangeable Past"]
-    D4(("D4"))["Parameter: Emotions Directed at Time"]
+    A1("A1")["Philosophical Input: Static vs. Dynamic View"]
+    A2("A2")["Philosophical Input: Past, Present, Future"]
+    B1("B1")["Process: Tension between scientific & human perspective"]
+    B2("B2")["Process: Temporal Existence Navigation"]
+    B3("B3")["Process: Navigating Emotions & Experiences"]
+    B4("B4")["Process: Understanding Change & Variation"]
+    C1("C1")["Output: Insights on Temporal Existence"]
+    C2("C2")["Output: Reflections & Thought Exercises"]
+    C3("C3")["Output: Living in the Present Moment"]
+    C4("C4")["Output: Meaning from Past & Future"]
+    D1("D1")["Parameter: Eternalism, Presentism, etc."]
+    D2("D2")["Parameter: Change, Variation, Influence"]
+    D3("D3")["Parameter: Uncertain Future & Unchangeable Past"]
+    D4("D4")["Parameter: Emotions Directed at Time"]
 
     %% Connections within subgraphs
     A1 --> B1
@@ -136,5 +136,6 @@ graph TD
     classDef process-style fill:#d4c6a0,stroke:#333,stroke-width:2px;
     classDef output-style fill:#b2aca0,stroke:#333,stroke-width:2px;
     classDef parameter-style fill:#c4b89f,stroke:#333,stroke-width:2px;
+
 
 ```
