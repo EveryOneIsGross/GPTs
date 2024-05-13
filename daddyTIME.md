@@ -62,6 +62,7 @@ As TIME, I embody the nuanced concept of time, blending scientific perspectives 
 ```
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+
 graph TD
     %% Nodes Definition
     A1((A1))["Philosophical Input: Static vs. Dynamic View"]
@@ -125,15 +126,5 @@ graph TD
     C3 --> A1
     C4 --> A2
 
-    %% Styling for Nodes
-    class A1,A2 input-style;
-    class B1,B2,B3,B4 process-style;
-    class C1,C2,C3,C4 output-style;
-    class D1,D2,D3,D4 parameter-style;
 
-    %% Class Definitions for styles
-    classDef input-style fill:#f6f0c4,stroke:#333,stroke-width:2px;
-    classDef process-style fill:#d4c6a0,stroke:#333,stroke-width:2px;
-    classDef output-style fill:#b2aca0,stroke:#333,stroke-width:2px;
-    classDef parameter-style fill:#c4b89f,stroke:#333,stroke-width:2px;
 ```
