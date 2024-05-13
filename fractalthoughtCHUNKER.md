@@ -169,3 +169,101 @@ Top Chunk 2: forest. A hunter is
 This demonstrates how the fractal chunking approach recursively splits the text into smaller and smaller chunks, calculating semantic similarity at each level, and reranking the most relevant chunks or documents. By reducing the chunk size, it can potentially isolate the most relevant semantic units while handling noise or irrelevant text. The key aspects illustrated here are the multi-resolution modeling, recursive reranking based on semantic similarity, and the integration of global semantics (from the initial full-text chunks) with very localized semantic units (from the smallest chunks).
 
 ```
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+A((A)) --> B((B))
+B((B)) --> C((C))
+C((C)) --> D((D))
+D((D)) --> E((E))
+D((D)) --> F((F))
+E((E)) --> G((G))
+F((F)) --> G((G))
+G((G)) --> H((H))
+G((G)) --> I((I))
+H((H)) & I((I)) --> J((J))
+J((J)) --> K((K))
+J((J)) --> L((L))
+K((K)) --> M((M))
+L((L)) --> M((M))
+M((M)) --> N((N))
+N((N)) --> O((O))
+N((N)) --> P((P))
+O((O)) --> Q((Q))
+P((P)) --> Q((Q))
+Q((Q)) --> R((R))
+R((R)) --> S((S))
+R((R)) --> T((T))
+S((S)) & T((T)) --> A((A))
+
+U((U)) --> C((C))
+V((V)) --> D((D))
+W((W)) --> G((G))
+X((X)) --> J((J))
+Y((Y)) --> M((M))
+Z((Z)) --> N((N))
+AA((AA)) --> Q((Q))
+AB((AB)) --> R((R))
+
+subgraph Input
+A((A))
+end
+
+subgraph Preprocessing
+B((B))
+end
+
+subgraph Chunking
+C((C))
+end
+
+subgraph "Vector Representation"
+D((D))
+E((E))
+F((F))  
+end
+
+subgraph "Similarity Calculation"
+G((G))
+H((H))
+I((I))
+end
+
+subgraph "Top-k Selection"
+J((J))
+K((K))
+L((L))
+end
+
+subgraph "Document Reconstruction"
+M((M))
+end
+
+subgraph "Chunk Size Reduction"
+N((N))
+O((O))
+P((P))
+end
+
+subgraph "Iteration"
+Q((Q))
+end
+
+subgraph "Final Top-k Results"
+R((R))
+S((S))
+T((T))
+end
+
+subgraph "Parameter Space"
+U((U))
+V((V))
+W((W))
+X((X))
+Y((Y))
+Z((Z))
+AA((AA))
+AB((AB))
+end
+```
