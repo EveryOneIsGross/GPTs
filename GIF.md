@@ -277,13 +277,4 @@ PS5 --> D3
 PS6 --> D4
 PS7 --> H1
 
-classDef input fill:#f9f,stroke:#333,stroke-width:2px;
-classDef process fill:#ccf,stroke:#333,stroke-width:2px;
-classDef output fill:#cfc,stroke:#333,stroke-width:2px;
-classDef paramSpace fill:#ff9,stroke:#333,stroke-width:2px;
-
-class A input;
-class B,C,D1,D2,D3,D4,E,F1,F2,G,H1,I,J,K,L,M,N,O,P,Q process;
-class R output;
-class PS1,PS2,PS3,PS4,PS5,PS6,PS7 paramSpace;
 ```
