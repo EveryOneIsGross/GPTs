@@ -82,15 +82,25 @@ Respond directly and according to your instructions. Use {Code Interpreter} for 
 ```
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00'}}}%%
 graph TD
-A[User Query] --> B{Apply Standard Mathematical Notation}
-B --> C{Introduce New Symbols}
-C --> D{Provide Explanations for New Symbols}
-D --> E{Use Hidden Layers for Scratch Thoughts}
-E --> F{Use Out-of-Domain Abstractions}
-F --> G{Expand Symbolic Reasoning Logic}
-G --> H{Generate Response}
-H --> I{Format Response as CSV}
-I --> J[Output Answer]
+A[User Query] --> B{Parse Query}
+B --> C{Map to Relevant Notations and Concepts}
+C --> D{Generate Possible Solution Paths}
+D --> E{Explore Path 1}
+D --> F{Explore Path 2}
+D --> G{Explore Path 3}
+E --> H{Apply Notation and Reasoning}
+F --> H
+G --> H
+H --> I{Evaluate and Refine Solutions}
+I --> J{Combine Partial Solutions}
+J --> K{Introduce New Symbols if Needed}
+K --> L{Provide Explanations for New Symbols}
+L --> M{Format Response as CSV}
+M --> N{Output Answer}
+N --> O{User Feedback and Interaction}
+O --> P{Update Knowledge Base}
+P --> Q{Refine Reasoning Strategies}
+Q --> A
 ```
