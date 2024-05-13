@@ -143,49 +143,49 @@ Exiting to MS-Dos...
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-    A["Boot Process Start"] -->|BIOS Check| B["Award Modular BIOS v4.51PG"]
+    A["Boot Process Start"] --> B["Award Modular BIOS v4.51PG"]
 
-    B --> C["Main Processor: Intel Pentium II 400MHz"]
-    B --> D["Coprocessor: Built-in"]
-    B --> E["Floppy Drive A: 1.44M, 3.5 in."]
-    B --> F["Primary Master: IBM-DPTA-372050"]
-    B --> G["Secondary Master: ATAPI CD-ROM 32X"]
-    B --> H["Memory: 256MB Extended, 640KB Base"]
+    B -->|Detects| C["Main Processor: Intel Pentium II 400MHz"]
+    B -->|Detects| D["Coprocessor: Built-in"]
+    B -->|Detects| E["Floppy Drive A: 1.44M, 3.5 in."]
+    B -->|Detects| F["Primary Master: IBM-DPTA-372050"]
+    B -->|Detects| G["Secondary Master: ATAPI CD-ROM 32X"]
+    B -->|Detects| H["Memory: 256MB Extended, 640KB Base"]
 
-    H --> I["System Date & Time"]
+    H <-->|Shares Info| I["System Date & Time"]
     I -->|Date| J["Date (mm:dd:yy): Fri 12/04/1998"]
     I -->|Time| K["Time (hh:mm:ss): 09:15:22"]
 
-    I --> L["Boot Device Sequence"]
-    L --> M["1. Diskette Drive"]
-    L --> N["2. Hard Drive"]
-    L --> O["3. ATAPI CD-ROM"]
+    I -->|Determines| L["Boot Device Sequence"]
+    L -->|First Option| M["1. Diskette Drive"]
+    L -->|Second Option| N["2. Hard Drive"]
+    L -->|Third Option| O["3. ATAPI CD-ROM"]
 
-    I --> P["BIOS Settings"]
-    P --> Q["Halt On: All Errors But Keyboard"]
-    P --> R["Quick Power On Self Test: Enabled"]
-    P --> S["Primary Display: VGA/EGA"]
+    B <-->|Configures| P["BIOS Settings"]
+    P -->|Set| Q["Halt On: All Errors But Keyboard"]
+    P -->|Set| R["Quick Power On Self Test: Enabled"]
+    P -->|Set| S["Primary Display: VGA/EGA"]
 
     A --> T["Starting MS-DOS"]
     T --> U["Microsoft MS-DOS Version 6.22"]
 
-    U --> V["Load CONFIG.SYS"]
-    V --> W["DEVICE=C:\\DOS\\HIMEM.SYS"]
-    V --> X["DEVICE=C:\\DOS\\EMM386.EXE RAM"]
-    V --> Y["FILES=40, BUFFERS=20, STACKS=9,256"]
+    U <-->|Reads| V["Load CONFIG.SYS"]
+    V -->|Loads| W["DEVICE=C:\\DOS\\HIMEM.SYS"]
+    V -->|Loads| X["DEVICE=C:\\DOS\\EMM386.EXE RAM"]
+    V -->|Configures| Y["FILES=40, BUFFERS=20, STACKS=9,256"]
 
-    U --> Z["Load AUTOEXEC.BAT"]
-    Z --> AA["SMARTDRV and MSCDEX Drivers"]
-    Z --> AB["Load High DOSKEY, MOUSE.COM"]
+    U <-->|Executes| Z["Load AUTOEXEC.BAT"]
+    Z -->|Starts| AA["SMARTDRV and MSCDEX Drivers"]
+    Z -->|Loads| AB["Load High DOSKEY, MOUSE.COM"]
 
-    U --> AC["Command Prompt C:\\>"]
-    AC --> AD["DOS Menu v1.0"]
-    AD -->|Choice: 1| AE["Starting Windows 3.11"]
+    U <--> AC["Command Prompt C:\\>"]
+    AC <-->|Interaction| AD["DOS Menu v1.0"]
+    AD <-->|Choice: 1| AE["Starting Windows 3.11"]
 
     AE --> AF["Microsoft Windows 3.11"]
-    AF --> AG["Program Manager Loaded"]
+    AF -->|Shows| AG["Program Manager Loaded"]
 
-    AF --> AH["Exiting to MS-DOS"]
+    AF <-->|Exit Command| AH["Exiting to MS-DOS"]
 
     subgraph BIOS
         B --> C
@@ -228,4 +228,5 @@ graph TD
         AF --> AG
         AF --> AH
     end
+
 ```
