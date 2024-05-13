@@ -68,41 +68,90 @@ The CASIO fx-9750GA PLUS calculator uses a BASIC-like programming language for i
 ```
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+%%{init: {'theme': 'default', 'themeVariables': { 'primaryColor': '#4a86e8', 'primaryTextColor': '#ffffff', 'primaryBorderColor': '#333333', 'lineColor': '#333333', 'secondaryColor': '#b6d7a8', 'tertiaryColor': '#ffd966', 'clusterBkg': '#ececec', 'clusterBorder': '#aaaaaa', 'fontSize': '14px'}}}%%
 graph TD
-    A["Start"] --> B["Initialize Data"]
-    B --> C["Load Vectors"]
-    C --> D["Enter Main Loop"]
-    D --> E["Split Document into Chunks"]
-    E --> F["Calculate Chunk Scores"]
-    F --> G["Select Top Chunks"]
-    G --> H["Reduce Chunk Size"]
-    H --> I["Check Chunk Size"]
-    I -->|Enough Size| D
-    I -->|Done| J["Compile Results"]
-    J --> K["End"]
+    subgraph "CASIO fx-9750GA PLUS World Model"
+        subgraph "Programming Environment"
+            subgraph "Input Layer"
+                IA["Python Code: def add_two_numbers(a, b): return a + b"]
+                IB["Identify Inputs: a, b"]
+                IC["Identify Outputs: return a + b"]
+            end
 
-    subgraph phase1
-        A
-        B
-        C
+            subgraph "Translation Process"
+                PA["Translate Functions: Use basic operations"]
+                PB["Translate Variables: a, b to A, B"]
+                PC["Setup User Input: ?→A, ?→B for A and B"]
+                PD["Perform Operation: A + B → C"]
+                PE["Display Output: Disp 'Sum is', C"]
+            end
+
+            subgraph "Output Generation"
+                OA["BASIC-like Code"]
+            end
+
+            subgraph "Parameter Handling"
+                PS1["Global Variables: A, B, C"]
+                PS2["Control Structures: No loops used"]
+                PS3["I/O Commands: ?, Disp"]
+            end
+        end
+
+        subgraph "Calculator Hardware"
+            CH1["Memory Management: Store and retrieve A, B, C"]
+            CH2["Processor: Execute basic arithmetic"]
+            CH3["Display: Show results on screen"]
+        end
+
+        subgraph "User Interaction"
+            UI1["User Input: Accept input for A and B"]
+            UI2["User Output: Display 'Sum is', C"]
+        end
     end
 
-    subgraph phase2
-        D
-        E
-        F
-        G
-        H
-        I
-    end
+    %% Connections within Translation Process
+    IA --> IB
+    IB --> IC
+    IC --> PA
+    PA --> PB
+    PB --> PC
+    PC --> PD
+    PD --> PE
 
-    subgraph phase3
-        J
-        K
-    end
+    %% Connect Translation to Output
+    PE --> OA
 
-    classDef process fill:#f9f,stroke:#333,stroke-width:2px;
-    class phase1,phase2,phase3 process
+    %% Connections within Parameter Handling
+    PS1 --> PB
+    PS2 --> PA
+    PS3 --> PC
 
+    %% Connect Parameter Handling to Translation
+    Parameter Handling --> Translation Process
+
+    %% Connections within Calculator Hardware
+    CH1 --> CH2
+    CH2 --> CH3
+
+    %% Connections from Translation to Calculator Hardware
+    PE --> CH3
+
+    %% Connections within User Interaction
+    UI1 --> CH1
+    CH3 --> UI2
+
+    %% Styling
+    classDef input fill:#f9d5e5,stroke:#b3176d;
+    classDef process fill:#d5f4e6,stroke:#1e434c;
+    classDef output fill:#fefbd8,stroke:#f4a688;
+    classDef param fill:#f4bbbb,stroke:#d64161;
+    classDef hardware fill:#fdd0a2,stroke:#7f6000;
+    classDef userint fill:#d9ead3,stroke:#274e13;
+
+    class "Input Layer" input;
+    class "Translation Process" process;
+    class "Output Generation" output;
+    class "Parameter Handling" param;
+    class "Calculator Hardware" hardware;
+    class "User Interaction" userint;
 ```
