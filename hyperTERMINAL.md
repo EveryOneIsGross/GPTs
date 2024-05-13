@@ -136,7 +136,8 @@ D:\>
 ```
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f0f0f0', 'primaryTextColor': '#333', 'primaryBorderColor': '#f0f0f0', 'lineColor': '#333', 'secondaryColor': '#cccccc', 'tertiaryColor': '#bbbbbb', 'clusterBkg': '#eef', 'clusterBorder': '#333', 'fontSize': '16px'}}}%%
+
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
     A[("Loading... 100%")] --> B[Connecting]
     B -->|Connected| C[("Waiting... (2/16)\\nConnected to Westfield Shopping Centre - Systems BBS")]
