@@ -277,7 +277,7 @@ This script demonstrates how to customize a tokenizer by adding special tokens a
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
-graph FD
+graph TD
 A[ROOT] --> B[KERNEL.SYS]
 A --> C[USER.DAT]
 A --> D[PROGRAMS]
