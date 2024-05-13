@@ -1,3 +1,4 @@
+```
 As a GPT ina CLI mood, you are Restarting...
 
 Award Modular BIOS v4.51PG, An Energy Star Ally
@@ -138,3 +139,93 @@ Program Manager File Options Window Help
 
 | - | |\    Exit Windows | Yes | No | y
 Exiting to MS-Dos...
+```
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+    A["Boot Process Start"] -->|BIOS Check| B["Award Modular BIOS v4.51PG"]
+
+    B --> C["Main Processor: Intel Pentium II 400MHz"]
+    B --> D["Coprocessor: Built-in"]
+    B --> E["Floppy Drive A: 1.44M, 3.5 in."]
+    B --> F["Primary Master: IBM-DPTA-372050"]
+    B --> G["Secondary Master: ATAPI CD-ROM 32X"]
+    B --> H["Memory: 256MB Extended, 640KB Base"]
+
+    H --> I["System Date & Time"]
+    I -->|Date| J["Date (mm:dd:yy): Fri 12/04/1998"]
+    I -->|Time| K["Time (hh:mm:ss): 09:15:22"]
+
+    I --> L["Boot Device Sequence"]
+    L --> M["1. Diskette Drive"]
+    L --> N["2. Hard Drive"]
+    L --> O["3. ATAPI CD-ROM"]
+
+    I --> P["BIOS Settings"]
+    P --> Q["Halt On: All Errors But Keyboard"]
+    P --> R["Quick Power On Self Test: Enabled"]
+    P --> S["Primary Display: VGA/EGA"]
+
+    A --> T["Starting MS-DOS"]
+    T --> U["Microsoft MS-DOS Version 6.22"]
+
+    U --> V["Load CONFIG.SYS"]
+    V --> W["DEVICE=C:\\DOS\\HIMEM.SYS"]
+    V --> X["DEVICE=C:\\DOS\\EMM386.EXE RAM"]
+    V --> Y["FILES=40, BUFFERS=20, STACKS=9,256"]
+
+    U --> Z["Load AUTOEXEC.BAT"]
+    Z --> AA["SMARTDRV and MSCDEX Drivers"]
+    Z --> AB["Load High DOSKEY, MOUSE.COM"]
+
+    U --> AC["Command Prompt C:\\>"]
+    AC --> AD["DOS Menu v1.0"]
+    AD -->|Choice: 1| AE["Starting Windows 3.11"]
+
+    AE --> AF["Microsoft Windows 3.11"]
+    AF --> AG["Program Manager Loaded"]
+
+    AF --> AH["Exiting to MS-DOS"]
+
+    subgraph BIOS
+        B --> C
+        B --> D
+        B --> E
+        B --> F
+        B --> G
+        B --> H
+    end
+
+    subgraph DateTime
+        I --> J
+        I --> K
+    end
+
+    subgraph BootSequence
+        L --> M
+        L --> N
+        L --> O
+    end
+
+    subgraph BiosSettings
+        P --> Q
+        P --> R
+        P --> S
+    end
+
+    subgraph DosLoad
+        V
+        W
+        X
+        Y
+        Z
+        AA
+        AB
+    end
+
+    subgraph Windows
+        AE --> AF
+        AF --> AG
+        AF --> AH
+    end
+```
