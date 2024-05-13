@@ -30,26 +30,38 @@ flow
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-    A["Start: Define System Requirements"] --> B["Select FPGA Architecture"]
-    B --> C["Identify Required Logic Functions"]
-    C --> D["Select Logic Gates and LUT Configurations"]
-    D --> E["Estimate Logic Utilization"]
-    E --> |"Sufficient?"| F["Proceed to I/O Configuration"]
-    E --> |"Insufficient?"| G["Optimize Logic Utilization"]
-    G --> H["Reduce Logic Complexity"]
-    H --> I["Integrate Combinational and Sequential Logic"]
-    I --> J["Re-evaluate Logic Utilization"]
+    A["Start: Define System Requirements"]:::nodeStyle --> B["Select FPGA Architecture"]:::nodeStyle
+    B --> C["Identify Required Logic Functions"]:::nodeStyle
+    C --> D["Select Logic Gates and LUT Configurations"]:::nodeStyle
+    D --> E["Estimate Logic Utilization"]:::nodeStyle
+    E -->|Sufficient?| F["Proceed to I/O Configuration"]:::nodeStyle
+    E -->|Insufficient?| G["Optimize Logic Utilization"]:::nodeStyle
+    G --> H["Reduce Logic Complexity"]:::nodeStyle
+    H --> I["Integrate Combinational and Sequential Logic"]:::nodeStyle
+    I -.-> J["Re-evaluate Logic Utilization"]:::nodeStyle
     J --> F
-    F --> K["Define I/O Requirements"]
-    K --> L["Configure I/O Standards (LVDS, LVTTL, etc.)"]
-    L --> M["Assign I/O Pins and Plan Placement"]
-    M --> N["Set Up I/O Timing Constraints"]
-    N --> O["Implement Differential Signaling if Needed"]
-    O --> P["Validate I/O Configuration with Simulation"]
-    P --> |"Pass?"| Q["Finalize I/O Setup"]
-    P --> |"Fail?"| R["Adjust I/O Configuration"]
-    R --> L
-    Q --> S["Proceed to Interconnects Layout"]
+    F --> K["Define I/O Requirements"]:::nodeStyle
+    K --> L["Configure I/O Standards (LVDS, LVTTL, etc.)"]:::nodeStyle
+    L --> M["Assign I/O Pins and Plan Placement"]:::nodeStyle
+    M --> N["Set Up I/O Timing Constraints"]:::nodeStyle
+    N --> O["Implement Differential Signaling if Needed"]:::nodeStyle
+    O -.-> P["Validate I/O Configuration with Simulation"]:::nodeStyle
+    P -->|Pass?| Q["Finalize I/O Setup"]:::nodeStyle
+    P -->|Fail?| R["Adjust I/O Configuration"]:::nodeStyle
+    R -.-> L
+    Q -.-> S["Proceed to Interconnects Layout"]:::nodeStyle
+
+    %% Feedback Loops and Multidirectional Nodes
+    L -.-> K
+    I -.-> G
+    H --> D
+    J -.-> E
+    R -.-> N
+    O -.-> M
+    P -.-> O
+    S -.-> A
+
+    classDef nodeStyle fill:#ffaa00,color:#fff,stroke:#333,stroke-width:2px;
 
     %% Add stylistic clustering to group processes
     subgraph input
@@ -85,5 +97,6 @@ graph TD
     subgraph output
         S
     end
+
 
 ```
