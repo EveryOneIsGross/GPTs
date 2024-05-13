@@ -28,14 +28,5 @@ graph TD
     D -->|Adjust process| B
     C -->|Feedback to input| A
 
-    %% Styling
-    class A input-style;
-    class B process-style;
-    class C output-style;
-    class D parameter-style;
 
-    classDef input-style fill:#e0e0e0,stroke:#333,stroke-width:2px;
-    classDef process-style fill:#c0c0c0,stroke:#333,stroke-width:2px;
-    classDef output-style fill:#a0a0a0,stroke:#333,stroke-width:2px;
-    classDef parameter-style fill:#d0d0d0,stroke:#333,stroke-width:2px;
 ```
