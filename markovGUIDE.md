@@ -28,6 +28,7 @@ and the sequence x_n is called a Markov chain.
 ```
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
     A[User Input] --> B{Input Type}
     B --> |Transition Matrix| C[Parse Transition Matrix]
