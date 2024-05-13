@@ -81,7 +81,7 @@ Q --> AR
 AR --> CL
 CL --> DIL
 DIL --> TL
-TL --> AR %% Feedback loop for continuous reflection and adaptation
+TL --> AR
 
 %% Connections from Input to Process
 Q --> AR
@@ -109,6 +109,8 @@ A --> C
 AR --> LE
 LE --> AR
 C --> LE
+R --> C
+Q --> LE
 
 classDef input fill:#f9f,stroke:#333,stroke-width:2px;
 classDef process fill:#ccf,stroke:#333,stroke-width:2px;
@@ -119,5 +121,6 @@ class Q,C input;
 class AR,CL,DIL,TL process;
 class R,A output;
 class LE paramSpace;
+
 
 ```
