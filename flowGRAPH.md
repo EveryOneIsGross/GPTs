@@ -64,23 +64,109 @@ dot.view()
 
 ```
 
-```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
-flowchart TD
+```mermaid%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+    %% Nodes within Input
+    A((A)) -->|Input to Preprocessing| B((B))
+    
+    %% Nodes within Preprocessing
+    B((B)) --> C((C))
+    B((B)) --> D((D))
+    B((B)) --> E((E))
+    C((C)) --> F((F))
+    D((D)) --> F((F))
+    E((E)) --> F((F))
+    
+    %% Nodes within Feature Extraction
+    F((F)) --> G((G))
+    F((F)) --> H((H))
+    F((F)) --> I((I))
+    G((G)) --> J((J))
+    H((H)) --> J((J))
+    I((I)) --> J((J))
+    
+    %% Nodes within Multi-stage Classification
+    J((J)) --> K((K))
+    J((J)) --> L((L))
+    J((J)) --> M((M))
+    K((K)) --> N((N))
+    L((L)) --> N((N))
+    M((M)) --> N((N))
+    
+    %% Nodes within Ensemble Output
+    N((N)) --> O((O))
+    
+    %% Nodes within Post-processing
+    O((O)) --> P((P))
+    O((O)) --> Q((Q))
+    P((P)) --> R((R))
+    Q((Q)) --> R((R))
+    
+    %% Nodes within Output
+    R((R)) --> S((S))
+    S((S)) --> T((T))
+    T((T)) -->|Feedback to Input| A((A))
+    
+    %% Parameter Space Connections
+    U((U)) -->|Influences C| C((C))
+    V((V)) -->|Influences B| B((B))
+    W((W)) -->|Influences F| F((F))
+    X((X)) -->|Influences F| F((F))
+    Y((Y)) -->|Influences J| J((J))
+    Z((Z)) -->|Influences O| O((O))
+    AA((AA)) -->|Influences R| R((R))
+    
+    %% Subgraphs
+    subgraph Input
+        A((A))
+    end
+    
+    subgraph Preprocessing
+        B((B))
+        C((C))
+        D((D))
+        E((E))
+    end
+    
+    subgraph "Feature Extraction"
+        F((F))
+        G((G))
+        H((H))
+        I((I))
+    end
+    
+    subgraph "Multi-stage Classification"
+        J((J))
+        K((K))
+        L((L))
+        M((M))
+    end
+    
+    subgraph "Ensemble Output"
+        N((N))
+    end
+    
+    subgraph Post-processing
+        O((O))
+        P((P))
+        Q((Q))
+    end
+    
+    subgraph Output
+        R((R))
+        S((S))
+        T((T))
+    end
+    
+    subgraph "Parameter Space"
+        U((U))
+        V((V))
+        W((W))
+        X((X))
+        Y((Y))
+        Z((Z))
+        AA((AA))
+    end
 
-    A[Start: Define Propositions] --> B[Identify Predicates and Constants]
-    B --> C[Structure First-Order Logic Statements]
-    C --> D[Define Logical Axioms]
-    D --> E[Establish Rules of Inference]
-    E --> F[Formulate Knowledge Base]
-    F --> G[Apply Deduction Theorems]
-    G --> H[Query Processing]
-    H --> I[Infer New Knowledge]
-    
-    I -->|Satisfiable| J[Solution Found: First-Order Logic Satisfies Query]
-    I -->|Unsatisfiable| K[No Solution: Revise Statements or Axioms]
-    
-    J --> L[End: Knowledge Inference Successful]
-    K --> A[Restart: Refine Propositions or Logic]
 
 ```
