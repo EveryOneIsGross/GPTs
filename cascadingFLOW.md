@@ -75,6 +75,5 @@ optimize --> monitor
 distribute --> scale
 config --> boot
 
-classDef processStyle fill:#f9f,stroke:#333,stroke-width:2px;
 class boot,config,scale,distribute,monitor,optimize,adapt,evolve,prune,compress processStyle;
 ```
