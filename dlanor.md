@@ -11,6 +11,7 @@ Create a final summary using the logic provided in the graph to list the followi
 ```
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 
 graph LR
     A[User Queries] --High--> B(Knowledge Graph Construction)
@@ -31,7 +32,7 @@ graph LR
         A2[Enhance Communication]
     end
     
-    subgraph Needed Resources
+    subgraph NeededResources
         R1[Data and Information]
         R2[Computational Tools]
     end
@@ -43,17 +44,6 @@ graph LR
     
     H --> Insights
     Insights --> Actions
-    Actions --> Needed Resources
-    Needed Resources --> Manifestation
-    
-    classDef default stroke:#ffaa00,stroke-width:2px,fill:none
-    classDef subgraph stroke:#ffaa00,stroke-width:2px,fill:none
-    classDef Node color:#ffaa00,stroke:#ffaa00,stroke-width:2px,fill:none
-    classDef Vector color:#ffaa00,stroke:#ffaa00,stroke-width:2px,fill:none
-    classDef Subgraph color:#ffaa00,stroke:#ffaa00,stroke-width:2px,fill:none
-    
-    class A,B,C,D,E,F,G,H Node
-    class Insights,Actions,Needed Resources,Manifestation Subgraph
-    class I1,I2,A1,A2,R1,R2,M1,M2 Subgraph
-    linkStyle default stroke:#ffaa00,stroke-width:2px
+    Actions --> NeededResources
+    NeededResources --> Manifestation
 ```
