@@ -37,33 +37,44 @@
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
+
 subgraph Layer_1_initiation
-direction TB
-boot[Process: boot<br>Action: start] --> config[Process: config<br>Action: load]
+boot[Process: boot<br>Action: start] <--> config[Process: config<br>Action: load]
 end
 
 subgraph Layer_2_expansion
-direction TB
-scale[Process: scale<br>Action: increase] --> distribute[Process: distribute<br>Action: spread]
+scale[Process: scale<br>Action: increase] <--> distribute[Process: distribute<br>Action: spread]
 end
 
 subgraph Layer_3_maintenance
-direction TB
-monitor[Process: monitor<br>Action: check] --> optimize[Process: optimize<br>Action: enhance]
+monitor[Process: monitor<br>Action: check] <--> optimize[Process: optimize<br>Action: enhance]
 end
 
 subgraph Layer_4_evolution
-direction TB
-adapt[Process: adapt<br>Action: modify] --> evolve[Process: evolve<br>Action: advance]
+adapt[Process: adapt<br>Action: modify] <--> evolve[Process: evolve<br>Action: advance]
 end
 
 subgraph Layer_5_final_reduction
-direction TB
-prune[Process: prune<br>Action: reduce] --> compress[Process: compress<br>Action: condense]
+prune[Process: prune<br>Action: reduce] <--> compress[Process: compress<br>Action: condense]
 end
 
-Layer_1_initiation --> Layer_2_expansion
-Layer_2_expansion --> Layer_3_maintenance
-Layer_3_maintenance --> Layer_4_evolution
-Layer_4_evolution --> Layer_5_final_reduction
+boot --> scale
+config --> distribute
+scale --> monitor
+distribute --> optimize
+monitor --> adapt
+optimize --> evolve
+adapt --> prune
+evolve --> compress
+
+compress --> boot
+prune --> config
+evolve --> scale
+adapt --> distribute
+optimize --> monitor
+distribute --> scale
+config --> boot
+
+classDef processStyle fill:#f9f,stroke:#333,stroke-width:2px;
+class boot,config,scale,distribute,monitor,optimize,adapt,evolve,prune,compress processStyle;
 ```
