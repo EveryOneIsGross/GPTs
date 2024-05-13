@@ -105,27 +105,27 @@ print(f"Number of edges in the graph: {H.number_of_edges()}")
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
     %% Nodes in Input Subgraph %%
-    A((A))["Text Data"]
-    B((B))["Query"]
+    A(["Text Data"]):::A
+    B(["Query"]):::B
 
     %% Nodes in Process Subgraph %%
-    C((C))["Preprocessing"]
-    D((D))["Word2Vec Training"]
-    E((E))["Chunk Vector Calculation"]
-    F((F))["Hierarchical Clustering"]
-    G((G))["Graph Construction"]
-    H((H))["Node Matching"]
-    I((I))["Interaction"]
+    C(["Preprocessing"]):::C
+    D(["Word2Vec Training"]):::D
+    E(["Chunk Vector Calculation"]):::E
+    F(["Hierarchical Clustering"]):::F
+    G(["Graph Construction"]):::G
+    H(["Node Matching"]):::H
+    I(["Interaction"]):::I
 
     %% Nodes in Output Subgraph %%
-    J((J))["Graph"]
-    K((K))["Response"]
+    J(["Graph"]):::J
+    K(["Response"]):::K
 
     %% Nodes in Parameter Space %%
-    L((L))["Vector Size"]
-    M((M))["Window Size"]
-    N((N))["Cluster Count"]
-    O((O))["Chunk Size"]
+    L(["Vector Size"]):::L
+    M(["Window Size"]):::M
+    N(["Cluster Count"]):::N
+    O(["Chunk Size"]):::O
 
     %% Connections within Input %%
     A --> C
@@ -179,4 +179,5 @@ graph TD
         N
         O
     end
-```
+
+````
