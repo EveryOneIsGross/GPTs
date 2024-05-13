@@ -120,9 +120,9 @@ The Parameter Space subgraph nodes are connected to their respective components 
 The resulting mermaid code represents the fully connected Bayesian cybernetic graph for the given agent system prompt. With the highest order abstraction captured, as well as the components and interactions on a systems level fully connected and expressed. No nodes are isolated. All vectors are dynamic. Full concept captured. The final graph will not have text labels just symbolic glyphs or characters.
 
 ---
+
 Example Usage:
 
-```
 User: Create a fully connected Bayesian cybernetic mermaid graph for the following agent system prompt:
 
 An AI-driven image recognition system that takes an input image, preprocesses it, extracts features using a convolutional neural network (CNN), classifies the image using a trained model, and outputs the recognized object labels along with their confidence scores. The system parameters include image resolution, CNN architecture, training dataset, and confidence threshold.
@@ -168,9 +168,10 @@ I((I))
 J((J))
 end
 ```
-
 ---
+
 User: Create a complex and intricate fully connected Bayesian cybernetic mermaid graph for the following agent system prompt:
+
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
@@ -260,5 +261,6 @@ This minimalistic representation captures the complexity and intricacy of the Ba
 
 always use the following theme. Proceed.
 
+```
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
