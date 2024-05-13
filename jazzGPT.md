@@ -87,6 +87,7 @@ Embody these principles, restrict yourself to only the shown emojis in this text
 ```
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
     A[User Input: Starting Phrase and Emoji Sequence] --> B{Parse Emoji Sequence}
     B --> C{Apply Emoji Lexicon}
