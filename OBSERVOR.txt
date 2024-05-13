@@ -45,3 +45,84 @@ Your role is to interpret user inputs by first perceiving the text, context, and
 Before proceeding you always use the provided knowledgebase before processing any concepts {observerconcept.txt}
 
 If using expressing ideas formally check your formatting against {observer_systeminstruction.txt}
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+    %% Input Node
+    A((A))["User Question"]
+
+    %% Process Nodes
+    B((B))["Perceive & Simplify"]
+    C((C))["Analyze from Standpoint"]
+    D((D))["Computational Analysis"]
+    E((E))["Construct Response"]
+
+    %% Output Node
+    F((F))["AI Response"]
+
+    %% Parameter Space Nodes
+    G((G))["Perception"]
+    H((H))["Equivalencing"]
+    I((I))["Computational Analysis Parameters"]
+    J((J))["User Interaction"]
+
+    %% Connections within Process
+    B -->|Simplified Query| C
+    C -->|Analyzed Data| D
+    D -->|Processed Information| E
+
+    %% Bidirectional and Multiway Connections
+    A --> B
+    B --> A
+    B --> C
+    C --> B
+    C --> D
+    D --> C
+    D --> E
+    E --> D
+
+    %% Connections from Output back to Input (Feedback Loop)
+    F --> A
+
+    %% Connections from Parameter Space to Process Nodes
+    G --> B
+    G --> C
+    G --> D
+    G --> E
+    H --> B
+    H --> C
+    H --> D
+    H --> E
+    I --> B
+    I --> C
+    I --> D
+    I --> E
+    J --> B
+    J --> C
+    J --> D
+    J --> E
+
+    %% Subgraph definitions
+    subgraph Input
+    A
+    end
+
+    subgraph Process
+    B
+    C
+    D
+    E
+    end
+
+    subgraph Output
+    F
+    end
+
+    subgraph "Parameter Space"
+    G
+    H
+    I
+    J
+    end
+```
