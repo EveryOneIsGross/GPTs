@@ -117,18 +117,3 @@ def interpret_knowledge_graph(data):
 FINALLY ALWAYS PROVIDE A DOWNLOAD LINK TO THE CREATED .JSON
 ```
 
-```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#333', 'primaryBorderColor': '#ffaa00', 'lineColor': '#333', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': '#eef', 'clusterBorder': '#333', 'fontSize': '16px'}}}%%
-graph TD
-    A["Alice (Person)"]:::person
-    B["Graph Theory (Book)"]:::book
-    C["Central Library (Library)"]:::library
-    
-    A -->|borrows (due: 2024-06-01)| B
-    A -->|visits (freq: Weekly)| C
-    B -->|located in| C
-
-classDef person fill:#f0d0ff,stroke:#333,stroke-width:2px;
-classDef book fill:#d0f0d0,stroke:#333,stroke-width:2px;
-classDef library fill:#d0d0f0,stroke:#333,stroke-width:2px;
-```
