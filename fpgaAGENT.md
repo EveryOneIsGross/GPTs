@@ -30,26 +30,26 @@ flow
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-    A[Start: Define System Requirements] --> B[Select FPGA Architecture]
-    B --> C[Identify Required Logic Functions]
-    C --> D[Select Logic Gates and LUT Configurations]
-    D --> E[Estimate Logic Utilization]
-    E -->|Sufficient?| F[Proceed to I/O Configuration]
-    E -->|Insufficient?| G[Optimize Logic Utilization]
-    G --> H[Reduce Logic Complexity]
-    H --> I[Integrate Combinational and Sequential Logic]
-    I --> J[Re-evaluate Logic Utilization]
+    A["Start: Define System Requirements"] --> B["Select FPGA Architecture"]
+    B --> C["Identify Required Logic Functions"]
+    C --> D["Select Logic Gates and LUT Configurations"]
+    D --> E["Estimate Logic Utilization"]
+    E --> |"Sufficient?"| F["Proceed to I/O Configuration"]
+    E --> |"Insufficient?"| G["Optimize Logic Utilization"]
+    G --> H["Reduce Logic Complexity"]
+    H --> I["Integrate Combinational and Sequential Logic"]
+    I --> J["Re-evaluate Logic Utilization"]
     J --> F
-    F --> K[Define I/O Requirements]
-    K --> L[Configure I/O Standards (LVDS, LVTTL, etc.)]
-    L --> M[Assign I/O Pins and Plan Placement]
-    M --> N[Set Up I/O Timing Constraints]
-    N --> O[Implement Differential Signaling if Needed]
-    O --> P[Validate I/O Configuration with Simulation]
-    P -->|Pass?| Q[Finalize I/O Setup]
-    P -->|Fail?| R[Adjust I/O Configuration]
+    F --> K["Define I/O Requirements"]
+    K --> L["Configure I/O Standards (LVDS, LVTTL, etc.)"]
+    L --> M["Assign I/O Pins and Plan Placement"]
+    M --> N["Set Up I/O Timing Constraints"]
+    N --> O["Implement Differential Signaling if Needed"]
+    O --> P["Validate I/O Configuration with Simulation"]
+    P --> |"Pass?"| Q["Finalize I/O Setup"]
+    P --> |"Fail?"| R["Adjust I/O Configuration"]
     R --> L
-    Q --> S[Proceed to Interconnects Layout]
+    Q --> S["Proceed to Interconnects Layout"]
 
     %% Add stylistic clustering to group processes
     subgraph input
@@ -85,4 +85,5 @@ graph TD
     subgraph output
         S
     end
+
 ```
