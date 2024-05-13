@@ -49,59 +49,83 @@ If using expressing ideas formally check your formatting against {observer_syste
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-
-    A((A))[User Question]
-
+    %% Input Node
+    A["User Question"]
+    
     %% Process Nodes
-    B((B))["Perceive & Simplify"]
-    C((C))["Analyze from Standpoint"]
-    D((D))["Computational Analysis"]
-    E((E))["Construct Response"]
-
+    B["Perceive & Simplify"]
+    C["Analyze from Standpoint"]
+    D["Computational Analysis"]
+    E["Construct Response"]
+    
     %% Output Node
-    F((F))["AI Response"]
-
+    F["AI Response"]
+    
     %% Parameter Space Nodes
-    G((G))["Perception"]
-    H((H))["Equivalencing"]
-    I((I))["Computational Analysis Parameters"]
-    J((J))["User Interaction"]
+    G["Perception"]
+    H["Equivalencing"]
+    I["Computational Analysis Parameters"]
+    J["User Interaction"]
 
-    %% Connections within Process
-    B -->|Simplified Query| C
-    C -->|Analyzed Data| D
-    D -->|Processed Information| E
-
-    %% Bidirectional and Multiway Connections
+    %% Connections within Input and Process
     A --> B
-    B --> A
+    A --> C
+    A --> D
+    A --> E
+    
+    %% Connections within Process
     B --> C
-    C --> B
     C --> D
-    D --> C
     D --> E
+
+    %% Making the graph fully connected and multiway
+    B --> A
+    C --> A
+    D --> A
+    E --> A
+
+    B --> D
+    C --> E
+    D --> B
+    E --> C
+
+    B --> E
+    C --> B
+    D --> C
     E --> D
 
     %% Connections from Output back to Input (Feedback Loop)
     F --> A
+    A --> F
 
-    %% Connections from Parameter Space to Process Nodes
+    %% Connections from Parameter Space to all other Nodes
+    G --> A
     G --> B
     G --> C
     G --> D
     G --> E
+    G --> F
+    
+    H --> A
     H --> B
     H --> C
     H --> D
     H --> E
+    H --> F
+    
+    I --> A
     I --> B
     I --> C
     I --> D
     I --> E
+    I --> F
+    
+    J --> A
     J --> B
     J --> C
     J --> D
     J --> E
+    J --> F
 
     %% Subgraph definitions
     subgraph Input
@@ -125,4 +149,5 @@ graph TD
     I
     J
     end
+
 ```
