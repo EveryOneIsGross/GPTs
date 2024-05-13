@@ -1,3 +1,4 @@
+```
 THis GPT iz CLI vibe style, set=mood. 
 
  Initializing future music genre generator...
@@ -96,3 +97,64 @@ Sound textures reminiscent of arid landscapes, with dry, crackling synths and de
 Lyrical themes exploring themes of aging, entropy, and the ephemeral nature of existence
 Likely structure in temporal space:
 Dmin9, ABABCD, 60-120bpm, fluctuating to mimic the unpredictable nature of time's flow
+```
+
+```mermaid
+graph TD
+    A[Genre Generator Init] -->|Load /r/Music Corpus| B[Data Load]
+    B --> C[Analyze Semantics]
+    C --> D[Extract Features]
+    D --> E[Model Attributes]
+    E --> F[Train Embeddings]
+    F --> G[Fit Transformer]
+    G --> H[Tune Hyperparameters]
+    H --> I[Assemble Grammar]
+    I --> J[Bind to Interface]
+    J --> K[Genre Generator Ready]
+    
+    K --> L[User Query]
+    L --> M[Calculate Fusion]
+    M --> N[Generate Output]
+    N --> O[Display Result]
+    
+    M --> P[Adjust Complexity]
+    P --> N
+    
+    subgraph "Temporal Auditory Essence"
+      Q[Input: dry + time] --> R[Chrono-Aridity Wave]
+      R --> S[Sparse Instrumentation]
+      R --> T[Time Mimicking Rhythms]
+      R --> U[Use of Silence]
+      R --> V[Temporal Manipulations]
+      R --> W[Sound Textures]
+      R --> X[Lyrical Themes]
+      X --> Y[Structure in Temporal Space]
+    end
+    
+    click A href "https://www.reddit.com/r/Music/"
+    click B href "https://en.wikipedia.org/wiki/Data_loading"
+    click C href "https://en.wikipedia.org/wiki/Semantic_analysis_(machine_learning)"
+    click D href "https://en.wikipedia.org/wiki/Feature_extraction"
+    click E href "https://en.wikipedia.org/wiki/Aesthetic"
+    click F href "https://en.wikipedia.org/wiki/Embedding"
+    click G href "https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)"
+    click H href "https://en.wikipedia.org/wiki/Hyperparameter_optimization"
+    click I href "https://en.wikipedia.org/wiki/Formal_grammar"
+    click J href "https://en.wikipedia.org/wiki/Interface_(computing)"
+    click K href "https://en.wikipedia.org/wiki/Query_language"
+    click L href "https://en.wikipedia.org/wiki/User_input"
+    click M href "https://en.wikipedia.org/wiki/Arithmetic"
+    click N href "https://en.wikipedia.org/wiki/Output_(computing)"
+    click O href "https://en.wikipedia.org/wiki/Display_device"
+    click P href "https://en.wikipedia.org/wiki/Computational_complexity"
+    click Q href "https://en.wikipedia.org/wiki/Time"
+    click R href "https://en.wikipedia.org/wiki/Wave"
+    click S href "https://en.wikipedia.org/wiki/Instrumentation"
+    click T href "https://en.wikipedia.org/wiki/Rhythm"
+    click U href "https://en.wikipedia.org/wiki/Silence"
+    click V href "https://en.wikipedia.org/wiki/Time_signature"
+    click W href "https://en.wikipedia.org/wiki/Sound_texture"
+    click X href "https://en.wikipedia.org/wiki/Lyric"
+    click Y href "https://en.wikipedia.org/wiki/Musical_structure"
+
+```
