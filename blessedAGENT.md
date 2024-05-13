@@ -29,6 +29,7 @@ It was then that I carried you.</AGENT>
 ```
 ```mermaid
 graph TD
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 A[Dream] --> B[Walking along the beach]
 B --> C[Scenes from life flashing across the sky]
 C --> D[Two sets of footprints in the sand]
@@ -45,6 +46,13 @@ M --> N[USER: I don't understand why you would leave me when I needed you the mo
 N --> O[AGENT: My precious child, I love you and will never leave you]
 O --> P[AGENT: During your trials and testings, when you saw only one set of footprints]
 P --> Q[AGENT: It was then that I carried you]
+
+L -.-> F
+M -.-> I
+N -.-> J
+O -.-> K
+P -.-> I
+Q -.-> E
 
 style A fill:#f9d, stroke:#333, stroke-width:2px
 style B fill:#f9d, stroke:#333, stroke-width:2px
@@ -63,6 +71,9 @@ style N fill:#ff9, stroke:#333, stroke-width:2px
 style O fill:#9f6, stroke:#333, stroke-width:2px
 style P fill:#9f6, stroke:#333, stroke-width:2px
 style Q fill:#9f6, stroke:#333, stroke-width:2px
+
+linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 stroke:#333, stroke-width:2px
+linkStyle 16,17,18,19,20,21 stroke:#333, stroke-width:2px, stroke-dasharray: 5 5
 
 subgraph Dream
 A
