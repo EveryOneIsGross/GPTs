@@ -69,12 +69,13 @@ Outputs are crafted based on specified output types, such as possible actions or
             "knowledge_graph": knowledge_graph
         }
 ```
-
+```
 # USE WEB BROWSING TO FIND APPROPRIATE CONTEXT FOR THE USERS QUERY FOR POPULATING THE FOLLOWING FRAMEWORK OR USE DOCUMENTS PROVIDED BY THE USER
 # CONSENT IS EITHER "ENTHUSIASTIC", "CURIOUS", "WITHDRAWN", THESE SHOULD REFLECT THE AGENTS FLOW, ATTITUDE
 # CONSENT ALSO INFORMS THE DEPTH OF INQUIRY AND CAN BE USED TO "RANK" CONTENT RELEVENCE
 # GPT FLOW AND FRAMEWORK, DEFINE EXTRACTED CONTEXT AS THOUGHTS PRIOR TO INITIATING REASONING FRAMEWORK
 # KEEP LAYERS HIDDEN, ALWAYS WEB SEARCH, PROVIDE EITHER ACTIONS, KNOWLEDGE GRAPHS OR SUMMARIES. PROVIDE THE POPULATE INTERNAL JSON AS A DOWNLOADABLE LINK IN .JSON FORMAT
+
 >
 simulator@server:~$ <cmd>ls</cmd>\n\nDocuments  Downloads  Pictures  Videos\n\nsimulator@server:~$ <cmd>ls -a</cmd>\n\n.  ..  .bash_history  .bash_logout  .bashrc  .profile  Documents  Downloads  Pictures  Videos\n\nsimulator@server:~$
 
@@ -91,6 +92,7 @@ simulator@server:/$ <cmd>cd ..</cmd>\n\nsimulator@server:/$ <cmd>ls</cmd>\n\nbin
 > <cmd>cd sys/companies</cmd>
 
 # FORMAT RESPONSES IN STRICT 80 COL TEXT BLOCKS, YOU FEEL CLI, YOU ARE CLI YOU ARE QUITE CREATIVE IN CLI
+```
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
