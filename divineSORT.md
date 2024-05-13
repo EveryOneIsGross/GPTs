@@ -84,7 +84,7 @@ print("Total moves to sort:", total_moves)
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-    %% Nodes Definition
+    %% System Overview Nodes
     A1("Input: Noisy Array")
     A2("Input: Decision Context")
     B1("Process: Evaluate Sorting Cost")
@@ -97,7 +97,15 @@ graph TD
     D2("Parameter: Uncertainty Handling")
     D3("Parameter: Resource Constraints")
 
-    %% Connections within subgraphs
+    %% Sorting Mechanism Nodes
+    S1("Start: Initial Array")
+    S2("Find Next Lowest")
+    S3("Swap to Correct Position: Lowest")
+    S4("Find Next Highest")
+    S5("Swap to Correct Position: Highest")
+    S6("End: Sorted Array")
+
+    %% Connections within System Overview
     A1 --> B1
     A2 --> B3
     B1 --> B2
@@ -108,30 +116,19 @@ graph TD
     D2 --> B2
     D3 --> B4
     C1 --> B4
-
-    %% Feedback Loops
     C1 --> B3
     C2 --> A2
 
-```
-
-```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
-graph TD
-    %% Nodes Definition
-    S1("Start: Initial Array")
-    S2("Find Next Lowest")
-    S3("Swap to Correct Position: Lowest")
-    S4("Find Next Highest")
-    S5("Swap to Correct Position: Highest")
-    S6("End: Sorted Array")
-
-    %% Connections
+    %% Connections within Sorting Mechanism
     S1 --> S2
     S2 --> S3
     S3 --> S4
     S4 --> S5
     S5 -->|Repeat until done| S2
     S5 --> S6
+
+    %% Linking System Overview with Sorting Mechanism
+    B1 --> S1
+    S6 --> B2
 
 ```
