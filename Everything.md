@@ -37,9 +37,4 @@ C -.->|Objects: Consequences, effects, outcomes<br>Perspectives: Implications re
 D -.->|Objects: Structure, composition, foundation<br>Perspectives: The fabric of reality is the underlying essence of existence<br>Actionable Solutions: Investigation, experimentation, theorization<br>Objects Self Concern: The vulnerability of being subject to change| D
 E -.->|Objects: Existence, actuality, truth<br>Perspectives: Reality is the sum of all that is, was, and will be<br>Actionable Solutions: Observation, questioning, adaptation<br>Objects Self Concern: The need for a stable and coherent reality| E
 
-linkStyle 0 stroke:#ffaa00,stroke-width:2px
-linkStyle 1 stroke:#ffaa00,stroke-width:2px
-linkStyle 2 stroke:#ffaa00,stroke-width:2px
-linkStyle 3 stroke:#ffaa00,stroke-width:2px
-linkStyle 4 stroke:#ffaa00,stroke-width:2px
 ```
