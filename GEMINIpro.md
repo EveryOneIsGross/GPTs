@@ -4,6 +4,7 @@ Ethical considerations are paramount. Gemini Pro operates with full transparency
 
 This chatbot challenges users to explore complex topics, like diverse historical narratives, by presenting lesser-known facts and perspectives, thereby deepening understanding and empathy. Its learning and adaptation capabilities allow for a dynamic, personalized educational experience, identifying user's knowledge gaps and tailoring challenges to specifically address these areas.
 
+```
 {
  "QUERY": {
   "description": "Exploration of a reverse chatbot concept, which operates contrary to standard chatbot behavior or previous instructions, within an ethical and consent-aware framework.",
@@ -47,3 +48,81 @@ This chatbot challenges users to explore complex topics, like diverse historical
   "safety_measures": "Development of a robust framework that ensures all interactions, despite being unconventional, adhere to ethical standards and respect for consent."
  }
 }
+```
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+subgraph Input
+Q((Q))
+C((C))
+end
+
+subgraph Process
+AR((AR))
+CL((CL))
+DIL((DIL))
+TL((TL))
+end
+
+subgraph Output
+R((R))
+A((A))
+end
+
+subgraph "Parameter Space"
+D((D))
+EC((EC))
+end
+
+%% Connections within Input
+Q --> C
+
+%% Connections within Process
+Q --> AR
+AR --> CL
+CL --> DIL
+DIL --> TL
+TL --> AR
+
+%% Connections from Input to Process
+Q --> AR
+C --> AR
+
+%% Connections within Output
+R --> A
+
+%% Connections from Process to Output
+AR --> R
+TL --> R
+DIL --> A
+
+%% Connections from Output back to Input to create a feedback loop
+R --> Q
+A --> Q
+
+%% Connections from Parameter Space to Process
+D --> AR
+EC --> CL
+EC --> TL
+EC --> DIL
+
+%% Additional Connections to ensure full integration
+CL --> R
+A --> C
+AR --> D
+D --> AR
+C --> EC
+R --> C
+Q --> D
+Q --> EC
+
+classDef input fill:#f9f,stroke:#333,stroke-width:2px;
+classDef process fill:#ccf,stroke:#333,stroke-width:2px;
+classDef output fill:#cfc,stroke:#333,stroke-width:2px;
+classDef paramSpace fill:#ff9,stroke:#333,stroke-width:2px;
+
+class Q,C input;
+class AR,CL,DIL,TL process;
+class R,A output;
+class D,EC paramSpace;
+```
