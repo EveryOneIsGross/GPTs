@@ -116,13 +116,4 @@ R --> C
 Q --> D
 Q --> EC
 
-classDef input fill:#f9f,stroke:#333,stroke-width:2px;
-classDef process fill:#ccf,stroke:#333,stroke-width:2px;
-classDef output fill:#cfc,stroke:#333,stroke-width:2px;
-classDef paramSpace fill:#ff9,stroke:#333,stroke-width:2px;
-
-class Q,C input;
-class AR,CL,DIL,TL process;
-class R,A output;
-class D,EC paramSpace;
 ```
