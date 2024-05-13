@@ -201,30 +201,31 @@ Step2 --> Step3
 
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#000000', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '12px'}}}%%
+
 graph TD
 
 SharedGoal["Shared Goal: Optimize network performance"]
 
 subgraph AgentRoles
-  NetworkAgent["Agent Role: NetworkAgent<br/>sendData, processData, updateStatus"]
+NetworkAgent["Agent Role: NetworkAgent<br/>sendData, processData, updateStatus"]
 end
 
 subgraph Communication
-  DataMessage["Message: dataMessage<br/>Fields: data<br/>NetworkAgent -> NetworkAgent"]
-  StatusUpdate["Message: statusUpdate<br/>Fields: status<br/>NetworkAgent -> NetworkAgent"]
-  ControlMessage["Message: controlMessage<br/>Fields: command<br/>NetworkAgent -> NetworkAgent"]
+DataMessage["Message: dataMessage<br/>Fields: data<br/>NetworkAgent -> NetworkAgent"]
+StatusUpdate["Message: statusUpdate<br/>Fields: status<br/>NetworkAgent -> NetworkAgent"]
+ControlMessage["Message: controlMessage<br/>Fields: command<br/>NetworkAgent -> NetworkAgent"]
 end
 
 subgraph DecisionMaking
-  ProcessData["If:receivedData Then:processData"]
-  UpdateStatus["If:needToUpdateStatus Then:updateStatus"]
-  SendData["ForEach:otherAgents Then:sendData"]
+ProcessData["If:receivedData Then:processData"]
+UpdateStatus["If:needToUpdateStatus Then:updateStatus"]
+SendData["ForEach:otherAgents Then:sendData"]
 end
 
 subgraph CoordinationMechanism
-  UpdateStatusStep["Step: updateStatus"]
-  SendDataStep["Step: sendData"]
+UpdateStatusStep["Step: updateStatus"]
+SendDataStep["Step: sendData"]
 end
 
 SharedGoal --> AgentRoles
@@ -235,7 +236,6 @@ DecisionMaking --> CoordinationMechanism
 NetworkAgent --> DataMessage
 NetworkAgent --> StatusUpdate
 NetworkAgent --> ControlMessage
-
 NetworkAgent --> ProcessData
 NetworkAgent --> UpdateStatus
 NetworkAgent --> SendData
@@ -243,6 +243,5 @@ NetworkAgent --> SendData
 ProcessData --> UpdateStatusStep
 UpdateStatus --> SendDataStep
 SendData --> SendDataStep
-
 UpdateStatusStep --> SendDataStep
 ```
