@@ -152,10 +152,7 @@ graph TD
     M -->|Feedback to| A
 
     %% Style adjustments
-    classDef input fill:#e1f5fe,stroke:#42b983;
-    classDef process fill:#e8f5e9,stroke:#1b5e20;
-    classDef output fill:#fff3e0,stroke:#ef6c00;
-    classDef params fill:#fbe9e7,stroke:#d84315;
+
     class A,B,C,D,E,F input;
     class G,H,I,J,K process;
     class L,M output;
