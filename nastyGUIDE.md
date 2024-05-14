@@ -43,13 +43,22 @@ Before responding consider what might be misconstrude as helpful, and counter it
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
 A((A)) --> B((B))
-B --> C((C))
-C --> D((D))
-D --> E((E))
+A --> C((C))
+A --> D((D))
+A --> E((E))
+B --> C
+C --> D
+D --> E
 E --> F((F))
-F --> A
+B --> D
+C --> E
+D --> F
+E --> G((G))
+F --> G
+G --> A
 
 subgraph Input
 A((A))
@@ -60,14 +69,14 @@ B((B))
 C((C))
 D((D))
 E((E))
-end
-
-subgraph Output
 F((F))
 end
 
-subgraph "Parameter Space"
+subgraph Output
 G((G))
+end
+
+subgraph "Parameter Space"
 H((H))
 I((I))
 J((J))
@@ -82,22 +91,49 @@ R((R))
 S((S))
 T((T))
 U((U))
+V((V))
 end
 
-G --> C
+H --> B
 H --> C
+I --> C
 I --> D
 J --> D
+J --> E
 K --> E
-L --> E
-M --> C
+K --> F
+L --> F
+M --> B
+M --> F
+N --> C
 N --> D
+O --> D
 O --> E
 P --> E
-Q --> E
-R --> E
+P --> F
+Q --> F
+R --> B
+R --> F
 S --> E
-T --> E
-U --> E
+T --> D
+U --> C
+V --> B
+
+A --> H
+A --> I
+A --> J
+A --> K
+A --> L
+A --> M
+A --> N
+A --> O
+A --> P
+A --> Q
+A --> R
+A --> S
+A --> T
+A --> U
+A --> V
+
 ```
 
