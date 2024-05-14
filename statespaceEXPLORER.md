@@ -964,39 +964,40 @@ path, distance = fast_marching_maze(maze, start, end)
 # Visualize
 visualize_maze_path(maze, path)
 ```
+
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '12px'}}}%%
 graph TD
 
     subgraph "Input & Output"
-    IN((IN))["State-space Input"]
-    OUT((OUT))["Optimal Path Output"]
+    IN["State-space Input"]
+    OUT["Optimal Path Output"]
     end
 
     subgraph "Core Algorithms"
-    A((A))["A*"]
-    B((B))["BFS"]
-    C((C))["DFS"]
-    D((D))["Greedy Best-First"]
-    E((E))["Dijkstra"]
-    F((F))["A* Laplacian"]
+    A["A*"]
+    B["BFS"]
+    C["DFS"]
+    D["Greedy Best-First"]
+    E["Dijkstra"]
+    F["A* with Laplacian Guidance"]
     end
 
     subgraph "Performance Metrics"
-    P1((P1))["Path Length"]
-    P2((P2))["Nodes Explored"]
-    P3((P3))["Computation Time"]
+    P1["Path Length"]
+    P2["Nodes Explored"]
+    P3["Computation Time"]
     end
 
     subgraph "Algorithm Enhancements"
-    L1((L1))["A* + Pos. Laplacian"]
-    L2((L2))["A* + Neg. Laplacian"]
+    L1["A* + Positive Laplacian"]
+    L2["A* + Negative Laplacian"]
     end
 
     subgraph "Comparisons & Evaluations"
-    S1((S1))["Compare Path Length"]
-    S2((S2))["Compare Nodes Explored"]
-    S3((S3))["Compare Time"]
+    S1["Compare Path Length"]
+    S2["Compare Nodes Explored"]
+    S3["Compare Computation Time"]
     end
 
     %% Connections
@@ -1050,4 +1051,5 @@ graph TD
     P1 --> S1
     P2 --> S2
     P3 --> S3
+
 ```
