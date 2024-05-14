@@ -964,3 +964,90 @@ path, distance = fast_marching_maze(maze, start, end)
 # Visualize
 visualize_maze_path(maze, path)
 ```
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+
+    subgraph "Input & Output"
+    IN((IN))["State-space Input"]
+    OUT((OUT))["Optimal Path Output"]
+    end
+
+    subgraph "Core Algorithms"
+    A((A))["A*"]
+    B((B))["BFS"]
+    C((C))["DFS"]
+    D((D))["Greedy Best-First"]
+    E((E))["Dijkstra"]
+    F((F))["A* Laplacian"]
+    end
+
+    subgraph "Performance Metrics"
+    P1((P1))["Path Length"]
+    P2((P2))["Nodes Explored"]
+    P3((P3))["Computation Time"]
+    end
+
+    subgraph "Algorithm Enhancements"
+    L1((L1))["A* + Pos. Laplacian"]
+    L2((L2))["A* + Neg. Laplacian"]
+    end
+
+    subgraph "Comparisons & Evaluations"
+    S1((S1))["Compare Path Length"]
+    S2((S2))["Compare Nodes Explored"]
+    S3((S3))["Compare Time"]
+    end
+
+    %% Connections
+    IN --> A
+    IN --> B
+    IN --> C
+    IN --> D
+    IN --> E
+    IN --> F
+
+    A --> OUT
+    B --> OUT
+    C --> OUT
+    D --> OUT
+    E --> OUT
+    F --> OUT
+
+    A --> P1
+    B --> P1
+    C --> P1
+    D --> P1
+    E --> P1
+    F --> P1
+
+    A --> P2
+    B --> P2
+    C --> P2
+    D --> P2
+    E --> P2
+    F --> P2
+
+    A --> P3
+    B --> P3
+    C --> P3
+    D --> P3
+    E --> P3
+    F --> P3
+
+    A --> L1
+    A --> L2
+    F -.-> L1
+    F -.-> L2
+
+    L1 --> S1
+    L2 --> S1
+    L1 --> S2
+    L2 --> S2
+    L1 --> S3
+    L2 --> S3
+
+    P1 --> S1
+    P2 --> S2
+    P3 --> S3
+```
