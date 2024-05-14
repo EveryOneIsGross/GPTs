@@ -47,7 +47,7 @@ graph TD
     I((I)) --> |Satisfiable| J((J))
     I((I)) --> |Unsatisfiable| K((K))
     J((J)) --> L((L))
-    K((K)) --> B((B))  % Feedback loop to an internal node
+    K((K)) --> B((B))  %% Feedback loop to an internal node
 
     subgraph Input
     A((A))
@@ -78,4 +78,5 @@ graph TD
     U((U)) --> |Influence| I((I))
     V((V)) --> |Influence| J((J))
     end
+
 ```
