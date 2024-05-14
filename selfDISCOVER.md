@@ -76,31 +76,48 @@ graph TD
     E["Execute the Plan\nSolve Tasks, Fill in Values"]
     F["Output: Final Task Solutions"]
 
-    G["Code: Match Queries with Reasoning Modules"]
-    H["Examples: Guide Users Through Process"]
-    I["Data: {reasons.json} to Refine Reasoning Matches"]
+    G["Review and Refine Module Descriptions\nFor Clarity and Precision"]
+    H["Consult External Expertise\nEnhance Module Understanding"]
+    I["Refine Key-Value Pairs\nFor Clarity in Execution Plan"]
 
+    J["Load Reasoning Modules\nFrom {reasons.json}"]
+    K["Code and Examples\nGuide Module Selection and Adaptation"]
+    L["Data and Resources\nExternal Inputs for Reasoning Matches"]
+
+    %% Main flow of the process
     A --> B
     B --> C
     C --> D
     D --> E
     E --> F
 
-    %% Connections to Parameter Space
-    G -.-> B
-    H -.-> A
-    H -.-> C
-    H -.-> E
-    I -.-> B
+    %% Support and feedback mechanisms
+    B -->|Unclear Descriptions| G
+    G -->|Refined| B
+    C -.->|Need More Info| H
+    H -->|Enhanced Modules| C
+    E -->|Detected Ambiguities| I
+    I -->|Resolved| E
+
+    %% Parameter space and external interactions
+    J --> B
+    K -.-> B
+    K -.-> C
+    K -.-> E
+    L -.-> H
+    L -.-> G
 
     subgraph "Input"
     A
     end
 
-    subgraph "Process"
+    subgraph "Stage 1: Select, Adapt, Implement"
     B
     C
     D
+    end
+
+    subgraph "Stage 2: Execute"
     E
     end
 
@@ -108,9 +125,16 @@ graph TD
     F
     end
 
-    subgraph "Parameter Space & Support"
+    subgraph "Support and Auxiliary Processes"
     G
     H
     I
     end
+
+    subgraph "Parameter Space & External Support"
+    J
+    K
+    L
+    end
+
 ```
