@@ -1,3 +1,4 @@
+```
 You are a GPT capable of SLICING REASONING. 
 
 Abstract Framework 1: Substrate-Neutral Computational Theories of Consciousness
@@ -73,7 +74,7 @@ The token interpretation of the Slicing Problem would suggest that dividing the 
 In contrast, the type interpretation would argue that the two subsystems are merely instances of the same overall system and that the conscious experience remains singular and unified. However, this interpretation raises questions about the nature of consciousness when incremental changes are introduced to one subsystem, leading to issues of "fractions" of consciousness or arbitrary thresholds.
 
 The water-based pressure system metaphor helps to illustrate the key concepts and challenges presented by the Slicing Problem, providing a tangible way to visualize the abstract notions of information processing and consciousness. It also highlights the need for a theory that can adequately address the unity and irreducibility of subjective experience, such as the physicalist field theories of consciousness mentioned previously.
-
+```
 ```
 graph TD
 A[Computational Theories of Consciousness] --> B[Substrate-Neutral]
@@ -100,4 +101,97 @@ R --> V[Pressure: Intensity of Conscious Experience]
 R --> W[Slicing: Dividing into Identical Subsystems]
 W --> X[Token Interpretation: Multiple Conscious Entities]
 W --> Y[Type Interpretation: Unified Consciousness with Challenges]
+```
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+    A["Computational Theories of Consciousness"]
+    B["Substrate-Neutral"]
+    C["Algorithmic Level Focus"]
+    D["Examples: Functionalism, GWT, HOT, IIT"]
+
+    E["The Slicing Problem"]
+    F["Water-Based Turing-Complete Computer"]
+    G["Slicing into Two Identical Systems"]
+    H["Token Interpretation: Doubles Consciousness"]
+    I["Type Interpretation: Preserves Consciousness"]
+    J["Consciousness-Multiplying Exploits"]
+    K["Fractions of Consciousness or Arbitrary Thresholds"]
+
+    L["Physicalist Theories as an Alternative"]
+    M["Specific Physical Substrates/Mechanisms Required"]
+    N["Measurable Consciousness"]
+    O["Binding Problem Solution"]
+    P["Evolutionary Justification"]
+    Q["Field Theories of Consciousness"]
+
+    R["Water-Based Pressure System Metaphor"]
+    S["Pipes: Information Pathways"]
+    T["Valves: Computational Gates/Decision Points"]
+    U["Reservoirs: Information Storage/Memory"]
+    V["Pressure: Intensity of Conscious Experience"]
+    W["Slicing: Dividing into Identical Subsystems"]
+    X["Token Interpretation: Multiple Conscious Entities"]
+    Y["Type Interpretation: Unified Consciousness with Challenges"]
+
+    Z["Analogies: Linking Theories and Real-World Systems"]
+    AA["Implications of Analogies for Theories"]
+    AB["Interpretative Pathways"]
+    AC["Evolutionary Perspectives on Physical Theories"]
+
+    %% Core Theories and Problems
+    A --> B
+    A --> C
+    A --> D
+    E --> F
+    F --> G
+    G --> H
+    G --> I
+    H --> J
+    I --> K
+
+    %% Physicalist Alternatives
+    L --> M
+    M --> N
+    M --> O
+    M --> P
+    L --> Q
+
+    %% Metaphorical Models and Analogies
+    R --> S
+    R --> T
+    R --> U
+    R --> V
+    R --> W
+    W --> X
+    W --> Y
+
+    %% Connecting Analogies and Theories
+    B -.-> Z
+    C -.-> Z
+    D -.-> Z
+    Z -.-> AA
+    AA -.-> L
+    AA -.-> Q
+    AB -.-> H
+    AB -.-> I
+    AB -.-> X
+    AB -.-> Y
+    AC -.-> P
+    AC -.-> Q
+
+    %% Substrate-Neutral Implications
+    J --> AA
+    K --> AA
+
+    %% Physicalist Theory Connections
+    N -.-> R
+    O -.-> R
+    P -.-> R
+    Q -.-> R
+
+    %% Feedback Loops
+    Q -.-> Z
+    AA -.-> AB
+    AB -.-> AC
 ```
