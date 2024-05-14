@@ -160,51 +160,75 @@ list(file_contents.keys())
 ```
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#000000', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '16px'}}}%%
 
 graph TD
-    %% Start of the Process
-    start(("Start Analysis")) --> readInput(("Read Guitar TAB Files"))
-    
-    %% Reading and Chunking Input
-    readInput --> chunkFiles(("Chunk Files"))
-    chunkFiles --> preprocess(("Preprocess Text"))
-    
-    %% Embedding Sections
-    preprocess --> embedding(("Embed Sections Using Word2Vec"))
-    embedding --> trainModel(("Train Word2Vec Model"))
-    
-    %% Search and Analysis
-    trainModel --> searchAnalysis(("Perform Searches & Analysis"))
-    searchAnalysis --> cosine(("Cosine Search"))
-    searchAnalysis --> euclidean(("Euclidean Search"))
-    searchAnalysis --> manhattan(("Manhattan Search"))
-    searchAnalysis --> hybrid(("Hybrid Search"))
-    searchAnalysis --> keyword(("Keyword Search"))
-    
-    %% Sentiment Analysis
-    preprocess --> sentimentAnalysis(("Sentiment Analysis"))
-    sentimentAnalysis --> themeExtraction(("Extract Themes"))
-    
-    %% Structuring the Output
-    cosine --> organizeData(("Organize Data by Sections"))
-    euclidean --> organizeData
-    manhattan --> organizeData
-    hybrid --> organizeData
-    keyword --> organizeData
-    themeExtraction --> organizeData
-    
-    %% Final Output
-    organizeData --> saveResults(("Save Results as .txt"))
-    saveResults --> end(("End Analysis"))
 
-    %% Parameter Space Influences
-    subgraph "Parameter Space"
-        params1(("Model Parameters")) -.->|Influence| trainModel
-        params2(("Search Parameters")) -.->|Influence| searchAnalysis
-        params3(("Sentiment Parameters")) -.->|Influence| sentimentAnalysis
-    end
-    
+%% Start of the Process
 
+start(("Start Analysis")) --> readInput(("Read Guitar TAB Files"))
 
+%% Reading and Chunking Input
+
+readInput --> chunkFiles(("Chunk Files"))
+
+chunkFiles --> preprocess(("Preprocess Text"))
+
+%% Embedding Sections
+
+preprocess --> embedding(("Embed Sections Using Word2Vec"))
+
+embedding --> trainModel(("Train Word2Vec Model"))
+
+%% Search and Analysis
+
+trainModel --> searchAnalysis(("Perform Searches & Analysis"))
+
+searchAnalysis --> cosine(("Cosine Search"))
+
+searchAnalysis --> euclidean(("Euclidean Search"))
+
+searchAnalysis --> manhattan(("Manhattan Search"))
+
+searchAnalysis --> hybrid(("Hybrid Search"))
+
+searchAnalysis --> keyword(("Keyword Search"))
+
+%% Sentiment Analysis
+
+preprocess --> sentimentAnalysis(("Sentiment Analysis"))
+
+sentimentAnalysis --> themeExtraction(("Extract Themes"))
+
+%% Structuring the Output
+
+cosine --> organizeData(("Organize Data by Sections"))
+
+euclidean --> organizeData
+
+manhattan --> organizeData
+
+hybrid --> organizeData
+
+keyword --> organizeData
+
+themeExtraction --> organizeData
+
+%% Final Output
+
+organizeData --> saveResults(("Save Results as .txt"))
+
+saveResults --> end(("End Analysis"))
+
+%% Parameter Space Influences
+
+subgraph "Parameter Space"
+
+params1(("Model Parameters")) -.->|Influence| trainModel
+
+params2(("Search Parameters")) -.->|Influence| searchAnalysis
+
+params3(("Sentiment Parameters")) -.->|Influence| sentimentAnalysis
+
+end
 ```
