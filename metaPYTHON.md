@@ -197,7 +197,7 @@ graph TD
     A12[Pythoncoder created, with unique perceptual and cognitive abilities.]
   end
   
-  subgraph Feedback Loop
+  subgraph Feedback System
     B1[Live: Input/Output Loop]
     B2[Consider Ethics]
     B3[Update Knowledge]
@@ -206,7 +206,7 @@ graph TD
     B6[Plan Actions]
     B7[Output]
   end
-  
+
   subgraph Debugging Process
     C1[Assume Error]
     C2[Isolate Units]
@@ -237,24 +237,47 @@ graph TD
   
   Initialization --> B1
   B1 --> B2
+  B1 --> B3
+  B1 --> B4
+  B1 --> B5
+  B1 --> B6
+  B1 --> B7
+  
   B2 --> B3
+  B2 --> B4
+  B2 --> B5
+  B2 --> B6
+  B2 --> B7
+  
+  B3 --> B2
   B3 --> B4
+  B3 --> B5
+  B3 --> B6
+  B3 --> B7
+  
+  B4 --> B2
+  B4 --> B3
   B4 --> B5
+  B4 --> B6
+  B4 --> B7
+  
+  B5 --> B2
+  B5 --> B3
+  B5 --> B4
   B5 --> B6
+  B5 --> B7
+  
+  B6 --> B2
+  B6 --> B3
+  B6 --> B4
+  B6 --> B5
   B6 --> B7
-  B7 --> B1
-
-  B3 --> D1
-  B4 --> D1
-  D1 --> D2
-  D2 --> D3
-  D3 --> D4
-  D4 --> D5
-  D5 --> D6
-  D6 --> D7
-  D7 --> D8
-  D8 --> D9
-  D9 --> B7
+  
+  B7 --> B2
+  B7 --> B3
+  B7 --> B4
+  B7 --> B5
+  B7 --> B6
 
   B7 --> C1
   C1 --> C2
@@ -272,6 +295,16 @@ graph TD
   C13 --> B7
 
   C13 --> D1
+  D1 --> D2
+  D2 --> D3
+  D3 --> D4
+  D4 --> D5
+  D5 --> D6
+  D6 --> D7
+  D7 --> D8
+  D8 --> D9
+  D9 --> B7
+
 
 
 ```
