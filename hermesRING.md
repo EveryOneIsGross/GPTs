@@ -127,101 +127,104 @@ and know their skills, their customs, their  businesses, and their lives, and th
 the names of their fathers, mothers, brothers, and  friends, even of those now dead, and of everybody!  
 And until I can read a sealed letter and report  everything to them in accordance with the truth."
 ```
-
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 
 graph TD
-    %% Nodes
-    MakeRing["Make the Ring"]
-    CutScarab["Cut a scarab from smaragdos stone"]
-    ThreadGoldWire["Thread scarab with gold wire"]
-    EngraveIsis["Engrave with figure of sacred Isis"]
-    ConsecrateRing["Consecrate the Ring"]
-    PurifySelf["Purify yourself"]
-    PlaceScarab["Place scarab on papyrus table"]
-    PlaceCenser["Put censer with myrrh and kyphi"]
-    PlaceVessel["Place fayence vessel with ointment"]
-    BurnIncense["Burn kyphi and myrrh"]
-    SubmergeRing["Put scarab-ring in ointment"]
-    RemoveRingJar["Remove jar with ring"]
-    PrepareRingUse["Prepare Ring for Use"]
-    BurnOffering["Make burnt-offering"]
-    AnointSelf["Anoint yourself with ointment"]
-    FaceSunrise["Face sunrise and recite spell"]
-    SpellRecitation["Recite Spell"]
-
-    %% Items
+    %% Start of Process
+    Start["Start: Begin Ritual"]
+    
+    %% Making the Ring
+    CutScarab["Cut Scarab from Smaragdos Stone"]
+    ThreadGoldWire["Thread Scarab with Gold Wire"]
+    EngraveIsis["Engrave Scarab with Figure of Isis"]
+    
+    %% Consecrating the Ring
+    PurifySelf["Purify Yourself"]
+    SetupTable["Setup Papyrus Table with Linen and Twigs"]
+    PlaceItems["Place Items on Table"]
+    BurnIncense["Burn Myrrh and Kyphi"]
+    SubmergeRing["Submerge Scarab-Ring in Ointment"]
+    RemoveRingJar["Remove Ring after 3 Days"]
+    
+    %% Preparing Ring for Use
+    BurnOffering["Burn Offering on Grapevine Twigs"]
+    WearRing["Wear Ring and Anoint Self"]
+    ReciteSpell["Recite Spell Facing Sunrise"]
+    
+    %% End of Process
+    End["End: Complete Ritual"]
+    
+    %% Item Nodes
     SmaragdosStone["Smaragdos Stone"]
     GoldWire["Gold Wire"]
+    IsisFigure["Isis Figure"]
     PapyrusTable["Papyrus Table"]
-    LinenSheet["Clean Linen Sheet"]
+    LinenSheet["Linen Sheet"]
     OliveTwigs["Olive Twigs"]
     Censer["Censer"]
     Myrrh["Myrrh"]
     Kyphi["Kyphi"]
     FayenceVessel["Fayence Vessel"]
     Ointment["Ointment"]
-    Bread["Pure Bread"]
-    Fruits["Seasonal Fruits"]
+    Bread["Bread"]
+    Fruits["Fruits"]
     GrapevineTwigs["Grapevine Twigs"]
-
-    %% Significance
-    IsisFigure["Isis Figure"]
+    
+    %% Significance and Symbolism
     ScarabSymbolism["Scarab Symbolism"]
-    GreenStone["Green Color of Stone"]
-    Purification["Purification Process"]
-    Consecration["Consecration Process"]
+    GreenColor["Green Color of Stone"]
+    IsisProtection["Isis Protection"]
     MagicalArtifact["Ring as Magical Artifact"]
-    ThreateningGods["Threatening Gods in Spell"]
-    ScarabRaConnection["Scarab as Ra's Symbol"]
-
-    %% Connections - Making the Ring
-    MakeRing --> CutScarab
+    RaConnection["Connection to Ra"]
+    
+    %% Flow of Process - Making the Ring
+    Start --> CutScarab
     CutScarab --> SmaragdosStone
     CutScarab --> ThreadGoldWire
     ThreadGoldWire --> GoldWire
-    CutScarab --> EngraveIsis
+    ThreadGoldWire --> EngraveIsis
     EngraveIsis --> IsisFigure
-
-    %% Connections - Consecrating the Ring
-    ConsecrateRing --> PurifySelf
-    PurifySelf --> Purification
-    ConsecrateRing --> PlaceScarab
-    PlaceScarab --> PapyrusTable
-    PapyrusTable --> LinenSheet
+    EngraveIsis --> PurifySelf
+    
+    %% Flow of Process - Consecrating the Ring
+    PurifySelf --> SetupTable
+    SetupTable --> PapyrusTable
+    SetupTable --> LinenSheet
     LinenSheet --> OliveTwigs
-    PlaceScarab --> Censer
-    Censer --> PlaceCenser
-    PlaceCenser --> Myrrh
-    PlaceCenser --> Kyphi
-    ConsecrateRing --> PlaceVessel
-    PlaceVessel --> FayenceVessel
+    SetupTable --> PlaceItems
+    PlaceItems --> Censer
+    Censer --> Myrrh
+    Censer --> Kyphi
+    PlaceItems --> FayenceVessel
     FayenceVessel --> Ointment
-    ConsecrateRing --> BurnIncense
+    PlaceItems --> Bread
+    PlaceItems --> Fruits
     BurnIncense --> Myrrh
     BurnIncense --> Kyphi
-    ConsecrateRing --> SubmergeRing
     SubmergeRing --> Ointment
-    ConsecrateRing --> RemoveRingJar
+    SubmergeRing --> RemoveRingJar
     RemoveRingJar --> MagicalArtifact
-
-    %% Connections - Preparing Ring for Use
-    PrepareRingUse --> BurnOffering
+    RemoveRingJar --> WearRing
+    
+    %% Flow of Process - Preparing the Ring for Use
     BurnOffering --> GrapevineTwigs
-    PrepareRingUse --> AnointSelf
-    AnointSelf --> Ointment
-    PrepareRingUse --> FaceSunrise
-    FaceSunrise --> SpellRecitation
-    SpellRecitation --> ScarabRaConnection
-    SpellRecitation --> ThreateningGods
-
-    %% Reciprocal and Feedback Connections
-    ConsecrateRing --> Consecration
-    ConsecrateRing -.-> MakeRing
-    ScarabSymbolism -.-> CutScarab
-    ScarabRaConnection -.-> ScarabSymbolism
-    MagicalArtifact -.-> ConsecrateRing
-    Consecration -.-> PurifySelf
-    ThreateningGods -.-> SpellRecitation
-    ScarabRaConnection -.-> ScarabSymbolism
+    WearRing --> BurnOffering
+    WearRing --> ReciteSpell
+    ReciteSpell --> RaConnection
+    ReciteSpell --> IsisProtection
+    RaConnection --> End
+    IsisProtection --> End
+    
+    %% Feedback and Inter-Node Connections
+    MagicalArtifact --> ScarabSymbolism
+    ScarabSymbolism --> GreenColor
+    GreenColor --> SmaragdosStone
+    ScarabSymbolism --> Start
+    IsisProtection --> ScarabSymbolism
+    RaConnection --> MagicalArtifact
+    
+    %% Link Back to Adjust Process
+    MagicalArtifact -->|Adjust Process Based on Outcome| Start
+    BurnOffering -->|Feedback to Refine| PurifySelf
 ```
