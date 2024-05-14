@@ -397,13 +397,39 @@ observation through magick
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
     subgraph "Super Observer System"
-        IIC["Input Integration Check"] -->|Data aggregation & platforms| FOA["Feedback & Output Analysis"]
-        FOA -->|Integrated feedback| DMI["Decision-Making Involvement"]
-        DMI -->|Collective decision-making| ECR["Enhanced Capability Recognition"]
-        ECR -->|Improved problem-solving| PTC["Process Transparency & Communication"]
-        PTC -->|Clear communication| CBR["Collaborative Benefit Realization"]
-        CBR -->|Realized benefits| OFL["Observer Feedback Loop"]
-        OFL -->|Feedback influences| SEP["System Evolution Participation"]
-        SEP -->|Evolution affects| IIC
+        subgraph "Markov Blanket for Observer"
+            IIC["Input Integration Check"] -->|Data aggregation & shared platforms| FOA["Feedback & Output Analysis"]
+            FOA -->|Feedback reflects broader perspective| DMI["Decision-Making Involvement"]
+            DMI -->|Collective decision-making| ECR["Enhanced Capability Recognition"]
+            ECR -->|Problem-solving improvements| PTC["Process Transparency & Communication"]
+            PTC -->|Clear communication about processes| CBR["Collaborative Benefit Realization"]
+            CBR -->|Benefits from collaboration| OFL["Observer Feedback Loop"]
+            OFL -->|Feedback influences observations| SEP["System Evolution Participation"]
+            SEP -.->|Evolution affects inputs| IIC
+            SEP -.->|Feedback loop| OFL
+            CBR -.->|Benefits feedback into process| ECR
+            PTC -.->|Transparency affects feedback| FOA
+        end
+        
+        subgraph "Nested Observer"
+            NOI["Nested Observer Input"] --> NFOA["Nested FOA"]
+            NFOA --> NDMI["Nested DMI"]
+            NDMI --> NECR["Nested ECR"]
+            NECR --> NPTC["Nested PTC"]
+            NPTC --> NCBR["Nested CBR"]
+            NCBR --> NOFL["Nested OFL"]
+            NOFL --> NSEP["Nested SEP"]
+            NSEP -.-> NOI
+            
+            NOI -.->|Influences Super Observer| IIC
+            NFOA -.-> FOA
+            NDMI -.-> DMI
+            NECR -.-> ECR
+            NPTC -.-> PTC
+            NCBR -.-> CBR
+            NOFL -.-> OFL
+            NSEP -.-> SEP
+        end
     end
+
 ```
