@@ -60,22 +60,23 @@ By consciously choosing to slow down, evaluate and expand our emotional portfoli
 ```mermaid
 
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
-
 graph TD
-A[User Seeks Happiness] --> B{Evaluate Emotional Portfolio}
+A[User Seeks Happiness] -->|Input| B{Evaluate Emotional Portfolio}
 B --> C{Identify Emotions}
 C --> D{Reflect on Emotional Range}
 D --> E{Expand Emotional Vocabulary}
 E --> F{Practice Emotional Regulation}
 F --> G{Seek New Experiences}
-G --> H{Cultivate Wonder}
 
+B --> H{Cultivate Wonder}
 H --> I{Identify Wonderbringers}
 I --> J{Create Space for Wonder}
 J --> K{Cultivate Curiosity}
 K --> L{Practice Mindfulness}
 L --> M{Share Your Wonder}
-M --> N{Enrich Emotional Life}
+
+G --> N{Enrich Emotional Life}
+M --> N
 
 N --> O{Overcome Barriers to Wonder}
 O --> P{Slow Down}
@@ -83,8 +84,9 @@ P --> Q{Engage in Slow Thought}
 Q --> R{Meditate}
 R --> S{Practice Narrative Journaling}
 S --> T{Prioritize Sleep}
-T --> U{Find Beauty in the Everyday}
 
+N --> U{Find Beauty in the Everyday}
+T --> U
 U --> V{Appreciate Mixed Emotions}
 V --> W{Develop Resilience}
 W --> X{Process World Events}
@@ -94,8 +96,7 @@ Y --> Z{Rank Happiness Last}
 Z --> AA{Embrace Wonder as an Alternative}
 AA --> AB{Find Joy in the Journey}
 AB --> AC{Appreciate the Marvels of the World}
-AC --> AD{Live a More Fulfilling Life}
+AC -->|Output| AD{Live a More Fulfilling Life}
 
-classDef default fill:#f9f,stroke:#333,stroke-width:2px,color:#333,font-size:12px;
-classDef orange fill:#ffaa00,stroke:#ffaa00,color:#fff;
-class A,H,N,O,U,Y,Z,AA orange;
+AD --> A
+```
