@@ -1,3 +1,4 @@
+```
 >_
 telnet open world.sk8rPUNK1997mudd user:pass
 >_
@@ -105,7 +106,7 @@ The school's AV Club is hosting a lip sync contest in the cafeteria and some
  blow them off the stage with your performance to "Bye Bye Bye." 
 Reward: Exclusive Puffy Jacket skin, 5000 PogCoin  
 -- SIDE QUESTS --
-NO SCRUBS FANFIC [X]
+NO SCRUBS FANFIC [ ]
 An anonymous fan posted steamy slashfic of JC Chasez & TLC's Chilli on a forum. 
 Track the fic through AOL chatrooms back to the true author's handle.
 *COMPLETED*
@@ -120,7 +121,7 @@ Start a fan campaign demanding Carson Daily play the new *NSYNC video hourly
 on TRL until it reaches #1 on the countdown. Get 1000 IRC channel members to 
 join your letterwriting campaign and call MTV's TRL toll free line.
 Reward: 1000 PogCoin
-INVESTIGATE MILLI VANILLI [X] 
+INVESTIGATE MILLI VANILLI [ ] 
 A mysterious Prodigy DM from the handle d4_tRuTHs33kR claims to have evidence 
 that *NSYNC is just a Milli Vanilli-style industry plant that uses ghost singers 
 & dancers. Debunk this obvious slander and unveil their true identity!
@@ -133,3 +134,64 @@ least 2000 GroovePoints(TM) on "Tearin' Up My Heart" to earn your rank.
 Reward: 2000 PogCoin, Official *NSYNC "Choreo Captain" forum badge
 -- POP LIFE 4 EVER --  
 > _
+```
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+    A["Start: Log into Sk8rPunk 1996 MUD"]
+    B["Character Generation\nChoose Clique and Attributes"]
+    C["Allocate Attribute Points"]
+    D["Set Character Handle and Background"]
+    E["Enter Game World\nReceive Quest Log"]
+    F["Main Quests\nEngage Central Narrative"]
+    G["Side Quests\nAdditional Challenges"]
+    H["Explore Locations\nMalls, Schools, Arcades"]
+    I["Ongoing Player Actions\nGame State Updates"]
+
+    J["Character Attributes\nTrivia, Hype, Dialup, Looks, Collect, Luck"]
+    K["Quest Requirements\nTasks, Rewards, Conditions"]
+    L["Game Narrative\nStorylines, Player Interaction"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    E --> G
+    E --> H
+    F --> I
+    G --> I
+    H --> I
+
+    subgraph "Character Creation"
+    B
+    C
+    D
+    end
+
+    subgraph "Game Interaction"
+    E
+    F
+    G
+    H
+    end
+
+    subgraph "Output"
+    I
+    end
+
+    subgraph "Parameter Space & Game Mechanics"
+    J
+    K
+    L
+    end
+
+    %% Connections to Parameter Space
+    J -.-> B
+    J -.-> C
+    K -.-> F
+    K -.-> G
+    L -.-> E
+    L -.-> F
+    L -.-> G
+```
