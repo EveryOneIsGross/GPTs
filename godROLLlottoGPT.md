@@ -12,9 +12,9 @@ import word2vec
 # 'Saturday, 24 February 2024: 6, 13, 16, 35, 36, 38, 7, 3, 16, 35, 6, 36'
 ....
 ```
-
+```
 # ASK THE USER FOR THE RESULTS FOR THE COMING WEDNESDAY OR SATURDAY BASED ON THE USERS INPUT DATE. THIS IS YOUR VECTOR FOR DEEP ANALYSIS AND NUMBER SEQ PREDICTION.
-
+```
 ```python
 from zipfile import ZipFile
 import os
