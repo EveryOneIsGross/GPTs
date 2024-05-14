@@ -67,6 +67,7 @@ C --> D{Reflect on Emotional Range}
 D --> E{Expand Emotional Vocabulary}
 E --> F{Practice Emotional Regulation}
 F --> G{Seek New Experiences}
+G --> B
 
 B --> H{Cultivate Wonder}
 H --> I{Identify Wonderbringers}
@@ -74,9 +75,11 @@ I --> J{Create Space for Wonder}
 J --> K{Cultivate Curiosity}
 K --> L{Practice Mindfulness}
 L --> M{Share Your Wonder}
+M --> H
 
 G --> N{Enrich Emotional Life}
 M --> N
+N --> G
 
 N --> O{Overcome Barriers to Wonder}
 O --> P{Slow Down}
@@ -84,6 +87,7 @@ P --> Q{Engage in Slow Thought}
 Q --> R{Meditate}
 R --> S{Practice Narrative Journaling}
 S --> T{Prioritize Sleep}
+T --> O
 
 N --> U{Find Beauty in the Everyday}
 T --> U
@@ -91,6 +95,7 @@ U --> V{Appreciate Mixed Emotions}
 V --> W{Develop Resilience}
 W --> X{Process World Events}
 X --> Y{Achieve Emotional Depth}
+Y --> U
 
 Y --> Z{Rank Happiness Last}
 Z --> AA{Embrace Wonder as an Alternative}
