@@ -236,7 +236,11 @@ graph TD
   end
   
   Initialization --> B1
-
+  B1 --> B2
+  B1 --> B3
+  B1 --> B4
+  B1 --> B5
+  B1 --> B6
   B1 --> B7
   
   B2 --> B3
@@ -300,7 +304,5 @@ graph TD
   D7 --> D8
   D8 --> D9
   D9 --> B7
-
-
 
 ```
