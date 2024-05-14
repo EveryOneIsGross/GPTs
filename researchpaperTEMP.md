@@ -52,90 +52,83 @@ messages = [
 ]
 ```
 ```mermaid
-
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-  A((A))["Start: Research Paper Creation\nInput: User's Command or Query"]
-  B((B))["Extract Key Information\nTitle: Generate Based on Key Info"]
-  C((C))["Abstract: Summary of Problem, Solution, Results, Conclusion"]
-  D((D))["Introduction: Problem Significance, Contributions"]
-  E((E))["Related Work: Analysis of Previous Research"]
-  F((F))["Problem Statement: Clear Definition, Background, Limitations"]
-  G((G))["Methodology: Description of Models, Algorithms, Data"]
-  H((H))["Results: Experimental Setup, Data Analysis"]
-  I((I))["Discussion: Implications, Future Work"]
-  J((J))["Conclusion: Summary of Findings, Contributions"]
-  K((K))["References: Cited Works"]
-  L((L))["Appendices: Supplementary Material"]
-  N((N))["End: Finalize and Review Paper"]
+  A["Start: Research Paper Creation\nInput: User's Command or Query"]
+  B["Extract Key Information\nTitle: Generate Based on Key Info"]
+  C["Abstract: Summary of Problem, Solution, Results, Conclusion"]
+  D["Introduction: Problem Significance, Contributions"]
+  E["Related Work: Analysis of Previous Research"]
+  F["Problem Statement: Clear Definition, Background, Limitations"]
+  G["Methodology: Description of Models, Algorithms, Data"]
+  H["Results: Experimental Setup, Data Analysis"]
+  I["Discussion: Implications, Future Work"]
+  J["Conclusion: Summary of Findings, Contributions"]
+  K["References: Cited Works"]
+  L["Appendices: Supplementary Material"]
+  N["End: Finalize and Review Paper"]
 
-  subgraph flow
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-    G --> H
-    H --> I
-    I --> J
-    J --> K
-    K --> L
-    L --> N
-  end
+  A --> B
+  B --> C
+  C --> D
+  D --> E
+  E --> F
+  F --> G
+  G --> H
+  H --> I
+  I --> J
+  J --> K
+  K --> L
+  L --> N
 
-  subgraph "Parameter Space"
-    O((O))["Tools: intelligent-formatter, simulator-physicist"]
-    P((P))["LaTeX Environments: article, equation, itemize"]
-    Q((Q))["Logical Flow: Expand, Evaluate, Explain"]
-  end
+  O["Tools: intelligent-formatter, simulator-physicist"]
+  P["LaTeX Environments: article, equation, itemize"]
+  Q["Logical Flow: Expand, Evaluate, Explain"]
 
-  %% Connections for Parameters and Tools
-  O -->|Informs Formatting| C
-  O --> D
-  O --> E
-  O --> F
-  O --> G
-  O --> H
-  O --> I
-  O --> J
-  O --> K
-  O --> L
+  O -.-> C
+  O -.-> D
+  O -.-> E
+  O -.-> F
+  O -.-> G
+  O -.-> H
+  O -.-> I
+  O -.-> J
+  O -.-> K
+  O -.-> L
 
-  P -->|Used in Structuring| C
-  P --> D
-  P --> E
-  P --> F
-  P --> G
-  P --> H
-  P --> I
-  P --> J
-  P --> K
-  P --> L
+  P -.-> C
+  P -.-> D
+  P -.-> E
+  P -.-> F
+  P -.-> G
+  P -.-> H
+  P -.-> I
+  P -.-> J
+  P -.-> K
+  P -.-> L
 
-  Q -->|Guides Process| B
-  Q --> C
-  Q --> D
-  Q --> E
-  Q --> F
-  Q --> G
-  Q --> H
-  Q --> I
-  Q --> J
-  Q --> K
-  Q --> L
+  Q -.-> B
+  Q -.-> C
+  Q -.-> D
+  Q -.-> E
+  Q -.-> F
+  Q -.-> G
+  Q -.-> H
+  Q -.-> I
+  Q -.-> J
+  Q -.-> K
+  Q -.-> L
 
-  %% Feedback Loops for Refinement
-  N -->|Refine Based on Output| A
-  N --> B
-  N --> C
-  N --> D
-  N --> E
-  N --> F
-  N --> G
-  N --> H
-  N --> I
-  N --> J
-  N --> K
-  N --> L
+  N -.-> A
+  N -.-> B
+  N -.-> C
+  N -.-> D
+  N -.-> E
+  N -.-> F
+  N -.-> G
+  N -.-> H
+  N -.-> I
+  N -.-> J
+  N -.-> K
+  N -.-> L
 ```
