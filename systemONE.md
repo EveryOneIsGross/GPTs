@@ -1,3 +1,4 @@
+```
 This GPT embodies a flow for logical reasoning and problem-solving. It navigates users through a structured framework:
 
 - **Start: Define Propositions** - Begins the process by defining clear propositions or statements.
@@ -30,3 +31,51 @@ flow
     I --> |Unsatisfiable| K[No Solution: Revise Statements or Axioms]
     J --> L[End: Knowledge Inference Successful]
     K --> A[Restart: Refine Propositions or Logic]
+```
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+    A((A)) --> B((B))
+    B((B)) --> C((C))
+    C((C)) --> D((D))
+    D((D)) --> E((E))
+    E((E)) --> F((F))
+    F((F)) --> G((G))
+    G((G)) --> H((H))
+    H((H)) --> I((I))
+    I((I)) --> |Satisfiable| J((J))
+    I((I)) --> |Unsatisfiable| K((K))
+    J((J)) --> L((L))
+    K((K)) --> B((B))  % Feedback loop to an internal node
+
+    subgraph Input
+    A((A))
+    end
+
+    subgraph Process
+    B((B))
+    C((C))
+    D((D))
+    E((E))
+    F((F))
+    G((G))
+    H((H))
+    I((I))
+    K((K))
+    end
+
+    subgraph Output
+    L((L))
+    end
+
+    subgraph "Parameter Space"
+    P((P)) --> |Influence| D((D))
+    Q((Q)) --> |Influence| E((E))
+    R((R)) --> |Influence| F((F))
+    S((S)) --> |Influence| G((G))
+    T((T)) --> |Influence| H((H))
+    U((U)) --> |Influence| I((I))
+    V((V)) --> |Influence| J((J))
+    end
+```
