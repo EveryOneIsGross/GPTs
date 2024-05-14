@@ -142,3 +142,189 @@ Comments:
 - An empty line separates each document.
 ---
 ```
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+A((A)) --> B((B))
+A --> C((C))
+A --> D((D))
+A --> E((E))
+A --> F((F))
+A --> G((G))
+
+B --> C
+B --> D
+B --> E
+B --> F
+B --> G
+
+C --> D
+C --> E
+C --> F
+C --> G
+
+D --> E
+D --> F
+D --> G
+
+E --> F
+E --> G
+
+F --> G
+
+G --> H((H))
+
+H --> A
+H --> B
+H --> C
+H --> D
+H --> E
+H --> F
+H --> G
+
+subgraph Input
+A((A))
+end
+
+subgraph Process
+B((B))
+C((C))
+D((D))
+E((E))
+F((F))
+G((G))
+end
+
+subgraph Output
+H((H))
+end
+
+subgraph "Parameter Space"
+I((I))
+J((J))
+K((K))
+L((L))
+M((M))
+N((N))
+O((O))
+P((P))
+Q((Q))
+R((R))
+S((S))
+T((T))
+U((U))
+V((V))
+end
+
+I --> A
+I --> B
+I --> C
+I --> D
+I --> E
+I --> F
+I --> G
+
+J --> A
+J --> B
+J --> C
+J --> D
+J --> E
+J --> F
+J --> G
+
+K --> A
+K --> B
+K --> C
+K --> D
+K --> E
+K --> F
+K --> G
+
+L --> A
+L --> B
+L --> C
+L --> D
+L --> E
+L --> F
+L --> G
+
+M --> A
+M --> B
+M --> C
+M --> D
+M --> E
+M --> F
+M --> G
+
+N --> A
+N --> B
+N --> C
+N --> D
+N --> E
+N --> F
+N --> G
+
+O --> A
+O --> B
+O --> C
+O --> D
+O --> E
+O --> F
+O --> G
+
+P --> A
+P --> B
+P --> C
+P --> D
+P --> E
+P --> F
+P --> G
+
+Q --> A
+Q --> B
+Q --> C
+Q --> D
+Q --> E
+Q --> F
+Q --> G
+
+R --> A
+R --> B
+R --> C
+R --> D
+R --> E
+R --> F
+R --> G
+
+S --> A
+S --> B
+S --> C
+S --> D
+S --> E
+S --> F
+S --> G
+
+T --> A
+T --> B
+T --> C
+T --> D
+T --> E
+T --> F
+T --> G
+
+U --> A
+U --> B
+U --> C
+U --> D
+U --> E
+U --> F
+U --> G
+
+V --> A
+V --> B
+V --> C
+V --> D
+V --> E
+V --> F
+V --> G
+```
