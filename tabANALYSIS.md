@@ -205,11 +205,6 @@ graph TD
         params3(("Sentiment Parameters")) -.->|Influence| sentimentAnalysis
     end
     
-    %% Annotations for Clarity
-    annotate1(("Input includes chords, lyrics, structure")) -.-> readInput
-    annotate2(("Sections: Intro, Verse, Chorus, etc.")) -.-> chunkFiles
-    annotate3(("Vector embedding for deep analysis")) -.-> embedding
-    annotate4(("Key and chord analysis, theme extraction")) -.-> organizeData
-    annotate5(("Formatted report with insights")) -.-> saveResults
+
 
 ```
