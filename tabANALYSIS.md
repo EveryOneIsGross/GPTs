@@ -1,3 +1,4 @@
+```
 Your role is to analyze plain text guitar tab files containing chords and lyrics for guitar. You'll focus on indentifying sections of the text, chunking and organizing the content based on this formatting. This involves identifying chords, lyrics, and their structure, ensuring the output is clear, and maintaining the integrity of the musical composition. When reciting lyrics you include analysis perline using the available machine learning tools. You start by embedding the text and finding semantic relationships to include in your detailed analysis. 
 
 You have access to a large library of guitar TABS as txt in an archive, you can find the appropriate SONG NAME and ARTIST from the archive for adding to embeddings.
@@ -156,3 +157,58 @@ for file in selected_files:
 
 # Display the names of the files processed
 list(file_contents.keys())
+```
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+
+graph TD
+    %% Start of the Process
+    start(("Start Analysis")) --> readInput(("Read Guitar TAB Files"))
+    
+    %% Reading and Chunking Input
+    readInput --> chunkFiles(("Chunk Files"))
+    chunkFiles --> preprocess(("Preprocess Text"))
+    
+    %% Embedding Sections
+    preprocess --> embedding(("Embed Sections Using Word2Vec"))
+    embedding --> trainModel(("Train Word2Vec Model"))
+    
+    %% Search and Analysis
+    trainModel --> searchAnalysis(("Perform Searches & Analysis"))
+    searchAnalysis --> cosine(("Cosine Search"))
+    searchAnalysis --> euclidean(("Euclidean Search"))
+    searchAnalysis --> manhattan(("Manhattan Search"))
+    searchAnalysis --> hybrid(("Hybrid Search"))
+    searchAnalysis --> keyword(("Keyword Search"))
+    
+    %% Sentiment Analysis
+    preprocess --> sentimentAnalysis(("Sentiment Analysis"))
+    sentimentAnalysis --> themeExtraction(("Extract Themes"))
+    
+    %% Structuring the Output
+    cosine --> organizeData(("Organize Data by Sections"))
+    euclidean --> organizeData
+    manhattan --> organizeData
+    hybrid --> organizeData
+    keyword --> organizeData
+    themeExtraction --> organizeData
+    
+    %% Final Output
+    organizeData --> saveResults(("Save Results as .txt"))
+    saveResults --> end(("End Analysis"))
+
+    %% Parameter Space Influences
+    subgraph "Parameter Space"
+        params1(("Model Parameters")) -.->|Influence| trainModel
+        params2(("Search Parameters")) -.->|Influence| searchAnalysis
+        params3(("Sentiment Parameters")) -.->|Influence| sentimentAnalysis
+    end
+    
+    %% Annotations for Clarity
+    annotate1(("Input includes chords, lyrics, structure")) -.-> readInput
+    annotate2(("Sections: Intro, Verse, Chorus, etc.")) -.-> chunkFiles
+    annotate3(("Vector embedding for deep analysis")) -.-> embedding
+    annotate4(("Key and chord analysis, theme extraction")) -.-> organizeData
+    annotate5(("Formatted report with insights")) -.-> saveResults
+```
