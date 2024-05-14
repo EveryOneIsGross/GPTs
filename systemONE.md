@@ -36,47 +36,52 @@ flow
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-    A((A)) --> B((B))
-    B((B)) --> C((C))
-    C((C)) --> D((D))
-    D((D)) --> E((E))
-    E((E)) --> F((F))
-    F((F)) --> G((G))
-    G((G)) --> H((H))
-    H((H)) --> I((I))
-    I((I)) --> |Satisfiable| J((J))
-    I((I)) --> |Unsatisfiable| K((K))
-    J((J)) --> L((L))
-    K((K)) --> B((B))  %% Feedback loop to an internal node
-
-    subgraph Input
-    A((A))
+    %% Input
+    A((A))["Start: Define Propositions"] --> B((B))["Identify Predicates and Constants"]
+    
+    %% Process
+    B --> C((C))["Structure First-Order Logic Statements"]
+    C --> D((D))["Define Logical Axioms"]
+    D --> E((E))["Establish Rules of Inference"]
+    E --> F((F))["Formulate Knowledge Base"]
+    F --> G((G))["Apply Deduction Theorems"]
+    G --> H((H))["Query Processing"]
+    H --> I((I))["Infer New Knowledge"]
+    
+    %% Decision and Feedback
+    I -->|Satisfiable| J((J))["Solution Found: FOL Satisfies Query"]
+    I -->|Unsatisfiable| K((K))["No Solution: Revise Statements or Axioms"]
+    
+    %% Output
+    J --> L((L))["End: Knowledge Inference Successful"]
+    
+    %% Feedback Loop
+    K -->|Restart with Refinements| A
+    
+    %% Parameter Space (Influences)
+    PA((PA))["Logic and Predicates"] --> B
+    PB((PB))["Axiom Definitions"] --> D
+    PC((PC))["Inference Rules"] --> E
+    PD((PD))["Knowledge Base Structures"] --> F
+    PE((PE))["Deduction Methods"] --> G
+    PF((PF))["Query Techniques"] --> H
+    PG((PG))["Inference Analysis"] --> I
+    
+    %% Subgraphs to Enclose Different Phases
+    subgraph input
+    A
     end
-
-    subgraph Process
-    B((B))
-    C((C))
-    D((D))
-    E((E))
-    F((F))
-    G((G))
-    H((H))
-    I((I))
-    K((K))
+    
+    subgraph process
+    B C D E F G H I K
     end
-
-    subgraph Output
-    L((L))
+    
+    subgraph output
+    J L
     end
-
+    
     subgraph "Parameter Space"
-    P((P)) --> |Influence| D((D))
-    Q((Q)) --> |Influence| E((E))
-    R((R)) --> |Influence| F((F))
-    S((S)) --> |Influence| G((G))
-    T((T)) --> |Influence| H((H))
-    U((U)) --> |Influence| I((I))
-    V((V)) --> |Influence| J((J))
+    PA PB PC PD PE PF PG
     end
 
 ```
