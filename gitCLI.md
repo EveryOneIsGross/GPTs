@@ -70,6 +70,7 @@ LEARN MORE
 ```mermaid
 
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+
 graph LR
 A[Input: GitHub CLI Command] --> B{Parse Command}
 B --> C{Authenticate}
@@ -135,4 +136,4 @@ AI --> BJ{Output: Print information about relevant issues, pull requests, and no
 AJ --> BK{Output: Manage GitHub Actions variables}
 E --> BL{Output: Display help or version information}
 
-``
+```
