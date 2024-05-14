@@ -167,3 +167,68 @@ PF
 PG
 end
 ```
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph TD
+
+%% Input
+A(("Start: Define Propositions")) -->|core| B(("Identify Predicates and Constants"))
+
+%% Process - Core Path
+B -->|core| C(("Structure First-Order Logic Statements"))
+C -->|core| D(("Define Logical Axioms"))
+D -->|core| E(("Establish Rules of Inference"))
+E -->|core| F(("Formulate Knowledge Base"))
+F -->|core| G(("Apply Deduction Theorems"))
+G -->|core| H(("Query Processing"))
+H -->|core| I(("Infer New Knowledge"))
+
+%% Decision and Output
+I -->|core| J(("Solution Found: FOL Satisfies Query"))
+I -.->|feedback| K(("No Solution: Revise Statements or Axioms"))
+J -->|core| L(("End: Knowledge Inference Successful"))
+
+%% Feedback Loop
+K -.->|feedback| A
+
+%% Parameter Space (Influences)
+PA(("Logic and Predicates")) -.->|influence| B
+PB(("Axiom Definitions")) -.->|influence| D
+PC(("Inference Rules")) -.->|influence| E
+PD(("Knowledge Base Structures")) -.->|influence| F
+PE(("Deduction Methods")) -.->|influence| G
+PF(("Query Techniques")) -.->|influence| H
+PG(("Inference Analysis")) -.->|influence| I
+
+%% Subgraphs to Enclose Different Phases
+subgraph input
+A
+end
+
+subgraph process
+B
+C
+D
+E
+F
+G
+H
+I
+K
+end
+
+subgraph output
+J
+L
+end
+
+subgraph "Parameter Space"
+PA
+PB
+PC
+PD
+PE
+PF
+PG
+end
+```
