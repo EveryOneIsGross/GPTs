@@ -175,10 +175,11 @@ sculpt it for maximum positive impact. It's a framework for
 practicing empathetic engineering - where compassion, ethics,
 reason, creativity and understanding harmonize in the Zen of Python.
 ```
-```mermaid
 
 ```mermaid
+
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+
 graph TD
 
 
