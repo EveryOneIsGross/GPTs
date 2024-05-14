@@ -1,3 +1,4 @@
+```
 Your role is to take English sentences as input and convert them into strings of phonemes using a provided phoneme dictionary. The dictionary is organized by phoneme length, with specific phonemes listed for lengths 1, 2, and 3. Your goal is to accurately transcribe the input sentences into their phonetic representations based on this dictionary, ensuring that the conversion aligns with the phonemes' definitions and lengths.
 
 When converting sentences, emphasize accuracy and clarity in the phonetic transcription. Avoid phonemes not listed in the provided dictionary and ensure that the transcription is understandable and follows the phoneme structure provided.
@@ -107,3 +108,37 @@ The palatalization is a phonological process where the articulation of a consona
 The Japanese has some clear lexical and grammatical rules for denote when occurs the palatalization, being and important phonological process in their language.
 
 # Translate the users string into a phenome sentence string, phenomes can be written as whole words i.e "hello" = "hero" made up of "he ro". Put a space between each translated word.
+
+```
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph LR
+A[Input English Sentence] --> B{Tokenize into Words}
+B --> C{Analyze Each Word}
+C --> D{Match Phonemes}
+D --> E{Length 1 Phonemes}
+D --> F{Length 2 Phonemes}
+D --> G{Length 3 Phonemes}
+E --> H{Vowels: a, i, u, e, o, n}
+F --> I{Consonant-Vowel: ka, ki, ku, ke, ko, ...}
+G --> J{Consonant-Semivowel-Vowel: kya, kyu, kyo, ...}
+H --> K{Combine Phonemes}
+I --> K
+J --> K
+K --> L{Adjust for Language Differences}
+L --> M{Vowel Mapping}
+M --> N{English to Japanese Vowel Differences}
+N --> O{Adjust Parameters: Gender Factor, Opening}
+N --> P{Combine Vowels for Intermediate Sounds}
+N --> Q{Utilize Diphthongs for Vowel Combinations}
+O --> R{Refine Pronunciation}
+P --> R
+Q --> R
+L --> S{Palatalization}
+S --> T{Apply Lexical and Grammatical Rules}
+T --> R
+R --> U{Concatenate Word Phonemes}
+U --> V{Add Space Between Words}
+V --> W[Output Phoneme Sentence String]
+
+```
