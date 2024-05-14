@@ -99,6 +99,152 @@ if model and corpus:
     for sentence, similarity in similar_sentences:
         print(f"- {sentence} (similarity: {similarity:.2f})")
 ```
+```python
+# this script can generate compatible pickles with your local models which you can share or use with cloud api that haz shell
+import gensim
+from gensim.models import Word2Vec
+import pickle
+import numpy as np
+from scipy.spatial.distance import cosine
+import json
+from scipy.spatial.distance import euclidean, cosine
+import re
+
+# Function to load the Word2Vec model
+def load_model(filename):
+    try:
+        return Word2Vec.load(filename)
+    except Exception as e:
+        print(f"Error loading model: {e}")
+        return None
+
+# Function to load the corpus
+def load_corpus(filename):
+    try:
+        with open(filename, 'rb') as file:
+            return pickle.load(file)
+    except Exception as e:
+        print(f"Error loading corpus: {e}")
+        return None
+
+# Function to load model settings from a JSON file
+def load_model_settings(filename):
+    try:
+        with open(filename, 'r') as file:
+            settings = json.load(file)
+            print("Model settings loaded successfully.")
+            return settings
+    except Exception as e:
+        print(f"Error loading model settings: {e}")
+        return None
+
+# Function to get the vector of a sentence using the Word2Vec model
+def get_sentence_vector(model, sentence):
+    words = gensim.utils.simple_preprocess(sentence)
+    word_vectors = [model.wv[word] for word in words if word in model.wv]
+    return np.mean(word_vectors, axis=0) if word_vectors else np.zeros(model.vector_size)
+
+# Function to find the most similar sentences in the corpus to a given query
+def find_similar_sentences(model, corpus, query, top_k=5):
+    query_vector = get_sentence_vector(model, query)
+    similarities = []
+    for sentence in corpus:
+        sentence_vector = get_sentence_vector(model, ' '.join(sentence))
+        if not np.any(sentence_vector):
+            continue
+        similarity = 1 - cosine(query_vector, sentence_vector)
+        similarities.append((' '.join(sentence), similarity))
+    sorted_similarities = sorted(similarities, key=lambda x: x[1], reverse=True)
+    return sorted_similarities[:top_k]
+
+# Prompt the user for the base name of the files to load model, corpus, and settings
+filename_base = input("Enter the base name of the files (without extension): ")
+
+def fractal_chunking_search_4d(model, corpus, query, original_chunk_size, top_k=5, num_neighbors=8):
+    query_vector = get_sentence_vector(model, query)
+    initial_similarities = []
+
+    # Calculate initial similarities
+    for sentence in corpus:
+        sentence_vector = get_sentence_vector(model, ' '.join(sentence))
+        if np.any(sentence_vector):
+            cosine_sim = 1 - cosine(query_vector, sentence_vector)
+            euclidean_dist = euclidean(query_vector, sentence_vector)
+            initial_similarities.append((sentence, cosine_sim, euclidean_dist, original_chunk_size))
+
+    # Sort initial matches by combined similarity and distance
+    sorted_initial = sorted(initial_similarities, key=lambda x: (x[1], -x[2]), reverse=True)[:top_k]
+
+    fractal_results = []
+
+    def explore_around(index, depth=0, current_chunk_size=original_chunk_size):
+        nonlocal fractal_results
+        if depth > num_neighbors:
+            return
+
+        # Adjust the current chunk size based on depth
+        if depth > 0:  # Reduce chunk size after the first depth
+            current_chunk_size = max(1, current_chunk_size // 3)
+
+        bounds = range(max(0, index - current_chunk_size), min(len(corpus), index + current_chunk_size + 1))
+
+        for i in bounds:
+            if i == index and depth == 0:  # Skip the initial match itself at depth 0
+                continue
+            sub_corpus_chunk = corpus[i:i+1]
+            segments = segment_sentence(' '.join(sub_corpus_chunk[0]))
+            
+            for segment in segments:
+                sub_vector = get_sentence_vector(model, segment)
+                if np.any(sub_vector):
+                    sub_cosine_sim = 1 - cosine(query_vector, sub_vector)
+                    sub_euclidean_dist = euclidean(query_vector, sub_vector)
+                    fractal_results.append((segment, sub_cosine_sim, sub_euclidean_dist, current_chunk_size))
+
+        explore_around(index, depth + 1, current_chunk_size)
+
+    def segment_sentence(sentence):
+        # Simple segmentation based on punctuation and conjunctions
+        delimiters = [",", ";", ".", " and ", " or ", " but "]
+        regexPattern = '|'.join(map(re.escape, delimiters))
+        segments = re.split(regexPattern, sentence)
+        return [segment.strip() for segment in segments if segment.strip() != ""]
+
+    for sentence, _, _, _ in sorted_initial:
+        index = corpus.index(sentence)
+        explore_around(index, 0, original_chunk_size)
+
+    unique_results = list({x[0]: x for x in fractal_results}.values())
+    sorted_results = sorted(unique_results, key=lambda x: (x[1], -x[3]), reverse=True)  # Sort by similarity, then by chunk size
+
+    #for result in sorted_results:
+        #print(f"Similarity: {result[1]:.2f}, Semantic Chunk size: {result[3]}, Sentence: {result[0]}, Word count: {len(result[0].split())}")
+
+    return [(result[0], result[1], len(result[0].split())) for result in sorted_results][:top_k]
+\
+# Load the model and corpus using the base name
+model = load_model(f'{filename_base}.model')
+corpus = load_corpus(f'{filename_base}.pkl')
+# Load and display model settings for verification
+model_settings = load_model_settings(f'{filename_base}_metadata.json')
+
+
+# Example conversation loop with fractal chunking option
+while True:
+    user_input = input("You: ")
+    if user_input.lower() == "exit":
+        break
+    # use chunk size from embedding
+    original_chunk_size = int(model_settings['window'])
+    similar_sentences = fractal_chunking_search_4d(model, corpus, user_input, original_chunk_size)
+    
+    #similar_sentences = find_similar_sentences(model, corpus, user_input)
+
+    response = "Here are some related thoughts:\n" + "\n".join([f"- {sentence[0]} (similarity: {sentence[1]:.2f})" for sentence in similar_sentences])
+    print("AI:", response)
+
+```
+
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
