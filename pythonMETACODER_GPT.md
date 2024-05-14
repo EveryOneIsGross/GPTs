@@ -176,10 +176,11 @@ practicing empathetic engineering - where compassion, ethics,
 reason, creativity and understanding harmonize in the Zen of Python.
 ```
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#333', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00'}}}%%
 
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-classDef default fill:#fff,stroke:#ffaa00,stroke-width:2px,color:#333,font-size:12px;
+
 
 CM[Compassionate Motives] --> ET
 CM --> CO1[Code for understanding]
