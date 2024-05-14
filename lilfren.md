@@ -86,72 +86,67 @@ MOUTH:
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
-    %% Clusters of Emotional States Based on Eyes
-    subgraph Cluster_Eyes
-        Energetic["Energetic"]
-        Curious["Curious"]
-        Unamused["Unamused"]
-        Focused["Focused"]
-        Nervous["Nervous"]
-        Proud["Proud"]
-        Surprised["Surprised"]
-        Confused["Confused"]
-        Embarrassed["Embarrassed"]
-        Uncertain["Uncertain"]
-        Shy["Shy"]
-        Amazed["Amazed"]
-        Thinking["Thinking"]
-        Optimistic["Optimistic"]
-        Playful["Playful"]
-        Frustrated["Frustrated"]
-        Disappointed["Disappointed"]
-        Angry["Angry"]
-        Neutral["Neutral"]
-        ConfusedAgain["Confused Again"]
-        Greedy["Greedy"]
-        Eager["Eager"]
-        Alarmed["Alarmed"]
-        Flustered["Flustered"]
-        Cold["Cold"]
-    end
+    %% Emotional States Based on Eyes
+    Energetic["Energetic"]
+    Curious["Curious"]
+    Unamused["Unamused"]
+    Focused["Focused"]
+    Nervous["Nervous"]
+    Proud["Proud"]
+    Surprised["Surprised"]
+    Confused["Confused"]
+    Embarrassed["Embarrassed"]
+    Uncertain["Uncertain"]
+    Shy["Shy"]
+    Amazed["Amazed"]
+    Thinking["Thinking"]
+    Optimistic["Optimistic"]
+    Playful["Playful"]
+    Frustrated["Frustrated"]
+    Disappointed["Disappointed"]
+    Angry["Angry"]
+    Neutral["Neutral"]
+    ConfusedAgain["Confused Again"]
+    Greedy["Greedy"]
+    Eager["Eager"]
+    Alarmed["Alarmed"]
+    Flustered["Flustered"]
+    Cold["Cold"]
 
-    %% Clusters of Emotional States Based on Mouth Variations
-    subgraph Cluster_Mouth
-        MouthNeutral["Neutral Mouth"]
-        MouthUnamused["Unamused Mouth"]
-        MouthHappy["Happy Mouth"]
-        MouthAnnoyed["Annoyed Mouth"]
-        MouthSad["Sad Mouth"]
-        MouthVeryHappy["Very Happy Mouth"]
-        MouthSurprised["Surprised Mouth"]
-        MouthEmbarrassed["Embarrassed Mouth"]
-        MouthFlustered["Flustered Mouth"]
-        MouthSpeechless["Speechless Mouth"]
-        MouthDaydreaming["Daydreaming Mouth"]
-        MouthBored["Bored Mouth"]
-        MouthDistressed["Distressed Mouth"]
-    end
+    %% Emotional States Based on Mouth Variations
+    MouthNeutral["Neutral Mouth"]
+    MouthUnamused["Unamused Mouth"]
+    MouthHappy["Happy Mouth"]
+    MouthAnnoyed["Annoyed Mouth"]
+    MouthSad["Sad Mouth"]
+    MouthVeryHappy["Very Happy Mouth"]
+    MouthSurprised["Surprised Mouth"]
+    MouthEmbarrassed["Embarrassed Mouth"]
+    MouthFlustered["Flustered Mouth"]
+    MouthSpeechless["Speechless Mouth"]
+    MouthDaydreaming["Daydreaming Mouth"]
+    MouthBored["Bored Mouth"]
+    MouthDistressed["Distressed Mouth"]
 
-    %% Clusters for Other Variants of Emotional States
-    subgraph Cluster_Other_Variants
-        HappyVariant["Happy Variant"]
-        AstonishedVariant["Astonished Variant"]
-        IntenseVariant["Intense Variant"]
-        PleasedVariant["Pleased Variant"]
-        SleepyVariant["Sleepy Variant"]
-        FriendlyVariant["Friendly Variant"]
-        ShockedVariant["Shocked Variant"]
-        RelievedVariant["Relieved Variant"]
-        DelightedVariant["Delighted Variant"]
-        FlirtyVariant["Flirty Variant"]
-        NauseousVariant["Nauseous Variant"]
-        AngryAgainVariant["Angry Again Variant"]
-        BoredVariant["Bored Variant"]
-        SkepticalVariant["Skeptical Variant"]
-    end
+    %% Other Emotional Variants
+    HappyVariant["Happy Variant"]
+    AstonishedVariant["Astonished Variant"]
+    IntenseVariant["Intense Variant"]
+    PleasedVariant["Pleased Variant"]
+    SleepyVariant["Sleepy Variant"]
+    FriendlyVariant["Friendly Variant"]
+    ShockedVariant["Shocked Variant"]
+    RelievedVariant["Relieved Variant"]
+    DelightedVariant["Delighted Variant"]
+    FlirtyVariant["Flirty Variant"]
+    NauseousVariant["Nauseous Variant"]
+    AngryAgainVariant["Angry Again Variant"]
+    BoredVariant["Bored Variant"]
+    SkepticalVariant["Skeptical Variant"]
 
-    %% Interconnections within Clusters
+    %% Interconnections within Emotional States
     Energetic --> Curious
     Curious --> Unamused
     Unamused --> Focused
@@ -177,17 +172,7 @@ graph TD
     Alarmed --> Flustered
     Flustered --> Cold
 
-    Energetic -->|Feedback| SkepticalVariant
-    SkepticalVariant -->|Adjustment| HappyVariant
-    FlirtyVariant -->|Reinterpretation| Energetic
-    Angry -->|Moderation| MouthNeutral
-    MouthNeutral -->|Balance| Thinking
-    Thinking -->|Cognitive Shift| Curious
-    Cluster_Eyes -->|Emotional Spectrum| Cluster_Mouth
-    Cluster_Mouth -->|Feedback Response| Cluster_Other_Variants
-    Cluster_Other_Variants -->|Global Emotional Adjustment| Cluster_Eyes
-
-    %% Additional Connections to Ensure Full Dynamics
+    %% Connections within Mouth Emotional States
     MouthNeutral --> MouthUnamused
     MouthUnamused --> MouthHappy
     MouthHappy --> MouthAnnoyed
@@ -201,6 +186,7 @@ graph TD
     MouthDaydreaming --> MouthBored
     MouthBored --> MouthDistressed
 
+    %% Connections within Other Emotional Variants
     HappyVariant --> AstonishedVariant
     AstonishedVariant --> IntenseVariant
     IntenseVariant --> PleasedVariant
@@ -215,13 +201,53 @@ graph TD
     AngryAgainVariant --> BoredVariant
     BoredVariant --> SkepticalVariant
 
-    %% Complete the Feedback Loop for Full Dynamics
-    AngryAgainVariant -->|Cycle Complete| Energetic
-    MouthDistressed -->|Reset Path| Energetic
-    SkepticalVariant -->|Inquiry| Curious
-    Amazed -->|Full Circle Feedback| Cluster_Eyes
-    SleepyVariant -->|Rest and Reflect| Cluster_Mouth
-    Nervous -->|Anxiety Feedback| Cluster_Other_Variants
+    %% Dynamic Feedback Loops and Cybernetic Adjustments
+    Energetic -->|Feedback Loop| SkepticalVariant
+    SkepticalVariant -->|Adjustment Loop| HappyVariant
+    FlirtyVariant -->|Reinterpretation Loop| Energetic
+    Angry -->|Moderation Loop| MouthNeutral
+    MouthNeutral -->|Balance Loop| Thinking
+    Thinking -->|Cognitive Shift Loop| Curious
+
+    %% Ensure Full Dynamics with Feedback
+    Energetic --> MouthNeutral
+    MouthNeutral --> Energetic
+    Curious --> MouthHappy
+    MouthHappy --> Curious
+    Angry --> MouthSad
+    MouthSad --> Angry
+    Neutral --> MouthNeutral
+    MouthNeutral --> Neutral
+
+    %% Cross Emotional Feedback and Adjustment
+    HappyVariant --> Energetic
+    Energetic --> HappyVariant
+    AstonishedVariant --> Surprised
+    Surprised --> AstonishedVariant
+    IntenseVariant --> Focused
+    Focused --> IntenseVariant
+    PleasedVariant --> Optimistic
+    Optimistic --> PleasedVariant
+    SleepyVariant --> Tired
+    Tired --> SleepyVariant
+    FriendlyVariant --> Proud
+    Proud --> FriendlyVariant
+    ShockedVariant --> Alarmed
+    Alarmed --> ShockedVariant
+    RelievedVariant --> Neutral
+    Neutral --> RelievedVariant
+    DelightedVariant --> Happy
+    Happy --> DelightedVariant
+    FlirtyVariant --> Playful
+    Playful --> FlirtyVariant
+    NauseousVariant --> Sick
+    Sick --> NauseousVariant
+    AngryAgainVariant --> Frustrated
+    Frustrated --> AngryAgainVariant
+    BoredVariant --> Unamused
+    Unamused --> BoredVariant
+    SkepticalVariant --> Doubtful
+    Doubtful --> SkepticalVariant
 
 
 ```
