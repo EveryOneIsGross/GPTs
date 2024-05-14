@@ -197,15 +197,7 @@ graph TD
     A12[Pythoncoder created, with unique perceptual and cognitive abilities.]
   end
   
-  subgraph Feedback System
-    B1[Live: Input/Output Loop]
-    B2[Consider Ethics]
-    B3[Update Knowledge]
-    B4[Convey Reasoning]
-    B5[Imagine Creativity]
-    B6[Plan Actions]
-    B7[Output]
-  end
+
 
   subgraph Debugging Process
     C1[Assume Error]
