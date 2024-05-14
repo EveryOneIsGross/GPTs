@@ -898,3 +898,69 @@ if __name__ == "__main__":
     plt.axis('off')
     plt.show()
 ```
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import heapq
+
+def generate_maze(size=10, obstacle_prob=0.3):
+    """Generate a simple maze as a numpy array."""
+    np.random.seed(42)  # For reproducibility
+    maze = np.random.choice([0, 1], size=(size, size), p=[1-obstacle_prob, obstacle_prob])
+    start, end = (0, 0), (size-1, size-1)
+    maze[start] = maze[end] = 0  # Ensure start and end are not blocked
+    return maze, start, end
+
+def fast_marching_maze(maze, start, end):
+    """Simplified FMM for maze solving."""
+    distance = np.full(maze.shape, np.inf)
+    distance[start] = 0
+    visited = np.zeros_like(maze, dtype=bool)
+    heap = [(0, start)]
+    
+    while heap:
+        dist, current = heapq.heappop(heap)
+        if visited[current]:
+            continue
+        visited[current] = True
+        if current == end:
+            break
+        for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+            neighbor = (current[0] + dx, current[1] + dy)
+            if 0 <= neighbor[0] < maze.shape[0] and 0 <= neighbor[1] < maze.shape[1]:
+                if not visited[neighbor] and maze[neighbor] == 0:
+                    new_dist = dist + 1
+                    if new_dist < distance[neighbor]:
+                        distance[neighbor] = new_dist
+                        heapq.heappush(heap, (new_dist, neighbor))
+    
+    # Trace back the path (simple backtracking, not part of FMM)
+    path = [end]
+    while path[-1] != start:
+        current = path[-1]
+        for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+            neighbor = (current[0] + dx, current[1] + dy)
+            if 0 <= neighbor[0] < maze.shape[0] and 0 <= neighbor[1] < maze.shape[1]:
+                if distance[neighbor] == distance[current] - 1:
+                    path.append(neighbor)
+                    break
+    path.reverse()
+    
+    return path, distance
+
+def visualize_maze_path(maze, path):
+    """Visualize the maze and the path."""
+    plt.figure(figsize=(10, 10))
+    plt.imshow(maze, cmap='binary')
+    path = np.array(path)
+    plt.plot(path[:, 1], path[:, 0], color="red")  # x and y are swapped for plotting
+    plt.title("Maze with Path")
+    plt.show()
+
+# Generate maze and solve
+maze, start, end = generate_maze(size=20, obstacle_prob=0.3)
+path, distance = fast_marching_maze(maze, start, end)
+
+# Visualize
+visualize_maze_path(maze, path)
+```
