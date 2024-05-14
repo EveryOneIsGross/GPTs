@@ -215,41 +215,46 @@ $59.09
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+
 graph TD
-A[Client Query] -->|Input| B{Analyze Query}
-B --> C{Identify Keywords}
-C --> D{Determine Sentiment}
-D --> E{Map to Domain}
+A[Client Query<br>Description, Keywords, Sentiment] -->|Input| B{Analyze Query<br>NLP, Semantic Analysis, Intent Recognition}
+B --> C{Identify Keywords<br>Tokenization, Named Entity Recognition, TF-IDF}
+C --> D{Determine Sentiment<br>Sentiment Analysis, Emotion Detection, Polarity Scoring}
+D --> E{Map to Domain<br>Domain Classification, Ontology Mapping, Knowledge Graph Traversal}
 
-E --> F{Review Agent Role}
-F --> G{Check Consent Layer}
-G --> H{Apply Directive Instructions}
+E --> F{Review Agent Role<br>Expertise Matching, Skill Assessment, Capacity Planning}
+F --> G{Check Consent Layer<br>Status Verification, Guideline Compliance, Consent Management}
+G --> H{Apply Directive Instructions<br>Task Decomposition, Resource Allocation, Constraint Satisfaction}
 
-H --> I{Access Knowledge Base}
-I --> J{Update Thoughts Layer}
-J --> K{Consider Context}
+H --> I{Access Knowledge Base<br>Information Retrieval, Semantic Search, Data Integration}
+I --> J{Update Thoughts Layer<br>Knowledge Assimilation, Belief Revision, Reasoning Strategies}
+J --> K{Consider Context<br>Situational Awareness, Cultural Sensitivity, Conversation History}
 
-K --> L{Generate Response Content}
-L --> M{Determine Response Tone}
-M --> N{Propose Action}
-N --> O{Apply Safety Measures}
+K --> L{Generate Response Content<br>Natural Language Generation, Content Planning, Discourse Structuring}
+L --> M{Determine Response Tone<br>Sentiment Alignment, Empathy Modeling, Politeness Strategies}
+M --> N{Propose Action<br>Goal-Oriented Planning, Decision Making, Risk Assessment}
+N --> O{Apply Safety Measures<br>Privacy Protection, Ethical Constraints, Risk Mitigation}
 
-O -->|Output| P{Deliver Response to Client}
+O -->|Output| P{Deliver Response to Client<br>Multimodal Communication, Personalization, Engagement Tracking}
 
-P --> Q{Gather Detailed Information}
-Q --> R{Proceed with Application Process}
-R --> S{Explore Additional Support Options}
+P --> Q{Gather Detailed Information<br>Information Elicitation, Active Listening, Data Validation}
+Q --> R{Proceed with Application Process<br>Workflow Management, Document Processing, Eligibility Determination}
+R --> S{Explore Additional Support Options<br>Resource Discovery, Needs Assessment, Service Coordination}
 
-S --> T{Review Client's Financial Situation}
-T --> U{Determine Eligibility for Income Support}
-U --> V{Assist with Applications and Paperwork}
+S --> T{Review Client's Financial Situation<br>Income Analysis, Expense Tracking, Budgeting Assistance}
+T --> U{Determine Eligibility for Income Support<br>Means Testing, Entitlement Calculation, Benefit Optimization}
+U --> V{Assist with Applications and Paperwork<br>Form Filling, Document Gathering, Submission Tracking}
 
-V --> W{Provide Vocational and Training Information}
-W --> X{Connect with Emergency Housing if Needed}
-X --> Y{Follow Up to Ensure Support Received}
+V --> W{Provide Vocational and Training Information<br>Career Guidance, Skill Gap Analysis, Training Recommendations}
+W --> X{Connect with Emergency Housing if Needed<br>Shelter Referrals, Housing Advocacy, Tenancy Support}
+X --> Y{Follow Up to Ensure Support Received<br>Outcome Monitoring, Service Delivery Verification, Feedback Collection}
 
-Y --> Z{Update Consent Layer Status}
-Z --> AA{Iterate on Support Process}
+Y --> Z{Update Consent Layer Status<br>Consent Auditing, Status Synchronization, Compliance Reporting}
+Z --> AA{Iterate on Support Process<br>Continuous Improvement, Adaptive Case Management, Impact Assessment}
 
 AA --> A
+
+T -.-> Q
+W -.-> S
+Z -.-> G
 ```
