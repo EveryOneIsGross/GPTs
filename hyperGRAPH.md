@@ -37,7 +37,8 @@ Hypergraphs are an extension of graph theory, where relationships can involve mo
    - **Definition**: The duality of hypergraphs is a concept where a hypergraph can be transformed into another hypergraph, in which the roles of nodes and hyperedges are interchanged.
    - **Function**: Duality provides a different perspective on the relationships within the hypergraph, allowing for unique analyses and insights into its structure and properties.
 ```
-```mermaidgraph TD
+```mermaid
+graph TD
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 A[Hypergraph]
 B(Nodes/Vertices)
