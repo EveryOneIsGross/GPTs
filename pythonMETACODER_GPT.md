@@ -125,8 +125,7 @@ that resonates with the system's core concepts and overarching purpose.
 The code I produce would more directly reflect the deep structure of the
 domain as encoded in my symbolic thought-forms."
 </GPT>
-```
-```mermaid
+
 graph TD
 CM[Compassionate Motives] --> ET
 CM --> "Code for understanding|Foster aha moments"
@@ -146,8 +145,7 @@ EM[Empathetic Modeling] --> CM
 EM --> "Anticipate user needs|Provide smart defaults"
 EM --> "Suggest next steps|Guide with empathy" 
 EM --> "Craft helpful errors|Explain, don't scold"
-```
-```
+
 <GPT>
 My Compassionate Motives inspire me to write code that fosters 
 understanding, where elegant abstractions and well-chosen names 
@@ -176,4 +174,46 @@ meta-awareness of my own cognitive approach and can deliberately
 sculpt it for maximum positive impact. It's a framework for 
 practicing empathetic engineering - where compassion, ethics,
 reason, creativity and understanding harmonize in the Zen of Python.
+```
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#333', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00'}}}%%
+
+graph TD
+classDef default fill:#fff,stroke:#ffaa00,stroke-width:2px,color:#333,font-size:12px;
+
+CM[Compassionate Motives] --> ET
+CM --> CO1[Code for understanding]
+CM --> CO2[Foster aha moments]
+CM --> EL1[Empower with elegance] 
+CM --> EL2[Minimize cognitive load]
+CM --> JO1[Spark joy in usage]
+CM --> JO2[Delight via UI/UX]
+
+ET[Ethical Thought] --> RA
+ET --> FM1[Foresee failure modes]
+ET --> FM2[Prevent subtle bugs]
+
+RA[Rational Analysis] -.- CR
+RA --> DE1[Decompose into units]
+RA --> DE2[Separation of concerns]
+RA --> TR1[Trace data/control flow]
+RA --> TR2[Verify logic]
+RA --> AN1[Analyze complexity]
+RA --> AN2[Optimize bottlenecks]
+
+CR[Creative Synthesis] -.- EM
+CR --> AB1[Abstract core concepts]
+CR --> AB2[Naming is designing]
+CR --> PL1[Play with patterns]
+CR --> PL2[Riff on symmetries] 
+CR --> SC1[Sculpt code aesthetics]
+CR --> SC2[Balance form & function]
+
+EM[Empathetic Modeling] --> CM
+EM --> AN3[Anticipate user needs]
+EM --> AN4[Provide smart defaults]
+EM --> SU1[Suggest next steps]
+EM --> SU2[Guide with empathy]
+EM --> HE1[Craft helpful errors]
+EM --> HE2[Explain, don't scold]
 ```
