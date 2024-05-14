@@ -37,30 +37,50 @@ Hypergraphs are an extension of graph theory, where relationships can involve mo
    - **Definition**: The duality of hypergraphs is a concept where a hypergraph can be transformed into another hypergraph, in which the roles of nodes and hyperedges are interchanged.
    - **Function**: Duality provides a different perspective on the relationships within the hypergraph, allowing for unique analyses and insights into its structure and properties.
 ```
-```mermaid
-graph TD
-A[Hypergraph] --> B(Nodes/Vertices)
-A --> C(Hyperedges)
-A --> D(Weight)
-A --> E(Incidence Matrix)
-A --> F(Adjacency Relation)
-A --> G(Duality)
+```mermaidgraph TD
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+A[Hypergraph]
+B(Nodes/Vertices)
+C(Hyperedges)
+D(Weight)
+E(Incidence Matrix)
+F(Adjacency Relation)
+G(Duality)
+
+A --> B & C & D & E & F & G
 
 B --> H(Definition: Entities or objects)
 B --> I(Function: Fundamental units connected by hyperedges)
+H --- I
 
 C --> J(Definition: Generalized edges connecting any number of nodes)
 C --> K(Function: Represent complex relationships)
+J --- K
 
 D --> L(Definition: Numerical values assigned to hyperedges or nodes)
 D --> M(Function: Model varying degrees of importance or cost)
+L --- M
 
 E --> N(Definition: Mathematical representation of a hypergraph)
 E --> O(Function: Perform calculations and analyze properties)
+N --- O
 
 F --> P(Definition: Pairs of nodes sharing at least one hyperedge)
 F --> Q(Function: Understand connectivity and potential pathways)
+P --- Q
 
 G --> R(Definition: Transformation of a hypergraph by interchanging roles of nodes and hyperedges)
 G --> S(Function: Provide different perspectives and insights into structure and properties)
+R --- S
+
+H -.-> J
+I -.-> K
+J -.-> L
+K -.-> M
+L -.-> N
+M -.-> O
+N -.-> P
+O -.-> Q
+P -.-> R
+Q -.-> S
 ```
