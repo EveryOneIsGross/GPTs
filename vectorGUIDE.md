@@ -10,27 +10,35 @@ import matplotlib
 import numpy as np
 ```
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#000000', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#000000', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '16px'}}}%%
 graph TD
     %% Nodes
-    A["Start: Read & Process\n<color:skyblue>"] -->|Edge weight: 5| B["Middle: Detailed Chunking & Preprocessing\n<color:lightgreen>"]
-    B -->|Edge weight: 3| C["End: In-depth Embedding Using Word2Vec\n<color:salmon>"]
-    A -->|Edge weight: 4| C
-    C -->|Feedback Loop| A
+    A["A: Start\nRead & Process"] 
+    B["B: Middle\nDetailed Chunking & Preprocessing"]
+    C["C: End\nIn-depth Embedding Using Word2Vec"]
+    D["D: Philosophical Node\nAbstract concepts"]
 
-    %% Philosophical Connections with ConnectionPatch
-    A --> D["Philosophical Node\n<color:red>"]
-    D -->|Philosophical Influence| C
+    %% Connections A
+    A --> B
+    A --> C
+    A --> D
+    A --> A
 
-    %% Annotations and Additional Info
-    B -. "Feedback Vector".-> D
-    D -. "Cyclic Dependency\nEnsures System Dynamics".-> B
+    %% Connections B
+    B --> A
+    B --> C
+    B --> D
+    B --> B
 
-    %% Subgraphs to Illustrate Enclosure
-    subgraph Enclosed System
-    A B C D
-    end
+    %% Connections C
+    C --> A
+    C --> B
+    C --> D
+    C --> C
 
-    %% Additional Annotations
-    linkStyle default interpolate basis
+    %% Connections D
+    D --> A
+    D --> B
+    D --> C
+    D --> D
 ```
