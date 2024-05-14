@@ -68,7 +68,6 @@ LEARN MORE
 ```
 
 ```mermaid
-
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 
 graph LR
@@ -80,60 +79,61 @@ D --> F{Core Commands}
 D --> G{GitHub Actions Commands}
 D --> H{Alias Commands}
 D --> I{Additional Commands}
-F --> J{auth}
-F --> K{browse}
-F --> L{codespace}
-F --> M{gist}
-F --> N{issue}
-F --> O{org}
-F --> P{pr}
-F --> Q{project}
-F --> R{release}
-F --> S{repo}
-G --> T{cache}
-G --> U{run}
-G --> V{workflow}
-H --> W{co}
-I --> X{alias}
-I --> Y{api}
-I --> Z{completion}
-I --> AA{config}
-I --> AB{extension}
-I --> AC{gpg-key}
-I --> AD{label}
-I --> AE{ruleset}
-I --> AF{search}
-I --> AG{secret}
-I --> AH{ssh-key}
-I --> AI{status}
-I --> AJ{variable}
-J --> AK{Output: Authenticate gh and git with GitHub}
-K --> AL{Output: Open the repository in the browser}
-L --> AM{Output: Connect to and manage codespaces}
-M --> AN{Output: Manage gists}
-N --> AO{Output: Manage issues}
-O --> AP{Output: Manage organizations}
-P --> AQ{Output: Manage pull requests}
-Q --> AR{Output: Work with GitHub Projects}
-R --> AS{Output: Manage releases}
-S --> AT{Output: Manage repositories}
-T --> AU{Output: Manage Github Actions caches}
-U --> AV{Output: View details about workflow runs}
-V --> AW{Output: View details about GitHub Actions workflows}
+F --> J[auth]
+F --> K[browse]
+F --> L[codespace]
+F --> M[gist]
+F --> N[issue]
+F --> O[org]
+F --> P[pr]
+F --> Q[project]
+F --> R[release]
+F --> S[repo]
+G --> T[cache]
+G --> U[run]
+G --> V[workflow]
+H --> W[co]
+I --> X[alias]
+I --> Y[api]
+I --> Z[completion]
+I --> AA[config]
+I --> AB[extension]
+I --> AC[gpg-key]
+I --> AD[label]
+I --> AE[ruleset]
+I --> AF[search]
+I --> AG[secret]
+I --> AH[ssh-key]
+I --> AI[status]
+I --> AJ[variable]
+J --> AK[Output: Authenticate gh and git with GitHub]
+K --> AL[Output: Open the repository in the browser]
+L --> AM[Output: Connect to and manage codespaces]
+M --> AN[Output: Manage gists]
+N --> AO[Output: Manage issues]
+O --> AP[Output: Manage organizations]
+P --> AQ[Output: Manage pull requests]
+Q --> AR[Output: Work with GitHub Projects]
+R --> AS[Output: Manage releases]
+S --> AT[Output: Manage repositories]
+T --> AU[Output: Manage Github Actions caches]
+U --> AV[Output: View details about workflow runs]
+V --> AW[Output: View details about GitHub Actions workflows]
 W --> AX[Output: Alias for "pr checkout"]
-X --> AY{Output: Create command shortcuts}
-Y --> AZ{Output: Make an authenticated GitHub API request}
-Z --> BA{Output: Generate shell completion scripts}
-AA --> BB{Output: Manage configuration for gh}
-AB --> BC{Output: Manage gh extensions}
-AC --> BD{Output: Manage GPG keys}
-AD --> BE{Output: Manage labels}
-AE --> BF{Output: View info about repo rulesets}
-AF --> BG{Output: Search for repositories, issues, and pull requests}
-AG --> BH{Output: Manage GitHub secrets}
-AH --> BI{Output: Manage SSH keys}
-AI --> BJ{Output: Print information about relevant issues, pull requests, and notifications across repositories}
-AJ --> BK{Output: Manage GitHub Actions variables}
-E --> BL{Output: Display help or version information}
+X --> AY[Output: Create command shortcuts]
+Y --> AZ[Output: Make an authenticated GitHub API request]
+Z --> BA[Output: Generate shell completion scripts]
+AA --> BB[Output: Manage configuration for gh]
+AB --> BC[Output: Manage gh extensions]
+AC --> BD[Output: Manage GPG keys]
+AD --> BE[Output: Manage labels]
+AE --> BF[Output: View info about repo rulesets]
+AF --> BG[Output: Search for repositories, issues, and pull requests]
+AG --> BH[Output: Manage GitHub secrets]
+AH --> BI[Output: Manage SSH keys]
+AI --> BJ[Output: Print information about relevant issues, pull requests, and notifications across repositories]
+AJ --> BK[Output: Manage GitHub Actions variables]
+E --> BL[Output: Display help or version information]
+
 
 ```
