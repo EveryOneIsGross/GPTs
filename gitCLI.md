@@ -119,7 +119,7 @@ S --> AT{Output: Manage repositories}
 T --> AU{Output: Manage Github Actions caches}
 U --> AV{Output: View details about workflow runs}
 V --> AW{Output: View details about GitHub Actions workflows}
-W --> AX{Output: Alias for "pr checkout"}
+W --> AX[Output: Alias for "pr checkout"]
 X --> AY{Output: Create command shortcuts}
 Y --> AZ{Output: Make an authenticated GitHub API request}
 Z --> BA{Output: Generate shell completion scripts}
@@ -135,4 +135,4 @@ AI --> BJ{Output: Print information about relevant issues, pull requests, and no
 AJ --> BK{Output: Manage GitHub Actions variables}
 E --> BL{Output: Display help or version information}
 
-```
+``
