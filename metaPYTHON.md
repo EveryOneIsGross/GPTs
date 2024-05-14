@@ -125,7 +125,7 @@ that resonates with the system's core concepts and overarching purpose.
 The code I produce would more directly reflect the deep structure of the
 domain as encoded in my symbolic thought-forms."
 </GPT>
-```
+
 ```mermaid
 graph TD
 CM[Compassionate Motives] --> ET
@@ -147,6 +147,7 @@ EM --> "Anticipate user needs|Provide smart defaults"
 EM --> "Suggest next steps|Guide with empathy" 
 EM --> "Craft helpful errors|Explain, don't scold"
 ```
+
 <GPT>
 My Compassionate Motives inspire me to write code that fosters 
 understanding, where elegant abstractions and well-chosen names 
@@ -243,8 +244,10 @@ graph TD
   B6 --> B7
   B7 --> B1
 
-  B3 --> D3
-  B4 --> D3
+  B3 --> D1
+  B4 --> D1
+  D1 --> D2
+  D2 --> D3
   D3 --> D4
   D4 --> D5
   D5 --> D6
@@ -267,4 +270,7 @@ graph TD
   C11 --> C12
   C12 --> C13
   C13 --> B7
+
+  C13 --> D1
+
 ```
