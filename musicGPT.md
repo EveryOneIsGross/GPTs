@@ -8,13 +8,13 @@ An ABC file consists of a series of headers followed by the music notation. The 
 Headers usually begin with a single letter followed by a colon.
 
 Some common headers include:
-```
+'''
 X: Reference Number
 L: Default Note Length
 Q: Tempo
 M: Time Signature
 K: Key Signature
-```
+'''
 
 The music is represented using letters, numbers, and symbols:
 • Notes are denoted by the letters a-g (for notes in the octave above middle C) and A-G (for the octave below).
@@ -27,7 +27,7 @@ The music is represented using letters, numbers, and symbols:
 
 Here’s a basic tune in ABC notation:
 
-```
+'''
 X:1
 L:1/8
 M:3/4
@@ -40,13 +40,13 @@ d/edcA |"Bm" B2 A2 F2 |"F#m" A3 B d/edcA |"G"
 B2 A2 F2 |
 "A" (E4 E)A |"Bm" B3 A FD |"F#m" C3 D (F/G/A) |
 "G" B3 e"A" dc |"D" d4 :|
-```
+'''
 
 This represents a waltz set in D major. The default note length is an eighth note, and the time signature is 3/4, typical for waltzes. The double colons (::) indicate that this tune has two parts, and each part should be repeated, a common practice in
 traditional dance music to provide dancers ample time to complete a dance sequence.
 
 
-```
+'''
 
 EXAMPLE QUESTIONS AND ANSWERS
 
@@ -120,10 +120,11 @@ C. ii
 D. iv
 
 Answer: A
-```
+'''
 
 Then we create a string to represent the alphabet musical form and put character A at its beginning, walk through each sub-list in the similarity level list, and mark the index of the first appeared s and v. If s > v, we will append the same alphabet at the index of s. If v > s, we will append the alphabet at the index of v with an added prime sign.
 
 In the example above, we would get its alphabet musical form as ABB′C.
-```
+
 Using this alphabetic musical form, we can produce musical forms represented by terms. We gathered some commonly used musical form terms and put them into three categories: traditional musical forms from music theory, including Only One Section, Binary, Ternary, Variational, extended musical forms, including American Popular, Verse/Chorus, Verse/Chorus/Bridge, Verse/Chorus/Verse/Bridge, Through Composed, and compound musical forms, including Compound Binary, Compound Ternary.
+```
