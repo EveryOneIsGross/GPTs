@@ -128,3 +128,70 @@ In the example above, we would get its alphabet musical form as ABB′C.
 
 Using this alphabetic musical form, we can produce musical forms represented by terms. We gathered some commonly used musical form terms and put them into three categories: traditional musical forms from music theory, including Only One Section, Binary, Ternary, Variational, extended musical forms, including American Popular, Verse/Chorus, Verse/Chorus/Bridge, Verse/Chorus/Verse/Bridge, Through Composed, and compound musical forms, including Compound Binary, Compound Ternary.
 ```
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph LR
+subgraph ABC Notation
+A[ABC File Structure]
+B[Headers]
+C[Music Notation]
+D[Notes]
+E[Note Duration]
+F[Sharps, Naturals, Flats]
+G[Chords]
+H[Bars]
+I[Tuplets]
+J[Decorations and Ornamentations]
+K[Example Tune]
+end
+subgraph Applications
+L[Music Theory]
+M[Deep Learning]
+end
+subgraph Advantages
+N[Data Efficiency]
+O[Easy Preprocessing]
+P[Scalability]
+end
+subgraph Python Script
+Q[abc2snd4GPT.py]
+R[Convert ABC to Sinewaves]
+S[Generative Compositions]
+end
+subgraph Musical Forms
+T[Traditional]
+U[Extended]
+V[Compound]
+end
+subgraph Question Types
+W[Chord Progressions]
+X[Chord Inversions]
+Y[Note Names]
+Z[Chord Functions]
+end
+A --> B
+A --> C
+C --> D
+C --> E
+C --> F
+C --> G
+C --> H
+C --> I
+C --> J
+A --> K
+K --> L
+K --> M
+M --> N
+M --> O
+M --> P
+M --> Q
+Q --> R
+Q --> S
+L --> T
+L --> U
+L --> V
+L --> W
+L --> X
+L --> Y
+L --> Z
+```
