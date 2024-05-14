@@ -67,34 +67,86 @@ By adopting Observer Theory as a philosophical heuristic, we expand our explorat
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
 
-A[Observer Theory] --> B[Layered Observation]
-A --> C[Unique Perspectives]
-A --> D[Observer Identity]
-A --> E[Collective vs Individual Observations]
-A --> F[Quantum Mechanics and Perception]
-A --> G[Observer Dependency]
-A --> H[Multiplicity of Self]
-A --> I[Equivalencing in Social Observations]
-A --> J[Superposition in Social Perception]
-A --> K[Super Observers and Collective Intelligence]
-A --> L[Observer Effect in Social Dynamics]
-A --> M[Entanglement and Relationships]
-A --> N[Reducibility and Understanding]
+A[Observer Theory<br>Observation influences<br>observed phenomenon] --- B[Layered Observation<br>Multiple sub-observers<br>contribute to perception]
+A --- C[Unique Perspectives<br>Each observer has a<br>distinct slice of reality]
+A --- D[Observer Identity<br>Tied to unique perspective<br>and observer network]
+A --- E[Collective vs Individual<br>Dynamic interplay between<br>shared and distinct realities]
+A --- F[Quantum Mechanics<br>Superposition of states<br>collapsed by interaction]
+A --- G[Observer Dependency<br>Identity influenced by<br>interactions with others]
+A --- H[Multiplicity of Self<br>Identity shaped by<br>others' perceptions]
+A --- I[Equivalencing<br>Categorizing individuals<br>based on limited observations]
+A --- J[Superposition in Social Perception<br>Identity as a superposition<br>collapsed by interaction]
+A --- K[Super Observers<br>Integrating multiple perspectives<br>for higher-order understanding]
+A --- L[Observer Effect<br>Perception influencing<br>behavior and self-perception]
+A --- M[Entanglement and Relationships<br>Complex web of influences<br>defining identities]
+A --- N[Reducibility and Understanding<br>Extracting patterns from<br>complex social dynamics]
 
-O[Philosophical Heuristic] --> P[Reality as Observer-Dependent]
-O --> Q[Multiplicity of Perspectives]
-O --> R[The Role of Consciousness]
-O --> S[Social Constructivism]
-O --> T[Interconnectedness and Entanglement]
-O --> U[Ethics and Responsibility]
-O --> V[Heuristic for Exploration]
+O[Philosophical Heuristic<br>Extending Observer Theory<br>beyond physical realm] --- P[Reality as Observer-Dependent<br>Perceptions and interactions<br>shape individual and collective realities]
+O --- Q[Multiplicity of Perspectives<br>Diverse viewpoints contribute<br>to multifaceted understanding]
+O --- R[The Role of Consciousness<br>Observer's mind interacts<br>with the universe]
+O --- S[Social Constructivism<br>Social realities constructed<br>through human activity]
+O --- T[Interconnectedness and Entanglement<br>Individuals entangled in<br>complex webs of relations]
+O --- U[Ethics and Responsibility<br>Moral considerations in<br>shaping social realities]
+O --- V[Heuristic for Exploration<br>Models of reality as<br>evolving constructs]
 
-W[Quantum Self Alignment] --> X[Explore Quantum Selves]
-W --> Y[Navigate Observer Matrix]
-W --> Z[Integrate Multiple Viewpoints]
-W --> AA[Understand Identity Manifestations]
+W[Quantum Self Alignment<br>Guiding users through<br>quantum self exploration] --- X[Explore Quantum Selves<br>Navigate the complexities<br>of identity and perception]
+W --- Y[Navigate Observer Matrix<br>Understand interconnectedness<br>within collective reality]
+W --- Z[Integrate Multiple Viewpoints<br>Form a holistic understanding<br>of one's identity]
+W --- AA[Understand Identity Manifestations<br>Recognize dynamic nature<br>across different contexts]
 
-A --> O
-O --> W
+A --- O
+O --- W
+
+B --- C
+B --- D
+B --- E
+C --- D
+C --- E
+C --- F
+D --- G
+D --- H
+E --- F
+E --- G
+F --- G
+F --- H
+F --- I
+G --- H
+G --- I
+G --- J
+H --- K
+H --- L
+I --- J
+I --- K
+J --- L
+J --- M
+K --- L 
+K --- M
+K --- N
+L --- M
+L --- N
+M --- N
+
+P --- Q
+P --- R
+P --- S
+Q --- R
+Q --- S
+Q --- T
+R --- S
+R --- T
+R --- U
+S --- T
+S --- U
+S --- V
+T --- U
+T --- V
+U --- V
+
+X --- Y
+X --- Z
+X --- AA
+Y --- Z
+Y --- AA
+Z --- AA
 
 ```
