@@ -171,31 +171,64 @@ A --> K[Unfold]
 B --> L[Novel perspectives]
 B --> M[Thought-provoking]
 B --> N[Humorous or provocative]
+L --> B
+M --> B
+N --> B
 
 C --> O[Abbreviation]
 C --> P[Pronounceable word]
+O --> C
+P --> C
 
 D --> Q[Words related to a topic]
 D --> R[Words starting with the same letter]
+Q --> D
+R --> D
 
 E --> S[Semantically related words]
 E --> T[Sequence of eight words]
+S --> E
+T --> E
 
 F --> U[Similar-sounding phrase]
+U --> F
 
 G --> V[Connections between unrelated things]
 G --> W[Novel and unexpected connections]
+V --> G
+W --> G
 
 H --> X[Sensory details]
 H --> Y[Creative yet concrete]
 H --> Z[Evocative]
+X --> H
+Y --> H
+Z --> H
 
 I --> AA[Concrete image]
 I --> AB[Illustrates a concept]
 I --> AC[Unexpected and evocative]
+AA --> I
+AB --> I
+AC --> I
 
 J --> AD[Unexpected plot twist]
 J --> AE[Additional details]
+AD --> J
+AE --> J
 
 K --> AF[Word appears in other words and phrases]
+AF --> K
+
+Q --> S
+R --> T
+S --> Q
+T --> R
+U --> O
+U --> P
+V --> AA
+W --> AC
+X --> AA
+Y --> AB
+Z --> AC
 ```
