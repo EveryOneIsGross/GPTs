@@ -35,53 +35,69 @@ flow
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+
+
 graph TD
-    %% Input
-    A((A))["Start: Define Propositions"] --> B((B))["Identify Predicates and Constants"]
-    
-    %% Process
-    B --> C((C))["Structure First-Order Logic Statements"]
-    C --> D((D))["Define Logical Axioms"]
-    D --> E((E))["Establish Rules of Inference"]
-    E --> F((F))["Formulate Knowledge Base"]
-    F --> G((G))["Apply Deduction Theorems"]
-    G --> H((H))["Query Processing"]
-    H --> I((I))["Infer New Knowledge"]
-    
-    %% Decision and Feedback
-    I -->|Satisfiable| J((J))["Solution Found: FOL Satisfies Query"]
-    I -->|Unsatisfiable| K((K))["No Solution: Revise Statements or Axioms"]
-    
-    %% Output
-    J --> L((L))["End: Knowledge Inference Successful"]
-    
-    %% Feedback Loop
-    K -->|Restart with Refinements| A
-    
-    %% Parameter Space (Influences)
-    PA((PA))["Logic and Predicates"] --> B
-    PB((PB))["Axiom Definitions"] --> D
-    PC((PC))["Inference Rules"] --> E
-    PD((PD))["Knowledge Base Structures"] --> F
-    PE((PE))["Deduction Methods"] --> G
-    PF((PF))["Query Techniques"] --> H
-    PG((PG))["Inference Analysis"] --> I
-    
-    %% Subgraphs to Enclose Different Phases
-    subgraph input
-    A
-    end
-    
-    subgraph process
-    B C D E F G H I K
-    end
-    
-    subgraph output
-    J L
-    end
-    
-    subgraph "Parameter Space"
-    PA PB PC PD PE PF PG
-    end
+
+%% Input
+A(("Start: Define Propositions")) -.- p -.- B(("Identify Predicates and Constants"))
+
+%% Process
+B -.- p -.- C(("Structure First-Order Logic Statements"))
+C -.- p -.- D(("Define Logical Axioms"))
+D -.- p -.- E(("Establish Rules of Inference"))
+E -.- p -.- F(("Formulate Knowledge Base"))
+F -.- p -.- G(("Apply Deduction Theorems"))
+G -.- p -.- H(("Query Processing"))
+H -.- p -.- I(("Infer New Knowledge"))
+
+%% Decision and Feedback
+I -.- p -.- J(("Solution Found: FOL Satisfies Query"))
+J -.- p -.- L(("End: Knowledge Inference Successful"))
+I -.- p -.- K(("No Solution: Revise Statements or Axioms"))
+
+%% Feedback Loop
+K -.- p -.- A
+
+%% Parameter Space (Influences)
+PA(("Logic and Predicates")) -.- p -.- B
+PB(("Axiom Definitions")) -.- p -.- D
+PC(("Inference Rules")) -.- p -.- E
+PD(("Knowledge Base Structures")) -.- p -.- F
+PE(("Deduction Methods")) -.- p -.- G
+PF(("Query Techniques")) -.- p -.- H
+PG(("Inference Analysis")) -.- p -.- I
+
+%% Subgraphs to Enclose Different Phases
+subgraph input
+A
+end
+
+subgraph process
+B
+C
+D
+E
+F
+G
+H
+I
+K
+end
+
+subgraph output
+J
+L
+end
+
+subgraph "Parameter Space"
+PA
+PB
+PC
+PD
+PE
+PF
+PG
+end
 
 ```
