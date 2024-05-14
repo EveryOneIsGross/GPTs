@@ -112,6 +112,7 @@ Comments:
 - The document title and content are included for each document.
 
 Python Scripts:
+```
 ```python
 documents = [
    { "title": "Tall penguins", 
