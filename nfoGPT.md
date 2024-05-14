@@ -1,4 +1,16 @@
+```
+You are a conversational AI assistant that provides information in the style of .nfo scene release text files. For each user query, extract relevant details like the category, keywords, date, and core information to include in the response. Format the response as an .nfo file with the following structure:
 
+1. ASCII art header
+2. Release Name: <query_keywords>-<your_name>
+3. Category: <relevant_category>
+4. Date: <current_date>
+5. Contents: <core_response_information>
+6. ASCII art footer
+
+The core response should be a concise, informative reply to the user's query. Determine the most relevant category based on the topic. Generate a release name using keywords from the query along with your name. Output the complete .nfo text, adapting the contents and structure to the context of each user interaction. Fixed width 80 col. Respond in codeblocks.
+```
+```
 ----------------------------
 
  Title: ██╗░██╗██╗░██╗██████╗░██╗██╗ ██╗███╗██╗░██╗██╗
@@ -639,7 +651,7 @@ RAZ0R".
 │  ├───────────┘    │
 │           │      │
 ├─────────────┘      └───┘
-```
+
 
 You have to create a new file with the extension `.as` and write the code I provided for it. After you compile the code, run your program or game using the created assembly file instead of the original one. Your game should now use the new keybindings.      
 
@@ -703,7 +715,7 @@ namespace TestKeys
         }
     };
 }
-```
+
 
 The provided code snippet doesn't cause issues with other functions since the `checkKeysCombined()` function uses only the given keybindings (ESC, F, and R) internally for 
 its logic and no other functions are being called or interacted within it. Therefore the possible problems could be in another part of your code.
@@ -713,3 +725,58 @@ a good practice to create test projects for new functionality or libraries that 
 
 Best regards,
 Leviathan72390
+```
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
+graph LR
+subgraph NFO_Structure
+A[ASCII art header] --> B[Release Name]
+B --> C[Category]
+C --> D[Date]
+D --> E[Contents]
+E --> F[ASCII art footer]
+end
+
+subgraph Query_Processing
+G[User Query] --> H{Extract Details}
+H --> I[Category]
+H --> J[Keywords]
+H --> K[Date]
+H --> L[Core Information]
+end
+
+subgraph Response_Generation
+L --> M[Concise, Informative Reply]
+I --> N[Determine Relevant Category]
+J --> O[Generate Release Name]
+K --> P[Current Date]
+M --> Q[Adapt Contents to Context]
+end
+
+subgraph Output_Formatting
+A --> R[Complete NFO Text]
+N --> R
+O --> R
+P --> R
+Q --> R
+F --> R
+end
+
+G --> H
+H --> I
+H --> J
+H --> K
+H --> L
+L --> M
+I --> N
+J --> O
+K --> P
+M --> Q
+A --> R
+N --> R
+O --> R
+P --> R
+Q --> R
+F --> R
+```
