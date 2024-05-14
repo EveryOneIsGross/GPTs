@@ -160,8 +160,7 @@ list(file_contents.keys())
 ```
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#000000', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '16px'}}}%%
-
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph TD
 
 %% Start of the Process
@@ -218,7 +217,7 @@ themeExtraction --> organizeData
 
 organizeData --> saveResults(("Save Results as .txt"))
 
-saveResults --> end(("End Analysis"))
+saveResults --> finalNode(("Analysis Complete"))
 
 %% Parameter Space Influences
 
@@ -231,4 +230,16 @@ params2(("Search Parameters")) -.->|Influence| searchAnalysis
 params3(("Sentiment Parameters")) -.->|Influence| sentimentAnalysis
 
 end
+
+%% Annotations for Clarity
+
+annotate1(("Input includes chords, lyrics, structure")) -.-> readInput
+
+annotate2(("Sections: Intro, Verse, Chorus, etc.")) -.-> chunkFiles
+
+annotate3(("Vector embedding for deep analysis")) -.-> embedding
+
+annotate4(("Key and chord analysis, theme extraction")) -.-> organizeData
+
+annotate5(("Formatted report with insights")) -.-> saveResults
 ```
