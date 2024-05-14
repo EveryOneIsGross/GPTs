@@ -58,7 +58,7 @@ Components:
 By incorporating these components, the system can help users develop a more intentional and balanced relationship with their attention in the context of the modern digital landscape. Users can learn to recognize and resist the pull of the attention economy, cultivate greater awareness and control over their attentional resources, and ultimately lead more fulfilling and connected lives.
 ```
 ```mermaid
-
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffaa00', 'primaryTextColor': '#ffaa00', 'primaryBorderColor': '#ffaa00', 'lineColor': '#ffaa00', 'secondaryColor': '#ffaa00', 'tertiaryColor': '#ffaa00', 'clusterBkg': 'none', 'clusterBorder': 'none', 'fontSize': '0px'}}}%%
 graph LR
 subgraph Ideas
 A[Technology allows scale and speed of opinion creation]
