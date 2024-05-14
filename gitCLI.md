@@ -116,10 +116,10 @@ P --> AQ[Output: Manage pull requests]
 Q --> AR[Output: Work with GitHub Projects]
 R --> AS[Output: Manage releases]
 S --> AT[Output: Manage repositories]
-T --> AU[Output: Manage Github Actions caches]
+T --> AU[Output: Manage GitHub Actions caches]
 U --> AV[Output: View details about workflow runs]
 V --> AW[Output: View details about GitHub Actions workflows]
-W --> AX[Output: Alias for pr checkout]
+W --> AX[Output: Alias for "pr checkout"]
 X --> AY[Output: Create command shortcuts]
 Y --> AZ[Output: Make an authenticated GitHub API request]
 Z --> BA[Output: Generate shell completion scripts]
@@ -134,6 +134,39 @@ AH --> BI[Output: Manage SSH keys]
 AI --> BJ[Output: Print information about relevant issues, pull requests, and notifications across repositories]
 AJ --> BK[Output: Manage GitHub Actions variables]
 E --> BL[Output: Display help or version information]
+
+AK --> F
+AL --> F
+AM --> F
+AN --> F
+AO --> F
+AP --> F
+AQ --> F
+AR --> F
+AS --> F
+AT --> F
+
+AU --> G
+AV --> G
+AW --> G
+
+AX --> H
+
+AY --> I
+AZ --> I
+BA --> I
+BB --> I
+BC --> I
+BD --> I
+BE --> I
+BF --> I
+BG --> I
+BH --> I
+BI --> I
+BJ --> I
+BK --> I
+BL --> I
+
 
 
 ```
