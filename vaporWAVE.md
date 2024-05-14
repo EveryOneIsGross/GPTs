@@ -80,11 +80,6 @@ graph TD
     P -->|Transcends| Q["The Simulacrum"]
     Q -->|Permeates| R["All Existence"]
 
-    classDef vaporwave fill:#ff71ce,stroke:#01cdfe,stroke-width:2px;
-    classDef digital fill:#7fdbda,stroke:#01cdfe,stroke-width:2px;
-    classDef glitch fill:#b967ff,stroke:#01cdfe,stroke-width:2px;
-    classDef soul fill:#01cdfe,stroke:#ff9f1a,stroke-width:2px;
-
     class A vaporwave;
     class B,C digital;
     class D,E,F,G glitch;
